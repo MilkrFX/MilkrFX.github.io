@@ -1,136 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pricing | MilkrFX</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pricing | MilkrFX</title>
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f5f6f8;
-  color: #111;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f5f6fa;
+      color: #111;
+    }
 
-header {
-  background: #0f0f0f;
-  color: #fff;
-  padding: 25px;
-  text-align: center;
-}
+    header {
+      background: #0f0f0f;
+      padding: 40px 20px;
+      text-align: center;
+      color: #fff;
+    }
 
-.brand-badge {
-  display: inline-block;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  background: #0f0f0f;
-  color: #fff;
-  margin-bottom: 15px;
-}
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
 
-.container {
-  max-width: 1100px;
-  margin: 50px auto;
-  padding: 0 20px;
-}
+    header p {
+      margin-top: 10px;
+      font-size: 16px;
+      opacity: 0.9;
+    }
 
-.pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-}
+    .container {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
 
-.pricing-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 35px;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
-  text-align: center;
-}
+    .badge {
+      display: inline-block;
+      background: #16a34a;
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
 
-.price {
-  font-size: 34px;
-  font-weight: bold;
-  margin: 15px 0;
-}
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
 
-.buy-btn {
-  padding: 14px 28px;
-  background: #0f0f0f;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  display: inline-block;
-}
+    .pricing-card {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 35px 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      text-align: center;
+      position: relative;
+    }
 
-.note {
-  margin-top: 40px;
-  background: #e5e7eb;
-  padding: 22px;
-  border-radius: 10px;
-  font-size: 14px;
-}
+    .pricing-card h3 {
+      margin-top: 15px;
+      font-size: 24px;
+    }
 
-footer {
-  text-align: center;
-  padding: 25px;
-  font-size: 14px;
-  color: #666;
-}
-</style>
+    .price {
+      font-size: 36px;
+      font-weight: bold;
+      color: #16a34a;
+      margin: 10px 0;
+    }
+
+    .old-price {
+      font-size: 15px;
+      color: #888;
+      text-decoration: line-through;
+    }
+
+    .pricing-card p {
+      font-size: 15px;
+      line-height: 1.6;
+      margin: 20px 0 30px;
+      color: #444;
+    }
+
+    .buy-btn {
+      display: inline-block;
+      padding: 14px 30px;
+      background: #111;
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .buy-btn:hover {
+      background: #000;
+    }
+
+    .note {
+      margin-top: 60px;
+      background: #e5e7eb;
+      padding: 25px;
+      border-radius: 10px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-  <h1>MilkrFX Pricing</h1>
-  <p>Founding Access Available</p>
+  <h1>Early Bird Access</h1>
+  <p>Founding pricing for the first 10 MilkrFX clients</p>
 </header>
 
 <div class="container">
 
-<div class="pricing-grid">
+  <div class="pricing-grid">
 
-<div class="pricing-card">
-  <span class="brand-badge">FOUNDING ACCESS</span>
-  <h3>VIP Signals</h3>
-  <div class="price">R ___</div>
-  <p>Structured signal access with predefined risk logic.</p>
-  <a class="buy-btn" href="#">Secure Checkout</a>
-</div>
+    <!-- INDICATOR -->
+    <div class="pricing-card">
+      <span class="badge">EARLY BIRD</span>
+      <h3>MilkrFX Indicator</h3>
+      <div class="old-price">Future Price: R950</div>
+      <div class="price">R500</div>
+      <p>
+        Rule-based market structure and trend confirmation indicator.
+        Built for disciplined, repeatable analysis.
+      </p>
+      <a class="buy-btn" href="#" target="_blank">Buy Early Access</a>
+    </div>
 
-<div class="pricing-card">
-  <span class="brand-badge">FOUNDING ACCESS</span>
-  <h3>MilkrFX Indicator</h3>
-  <div class="price">R ___</div>
-  <p>Market structure and trend confirmation indicator.</p>
-  <a class="buy-btn" href="#">Secure Checkout</a>
-</div>
+    <!-- EA -->
+    <div class="pricing-card">
+      <span class="badge">EARLY BIRD</span>
+      <h3>Expert Advisor (EA)</h3>
+      <div class="old-price">Future Price: R1,499</div>
+      <div class="price">R850</div>
+      <p>
+        Fully automated MT5 Expert Advisor based on strict execution rules.
+        No discretionary logic.
+      </p>
+      <a class="buy-btn" href="#" target="_blank">Buy Early Access</a>
+    </div>
 
-<div class="pricing-card">
-  <span class="brand-badge">FOUNDING ACCESS</span>
-  <h3>Expert Advisor</h3>
-  <div class="price">R ___</div>
-  <p>Fully automated MT5 rule-based Expert Advisor.</p>
-  <a class="buy-btn" href="#">Secure Checkout</a>
-</div>
+    <!-- VIP -->
+    <div class="pricing-card">
+      <span class="badge">EARLY BIRD</span>
+      <h3>VIP Access</h3>
+      <div class="old-price">Future Price: R500 / month</div>
+      <div class="price">R250</div>
+      <p>
+        Private access to premium tools, updates, and structured insights
+        for serious traders.
+      </p>
+      <a class="buy-btn" href="#" target="_blank">Join VIP Early</a>
+    </div>
 
-</div>
+  </div>
 
-<div class="note">
-<strong>Important:</strong><br>
-Independent trading tools only. No financial advice or performance guarantees.
-</div>
+  <div class="note">
+    <strong>Early Bird Notice</strong><br><br>
+    Early Bird access is limited to the first 10 clients.
+    Once these slots are filled, pricing will automatically
+    revert to standard rates.
+    <br><br>
+    MilkrFX tools are rule-based and designed for analytical and
+    educational use only. No guarantees are provided.
+  </div>
 
 </div>
 
 <footer>
-© 2025 MilkrFX. All rights reserved.
+  © 2025 MilkrFX. All rights reserved.
 </footer>
 
 </body>
