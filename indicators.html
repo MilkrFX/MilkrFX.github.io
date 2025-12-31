@@ -33,7 +33,7 @@
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: auto;
             padding: 60px 20px;
         }
@@ -43,12 +43,18 @@
             margin-bottom: 60px;
         }
 
-        /* WHITE INDICATOR CARD */
+        /* GRID FOR DESKTOP */
+        .indicator-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        /* WHITE CARD */
         .indicator {
             background: #ffffff;
-            padding: 32px;
+            padding: 28px;
             border-radius: 16px;
-            margin-bottom: 50px;
             box-shadow: 0 10px 35px rgba(0,0,0,0.35);
         }
 
@@ -60,17 +66,16 @@
         .indicator p {
             color: #333333;
             line-height: 1.6;
-            max-width: 800px;
+            font-size: 15px;
         }
 
-        /* IMAGE CONTROL */
         .indicator img {
-            display: block;
             width: 100%;
-            max-width: 720px;   /* <<< THIS MAKES IT PROFESSIONAL SIZE */
-            margin: 30px auto 0;
-            border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+            max-width: 480px;   /* <<< PRO SIZE */
+            display: block;
+            margin: 20px auto 0;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
         }
 
         .note {
@@ -78,6 +83,13 @@
             margin-top: 60px;
             font-size: 14px;
             color: #aab2ff;
+        }
+
+        /* MOBILE STACK */
+        @media (max-width: 900px) {
+            .indicator-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -94,26 +106,30 @@
     <div class="container">
         <h1>Analytical Indicators</h1>
 
-        <!-- Indicator 1 -->
-        <div class="indicator">
-            <h3>Market Structure Indicator</h3>
-            <p>
-                Identifies break of structure, change of character,
-                and swing high/low relationships to define directional bias
-                and structural context.
-            </p>
-            <img src="images/indicator-structure.jpeg" alt="Market Structure Indicator">
-        </div>
+        <div class="indicator-grid">
 
-        <!-- Indicator 2 -->
-        <div class="indicator">
-            <h3>Execution Signal Indicator</h3>
-            <p>
-                Highlights rule-based buy and sell opportunities aligned
-                with predefined structural conditions and execution zones.
-                Designed for confirmation — not prediction.
-            </p>
-            <img src="images/indicator-signals.jpeg" alt="Execution Signal Indicator">
+            <!-- Indicator 1 -->
+            <div class="indicator">
+                <h3>Market Structure Indicator</h3>
+                <p>
+                    Identifies break of structure, change of character,
+                    and swing high/low relationships to define market bias
+                    and structural context.
+                </p>
+                <img src="images/indicator-structure.jpeg" alt="Market Structure Indicator">
+            </div>
+
+            <!-- Indicator 2 -->
+            <div class="indicator">
+                <h3>Execution Signal Indicator</h3>
+                <p>
+                    Highlights rule-based buy and sell opportunities aligned
+                    with predefined structural conditions and execution zones.
+                    Designed for confirmation, not prediction.
+                </p>
+                <img src="images/indicator-signals.jpeg" alt="Execution Signal Indicator">
+            </div>
+
         </div>
 
         <p class="note">
