@@ -65,13 +65,21 @@ h1 {
     margin-bottom: 25px;
 }
 
-/* IMAGE CONTROL */
-.indicator-card img {
-    max-width: 92%;
-    height: auto;
+/* IMAGE FRAME (THIS IS THE FIX) */
+.image-frame {
+    width: 100%;
+    height: 320px;              /* same visual height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.image-frame img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;        /* no stretch, no crop */
     border-radius: 10px;
-    display: block;
-    margin: 0 auto;
 }
 
 /* MOBILE */
@@ -80,8 +88,8 @@ h1 {
         grid-template-columns: 1fr;
     }
 
-    .indicator-card img {
-        max-width: 100%;
+    .image-frame {
+        height: 260px;
     }
 }
 </style>
@@ -107,7 +115,9 @@ h1 {
                 Identifies break of structure, change of character, and swing
                 high/low relationships to define directional bias and structural context.
             </p>
-            <img src="images/indicator-structure.jpeg" alt="Market Structure Indicator">
+            <div class="image-frame">
+                <img src="images/indicator-structure.jpeg" alt="Market Structure Indicator">
+            </div>
         </div>
 
         <!-- SIGNALS -->
@@ -117,7 +127,9 @@ h1 {
                 Highlights rule-based buy and sell opportunities aligned with predefined
                 structural conditions and execution zones. Designed for confirmation, not prediction.
             </p>
-            <img src="images/indicator-signals.jpeg" alt="Execution Signal Indicator">
+            <div class="image-frame">
+                <img src="images/indicator-signals.jpeg" alt="Execution Signal Indicator">
+            </div>
         </div>
 
     </div>
