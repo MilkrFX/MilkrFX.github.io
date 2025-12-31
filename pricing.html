@@ -9,26 +9,62 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background-color: #f5f5f5;
-      color: #333;
+      background-color: #f5f6f8;
+      color: #111;
     }
 
     header {
-      background: #0f172a;
-      padding: 20px;
+      background: #0f0f0f;
+      padding: 25px;
       text-align: center;
       color: #fff;
     }
 
     header h1 {
       margin: 0;
-      font-size: 32px;
+      font-size: 30px;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      margin-top: 8px;
+      font-size: 15px;
+      opacity: 0.9;
     }
 
     .container {
       max-width: 1100px;
-      margin: 40px auto;
+      margin: 50px auto;
       padding: 0 20px;
+    }
+
+    .early-banner {
+      background: #0f0f0f;
+      color: #fff;
+      padding: 35px 25px;
+      border-radius: 14px;
+      text-align: center;
+      margin-bottom: 50px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .early-banner h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .early-banner p {
+      font-size: 16px;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.6;
+      opacity: 0.95;
+    }
+
+    .slots {
+      margin-top: 18px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
     }
 
     .pricing-grid {
@@ -39,41 +75,56 @@
 
     .pricing-card {
       background: #ffffff;
-      border-radius: 10px;
-      padding: 30px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      border-radius: 12px;
+      padding: 35px 30px;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.08);
       text-align: center;
-      transition: transform 0.2s ease;
+      position: relative;
     }
 
-    .pricing-card:hover {
-      transform: translateY(-5px);
+    .badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #0f0f0f;
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
     }
 
     .pricing-card h3 {
-      margin-top: 0;
+      margin-top: 20px;
       font-size: 24px;
-      color: #0f172a;
     }
 
     .price {
-      font-size: 32px;
+      font-size: 34px;
       font-weight: bold;
       margin: 15px 0;
-      color: #16a34a;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: #888;
+      font-size: 15px;
     }
 
     .pricing-card p {
       font-size: 15px;
       line-height: 1.6;
       margin-bottom: 25px;
+      color: #333;
     }
 
     .buy-btn {
       display: inline-block;
       padding: 14px 28px;
-      background: #16a34a;
-      color: #ffffff;
+      background: #0f0f0f;
+      color: #fff;
       text-decoration: none;
       font-size: 16px;
       border-radius: 6px;
@@ -81,20 +132,21 @@
     }
 
     .buy-btn:hover {
-      background: #15803d;
+      opacity: 0.9;
     }
 
     .note {
-      margin-top: 40px;
+      margin-top: 50px;
       background: #e5e7eb;
-      padding: 20px;
-      border-radius: 8px;
+      padding: 22px;
+      border-radius: 10px;
       font-size: 14px;
+      line-height: 1.6;
     }
 
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 25px;
       font-size: 14px;
       color: #666;
     }
@@ -103,73 +155,90 @@
 
 <body>
 
-  <header>
-    <h1>MilkrFX Pricing</h1>
-    <p>Choose your product and complete checkout securely</p>
-  </header>
+<header>
+  <h1>MilkrFX Pricing</h1>
+  <p>Structured access to rule-based trading tools</p>
+</header>
 
-  <div class="container">
+<div class="container">
 
-    <div class="pricing-grid">
+  <!-- EARLY BELIEVER BANNER -->
+  <div class="early-banner">
+    <h2>Early Believer Access</h2>
+    <p>
+      The first 10 clients receive Early Believer Access with reduced pricing
+      and priority onboarding. Once capacity is reached, standard pricing applies permanently.
+    </p>
+    <div class="slots">Slots Remaining: 7 / 10</div>
+  </div>
 
-      <!-- VIP SIGNALS -->
-      <div class="pricing-card">
-        <h3>VIP Signals</h3>
-        <div class="price">R350</div>
-        <p>
-          Access professional trading signals with structured entries,
-          risk management, and disciplined execution.
-        </p>
-        <a class="buy-btn"
-           href="https://pay.yoco.com/r/4WdpVN?redirectOnPaymentSuccess=https%3A%2F%2Fmilkrfx.github.io%2Fthankyou.html%3Fproduct%3DVIP%20Signals"
-           target="_blank">
-          Buy Now
-        </a>
-      </div>
+  <div class="pricing-grid">
 
-      <!-- INDICATOR -->
-      <div class="pricing-card">
-        <h3>MilkrFX Indicator</h3>
-        <div class="price">R950</div>
-        <p>
-          Advanced market structure and trend confirmation indicator
-          designed for precision trading.
-        </p>
-        <a class="buy-btn"
-           href="https://pay.yoco.com/r/melQD0?redirectOnPaymentSuccess=https%3A%2F%2Fmilkrfx.github.io%2Fthankyou.html%3Fproduct%3DMilkrFX%20Indicator"
-           target="_blank">
-          Buy Now
-        </a>
-      </div>
-
-      <!-- EXPERT ADVISOR -->
-      <div class="pricing-card">
-        <h3>Expert Advisor</h3>
-        <div class="price">R1,499</div>
-        <p>
-          Fully automated MT5 Expert Advisor built on strict,
-          rule-based execution logic.
-        </p>
-        <a class="buy-btn"
-           href="https://pay.yoco.com/r/7yqglL?redirectOnPaymentSuccess=https%3A%2F%2Fmilkrfx.github.io%2Fthankyou.html%3Fproduct%3DExpert%20Advisor"
-           target="_blank">
-          Buy Now
-        </a>
-      </div>
-
+    <!-- VIP SIGNALS -->
+    <div class="pricing-card">
+      <div class="badge">EARLY BELIEVER</div>
+      <h3>VIP Signals</h3>
+      <div class="old-price">Standard: R450</div>
+      <div class="price">R350</div>
+      <p>
+        Structured trading signals with predefined risk logic
+        and disciplined execution guidelines.
+      </p>
+      <a class="buy-btn"
+         href="https://pay.yoco.com/r/4WdpVN"
+         target="_blank">
+        Secure Checkout
+      </a>
     </div>
 
-    <div class="note">
-      <strong>After payment:</strong><br>
-      Once your payment is successful, you will be redirected automatically
-      and guided to WhatsApp to receive your product and onboarding instructions.
+    <!-- INDICATOR -->
+    <div class="pricing-card">
+      <div class="badge">EARLY BELIEVER</div>
+      <h3>MilkrFX Indicator</h3>
+      <div class="old-price">Standard: R1,200</div>
+      <div class="price">R950</div>
+      <p>
+        Market structure and trend confirmation indicator
+        designed for clarity and consistency.
+      </p>
+      <a class="buy-btn"
+         href="https://pay.yoco.com/r/melQD0"
+         target="_blank">
+        Secure Checkout
+      </a>
+    </div>
+
+    <!-- EXPERT ADVISOR -->
+    <div class="pricing-card">
+      <div class="badge">EARLY BELIEVER</div>
+      <h3>Expert Advisor</h3>
+      <div class="old-price">Standard: R1,899</div>
+      <div class="price">R1,499</div>
+      <p>
+        Fully automated MT5 Expert Advisor built on strict,
+        rule-based execution logic.
+      </p>
+      <a class="buy-btn"
+         href="https://pay.yoco.com/r/7yqglL"
+         target="_blank">
+        Secure Checkout
+      </a>
     </div>
 
   </div>
 
-  <footer>
-    © 2025 MilkrFX. All rights reserved.
-  </footer>
+  <div class="note">
+    <strong>Important:</strong><br>
+    All MilkrFX tools are rule-based and provided for educational
+    and analytical purposes only. No performance guarantees are offered.
+    Payments are processed securely via Yoco.
+  </div>
+
+</div>
+
+<footer>
+  © 2025 MilkrFX. All rights reserved.
+</footer>
 
 </body>
 </html>
