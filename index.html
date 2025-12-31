@@ -10,149 +10,189 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background-color: #f8f9fb;
+      background-color: #f6f7fb;
       color: #111;
     }
 
+    /* ===== HEADER ===== */
     header {
-      background: #0f0f0f;
+      background: #0b0b0f;
       color: #fff;
-      padding: 22px;
+      padding: 22px 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     header h1 {
       margin: 0;
-      font-size: 26px;
+      font-size: 24px;
       letter-spacing: 1px;
-    }
-
-    nav {
-      margin-top: 8px;
+      font-weight: 700;
     }
 
     nav a {
       color: #fff;
-      margin-right: 18px;
+      margin-left: 18px;
       text-decoration: none;
       font-weight: 600;
       font-size: 14px;
+      opacity: 0.9;
     }
 
-    /* ===== HERO WITH IMAGE ===== */
+    nav a:hover {
+      opacity: 1;
+      color: #ff3b3b;
+    }
+
+    /* ===== HERO ===== */
     .hero {
       background:
         linear-gradient(
-          rgba(0, 0, 0, 0.65),
-          rgba(0, 0, 0, 0.65)
+          rgba(5, 5, 10, 0.75),
+          rgba(5, 5, 10, 0.85)
         ),
         url("assets/images/hero.jpeg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-
       color: #fff;
-      padding: 120px 20px;
+      padding: 140px 20px;
       text-align: center;
     }
 
     .hero h2 {
-      font-size: 42px;
-      margin-bottom: 15px;
+      font-size: 46px;
+      margin-bottom: 18px;
+      letter-spacing: 0.5px;
     }
 
     .hero p {
-      font-size: 18px;
-      max-width: 720px;
+      font-size: 19px;
+      max-width: 760px;
       margin: auto;
       opacity: 0.9;
+      line-height: 1.6;
     }
 
     .hero .btn {
-      margin-top: 35px;
-      padding: 14px 28px;
-      background: #fff;
-      color: #0f0f0f;
+      margin-top: 40px;
+      padding: 15px 34px;
+      background: #ff3b3b;
+      color: #fff;
       border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
       display: inline-block;
+      box-shadow: 0 8px 20px rgba(255,59,59,0.35);
     }
 
+    .hero .btn:hover {
+      background: #e83232;
+    }
+
+    /* ===== SECTIONS ===== */
     section {
-      padding: 60px 20px;
-      max-width: 1100px;
+      padding: 70px 20px;
+      max-width: 1150px;
       margin: auto;
     }
 
     h3 {
-      font-size: 28px;
-      margin-bottom: 25px;
+      font-size: 30px;
+      margin-bottom: 30px;
+      text-align: center;
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
+      gap: 28px;
     }
 
     .card {
       background: #fff;
-      border-radius: 10px;
-      padding: 30px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      border-radius: 12px;
+      padding: 34px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
     }
 
     .card h4 {
       margin-top: 0;
-      font-size: 20px;
+      font-size: 21px;
+      margin-bottom: 12px;
     }
 
     .card p {
-      font-size: 15px;
-      line-height: 1.6;
+      font-size: 15.5px;
+      line-height: 1.7;
+      opacity: 0.95;
     }
 
+    /* ===== PHILOSOPHY ===== */
+    .philosophy {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    /* ===== CTA ===== */
     .cta {
       text-align: center;
-      background: #111;
+      background: linear-gradient(135deg, #0b0b0f, #151520);
       color: #fff;
-      padding: 60px 20px;
+      padding: 80px 20px;
     }
 
     .cta h3 {
-      font-size: 32px;
-      margin-bottom: 15px;
+      font-size: 34px;
+      margin-bottom: 18px;
     }
 
     .cta p {
       font-size: 17px;
-      max-width: 700px;
+      max-width: 720px;
       margin: auto;
       opacity: 0.9;
+      line-height: 1.6;
     }
 
     .cta a {
       display: inline-block;
-      margin-top: 25px;
-      padding: 14px 30px;
-      background: #fff;
-      color: #111;
+      margin-top: 30px;
+      padding: 15px 34px;
+      background: #ff3b3b;
+      color: #fff;
       text-decoration: none;
       font-weight: bold;
       border-radius: 6px;
+      box-shadow: 0 8px 20px rgba(255,59,59,0.35);
     }
 
+    /* ===== FOOTER ===== */
     footer {
-      background: #0f0f0f;
+      background: #0b0b0f;
       color: #fff;
-      padding: 30px;
+      padding: 35px 20px;
       text-align: center;
       font-size: 14px;
+      opacity: 0.9;
     }
 
     footer a {
-      color: #fff;
+      color: #ff3b3b;
       text-decoration: underline;
+    }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 34px;
+      }
     }
   </style>
 </head>
@@ -176,7 +216,6 @@
     Tools built on structure, discipline, and execution logic —
     not hype, not promises.
   </p>
-
   <a href="pricing.html" class="btn">View Pricing & Access</a>
 </section>
 
@@ -210,7 +249,7 @@
   </div>
 </section>
 
-<section>
+<section class="philosophy">
   <h3>Our Philosophy</h3>
 
   <div class="card">
@@ -219,7 +258,6 @@
       and market structure understanding. We do not provide financial advice,
       manage accounts, or guarantee performance.
     </p>
-
     <p>
       Every product is designed for educational and analytical use,
       allowing traders to make their own informed decisions.
@@ -233,7 +271,6 @@
     Explore our pricing and access options for indicators,
     expert advisors, and VIP tools.
   </p>
-
   <a href="pricing.html">Go to Pricing</a>
 </section>
 
