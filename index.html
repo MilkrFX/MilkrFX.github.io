@@ -77,19 +77,35 @@
       line-height: 1.6;
     }
 
-    .hero .btn {
+    .hero .btn,
+    .hero .btn-secondary {
       margin-top: 42px;
       padding: 16px 38px;
-      background: var(--brand-primary);
-      color: #ffffff;
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
       display: inline-block;
+      transition: transform 0.25s ease, background 0.25s ease;
+    }
+
+    .hero .btn {
+      background: var(--brand-primary);
+      color: #ffffff;
+      margin-right: 12px;
     }
 
     .hero .btn:hover {
       background: var(--brand-primary-hover);
+      transform: scale(1.05);
+    }
+
+    .hero .btn-secondary {
+      background: #ffffff;
+      color: var(--brand-dark);
+    }
+
+    .hero .btn-secondary:hover {
+      transform: scale(1.05);
     }
 
     section {
@@ -146,27 +162,56 @@
       background: var(--brand-primary-hover);
     }
 
-    .about {
-      background: #ffffff;
-      border-radius: 18px;
-      padding: 70px;
-      box-shadow: 0 16px 45px rgba(0,0,0,0.08);
-      max-width: 900px;
+    /* Recommended Broker */
+    .broker-card {
+      max-width: 420px;
       margin: auto;
+      background: #ffffff;
+      padding: 45px;
+      border-radius: 20px;
+      box-shadow: 0 18px 45px rgba(0,0,0,0.1);
       text-align: center;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
     }
 
-    .about p {
-      font-size: 17px;
-      line-height: 1.8;
+    .broker-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 26px 65px rgba(0,0,0,0.18);
+    }
+
+    .broker-logo {
+      max-width: 190px;
+      margin-bottom: 18px;
+    }
+
+    .stars {
+      font-size: 24px;
+      color: #f5b301;
+      margin-bottom: 16px;
+      letter-spacing: 3px;
+    }
+
+    .broker-card p {
+      font-size: 16px;
+      line-height: 1.7;
       color: var(--text-muted);
-      margin-bottom: 22px;
+      margin-bottom: 28px;
     }
 
-    .about .signature {
-      margin-top: 30px;
+    .broker-btn {
+      display: inline-block;
+      padding: 16px 42px;
+      background: var(--brand-primary);
+      color: #ffffff;
+      border-radius: 10px;
+      text-decoration: none;
       font-weight: bold;
-      color: var(--brand-dark);
+      transition: transform 0.25s ease, background 0.25s ease;
+    }
+
+    .broker-btn:hover {
+      background: var(--brand-primary-hover);
+      transform: scale(1.06);
     }
 
     .cta {
@@ -212,24 +257,6 @@
       text-align: center;
       font-size: 14px;
     }
-
-    .whatsapp-float {
-      position: fixed;
-      width: 56px;
-      height: 56px;
-      bottom: 25px;
-      right: 25px;
-      background-color: #25D366;
-      color: #fff;
-      border-radius: 50%;
-      font-size: 30px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.35);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      z-index: 1000;
-    }
   </style>
 </head>
 
@@ -252,87 +279,66 @@
     Structured trading indicators and expert advisors built for
     disciplined execution — not speculation or hype.
   </p>
+
   <a href="pricing.html" class="btn">View Pricing</a>
+
+  <a
+    href="https://one.exnessonelink.com/a/gjrchju5te"
+    target="_blank"
+    class="btn-secondary"
+  >
+    Trade with Exness
+  </a>
 </section>
 
 <section>
   <h3>Our Focus</h3>
-
   <div class="grid">
     <div class="card">
       <h4>Trading Indicators</h4>
-      <p>
-        Market structure and confirmation indicators designed for
-        repeatable, rule-based analysis.
-      </p>
+      <p>Market structure and confirmation indicators designed for rule-based analysis.</p>
       <a href="indicators.html">View Indicators</a>
     </div>
 
     <div class="card">
       <h4>Expert Advisors</h4>
-      <p>
-        MT5 Expert Advisors engineered with strict execution logic
-        and controlled risk parameters.
-      </p>
+      <p>MT5 Expert Advisors engineered with strict execution logic.</p>
       <a href="ea.html">View Expert Advisors</a>
     </div>
 
     <div class="card">
       <h4>Custom Development</h4>
-      <p>
-        Bespoke trading tools built directly from defined rules
-        and execution requirements.
-      </p>
+      <p>Bespoke trading tools built directly from defined rules.</p>
       <a href="pricing.html">Request Information</a>
     </div>
   </div>
 </section>
 
 <section>
-  <h3>About MilkrFX</h3>
-  <div class="about">
-    <p>
-      MilkrFX is a trading technology brand focused on the development
-      of structured, rule-based market tools. Our work centers on
-      execution logic, market structure, and disciplined system design
-      rather than discretionary decision-making.
-    </p>
-    <p>
-      All MilkrFX tools are built from clearly defined rules and tested
-      within controlled environments to evaluate behavior across
-      varying market conditions. The objective is consistency,
-      repeatability, and transparency in execution.
-    </p>
-    <p>
-      MilkrFX does not provide investment advice or managed trading
-      services. Our products are designed to support informed
-      decision-making for traders who value structure and risk control.
-    </p>
-    <div class="signature">— Jacques<br>Founder, MilkrFX</div>
+  <h3>Recommended Broker</h3>
+  <div class="broker-card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Exness_logo.svg" class="broker-logo">
+    <div class="stars">★★★★★</div>
+    <p>Exness is a globally trusted broker offering fast execution and competitive spreads.</p>
+    <a href="https://one.exnessonelink.com/a/gjrchju5te" target="_blank" class="broker-btn">
+      Open an Exness Account
+    </a>
   </div>
 </section>
 
 <section class="cta">
-  <h3>Designed for Disciplined Traders</h3>
+  <h3>Ready to Start Trading?</h3>
   <p>
-    Review our pricing or contact us directly for further
-    information about our tools.
+    Use our tools with a reliable trading environment.
   </p>
-  <a href="pricing.html">View Pricing</a>
+  <a href="https://one.exnessonelink.com/a/gjrchju5te" target="_blank">
+    Start with Exness
+  </a>
 </section>
 
 <footer>
   © 2025 MilkrFX. All rights reserved.
 </footer>
-
-<a
-  href="https://wa.me/27664597933?text=Hi%20MilkrFX%2C%20I%20have%20a%20question%20about%20your%20tools."
-  class="whatsapp-float"
-  target="_blank"
-  aria-label="Chat on WhatsApp"
->
-  ☎
-</a>
 
 </body>
   </html>
