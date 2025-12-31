@@ -2,109 +2,172 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>MilkrFX</title>
+  <title>MilkrFX | Trading Tools & Automation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MilkrFX provides rule-based trading tools, indicators, and automation systems for educational and analytical purposes.">
 
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f1115;
-      color: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f8f9fb;
+      color: #111;
+    }
+
+    header {
+      background: #111;
+      color: #fff;
+      padding: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
     }
 
     nav {
-      background: #0b0d11;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      margin-top: 10px;
     }
 
     nav a {
-      color: #ffffff;
+      color: #fff;
+      margin-right: 15px;
       text-decoration: none;
-      margin-left: 20px;
       font-weight: 600;
     }
 
-    nav a:hover {
-      color: #00ff99;
-    }
-
-    .hero {
-      padding: 120px 20px;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 42px;
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      color: #aaa;
-      max-width: 600px;
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
       margin: auto;
-      font-size: 18px;
-      line-height: 1.6;
     }
 
-    .hero a {
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      margin-bottom: 25px;
+    }
+
+    .btn {
       display: inline-block;
-      margin-top: 30px;
-      padding: 14px 32px;
-      background: #00ff99;
-      color: #000;
-      border-radius: 30px;
+      padding: 12px 20px;
+      margin-right: 10px;
+      margin-top: 10px;
+      background-color: #111;
+      color: #fff;
       text-decoration: none;
-      font-weight: bold;
+      border-radius: 6px;
+      font-weight: 600;
     }
 
-    /* WhatsApp Button */
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: white;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 32px;
-      text-decoration: none;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-      z-index: 999;
+    .btn.secondary {
+      background-color: #f1f1f1;
+      color: #111;
+      border: 1px solid #ccc;
+    }
+
+    footer {
+      background: #111;
+      color: #fff;
+      padding: 25px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: underline;
     }
   </style>
 </head>
 
 <body>
 
+<header>
+  <h1>MilkrFX</h1>
   <nav>
-    <strong>MilkrFX</strong>
-    <div>
-      <a href="index.html">Home</a>
-      <a href="indicators.html">Indicators</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="disclaimer.html">Disclaimer</a>
-    </div>
+    <a href="index.html">Home</a>
+    <a href="indicators.html">Indicators</a>
+    <a href="disclaimer.html">Disclaimer</a>
   </nav>
+</header>
 
-  <div class="hero">
-    <h1>Rule-Based Trading Systems</h1>
+<section>
+  <h2>Professional Trading Tools</h2>
+
+  <div class="card">
     <p>
-      MilkrFX develops analytical indicators, expert advisors,
-      and signal frameworks built on structure, discipline,
-      and repeatable logic.
+      MilkrFX develops structured, rule-based trading tools, indicators, and automation
+      systems designed to assist traders with market analysis and execution logic.
     </p>
-    <a href="pricing.html">View Pricing</a>
-  </div>
 
-  <a class="whatsapp" href="https://wa.me/27664597933" target="_blank">💬</a>
+    <p>
+      All systems are built from predefined trading rules and are intended for
+      educational and analytical purposes only.
+    </p>
+  </div>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+
+  <div class="card">
+    <h3>Trading Tools & Indicators</h3>
+
+    <p>
+      We provide custom indicators, execution tools, and automation systems
+      focused on market structure, trend behavior, and risk-controlled execution.
+    </p>
+
+    <p style="margin-top: 15px;">
+      <strong>Payments</strong><br>
+      Secure online payments are currently supported via <strong>Skrill</strong>.<br>
+      If Skrill is not available in your region, please contact us directly and we will
+      assist you with an alternative payment option.
+    </p>
+
+    <div style="margin-top: 20px;">
+      <a href="YOUR_SKRILL_PAYMENT_LINK" target="_blank" class="btn">
+        Pay Securely with Skrill
+      </a>
+
+      <a href="https://wa.me/27664597933" target="_blank" class="btn secondary">
+        Contact Us for Alternative Payment
+      </a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Support</h2>
+
+  <div class="card">
+    <p>
+      For questions about our tools, setup assistance, or general enquiries,
+      please contact us directly via WhatsApp.
+    </p>
+
+    <a href="https://wa.me/27664597933" target="_blank" class="btn">
+      WhatsApp Support
+    </a>
+  </div>
+</section>
+
+<footer>
+  <p>
+    © 2025 MilkrFX. All rights reserved.
+  </p>
+  <p>
+    Trading involves risk. No financial advice is provided.
+    Please read our <a href="disclaimer.html">full disclaimer</a>.
+  </p>
+</footer>
 
 </body>
 </html>
