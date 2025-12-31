@@ -7,16 +7,26 @@
   <meta name="description" content="MilkrFX builds rule-based trading indicators, expert advisors, and premium tools for structured market analysis.">
 
   <style>
+    :root {
+      --bg-main: #f4f6f9;
+      --brand-dark: #0b1220;
+      --brand-primary: #1d4ed8;
+      --brand-primary-hover: #1e40af;
+      --text-main: #111827;
+      --text-muted: #4b5563;
+      --card-bg: #ffffff;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background-color: #f4f6f9;
-      color: #111;
+      background-color: var(--bg-main);
+      color: var(--text-main);
     }
 
     /* ===== HEADER ===== */
     header {
-      background: #0f172a;
+      background: var(--brand-dark);
       color: #fff;
       padding: 26px 20px;
     }
@@ -32,22 +42,21 @@
     }
 
     nav a {
-      color: #fff;
+      color: #e5e7eb;
       margin-right: 18px;
       text-decoration: none;
       font-weight: 600;
       font-size: 14px;
-      opacity: 0.9;
     }
 
     nav a:hover {
-      opacity: 1;
+      color: #ffffff;
     }
 
     /* ===== HERO ===== */
     .hero {
       background:
-        linear-gradient(rgba(15,23,42,0.75), rgba(15,23,42,0.75)),
+        linear-gradient(rgba(11,18,32,0.8), rgba(11,18,32,0.8)),
         url("assets/images/hero.jpeg");
       background-size: cover;
       background-position: center;
@@ -71,12 +80,16 @@
     .hero .btn {
       margin-top: 40px;
       padding: 16px 36px;
-      background: #ffffff;
-      color: #0f172a;
+      background: var(--brand-primary);
+      color: #ffffff;
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
       display: inline-block;
+    }
+
+    .hero .btn:hover {
+      background: var(--brand-primary-hover);
     }
 
     /* ===== SECTIONS ===== */
@@ -90,7 +103,7 @@
       font-size: 34px;
       margin-bottom: 40px;
       text-align: center;
-      color: #0f172a;
+      color: var(--brand-dark);
     }
 
     /* ===== SERVICES ===== */
@@ -101,7 +114,7 @@
     }
 
     .card {
-      background: #ffffff;
+      background: var(--card-bg);
       border-radius: 16px;
       padding: 40px 35px;
       box-shadow: 0 14px 40px rgba(0,0,0,0.08);
@@ -117,23 +130,28 @@
     .card h4 {
       margin-top: 0;
       font-size: 22px;
+      color: var(--brand-dark);
     }
 
     .card p {
       font-size: 15px;
       line-height: 1.7;
       margin: 22px 0 28px;
-      color: #333;
+      color: var(--text-muted);
     }
 
     .card a {
       display: inline-block;
       padding: 14px 30px;
-      background: #0f172a;
+      background: var(--brand-primary);
       color: #fff;
       text-decoration: none;
       border-radius: 8px;
       font-weight: bold;
+    }
+
+    .card a:hover {
+      background: var(--brand-primary-hover);
     }
 
     /* ===== FOUNDER ===== */
@@ -149,19 +167,19 @@
     .founder p {
       font-size: 17px;
       line-height: 1.8;
-      color: #333;
+      color: var(--text-muted);
     }
 
     .founder .name {
       margin-top: 28px;
       font-weight: bold;
-      color: #0f172a;
+      color: var(--brand-dark);
     }
 
     /* ===== CTA ===== */
     .cta {
       text-align: center;
-      background: linear-gradient(135deg, #0f172a, #1e293b);
+      background: linear-gradient(135deg, var(--brand-dark), #111827);
       color: #fff;
       padding: 100px 20px;
     }
@@ -169,7 +187,7 @@
     .cta h3 {
       font-size: 36px;
       margin-bottom: 18px;
-      color: #fff;
+      color: #ffffff;
     }
 
     .cta p {
@@ -183,21 +201,24 @@
       display: inline-block;
       margin-top: 35px;
       padding: 18px 40px;
-      background: #ffffff;
-      color: #0f172a;
+      background: var(--brand-primary);
+      color: #ffffff;
       text-decoration: none;
       font-weight: bold;
       border-radius: 8px;
     }
 
+    .cta a:hover {
+      background: var(--brand-primary-hover);
+    }
+
     /* ===== FOOTER ===== */
     footer {
-      background: #0f172a;
-      color: #fff;
+      background: var(--brand-dark);
+      color: #e5e7eb;
       padding: 35px;
       text-align: center;
       font-size: 14px;
-      opacity: 0.9;
     }
 
     /* ===== WHATSAPP FLOAT ===== */
@@ -244,34 +265,23 @@
   <h3>What We Build</h3>
 
   <div class="grid">
-
     <div class="card">
       <h4>Trading Indicators</h4>
-      <p>
-        Precision-built indicators focused on market structure,
-        confirmation, and rule-based decision making.
-      </p>
+      <p>Precision-built indicators focused on market structure and rule-based confirmation.</p>
       <a href="indicators.html">View Indicators</a>
     </div>
 
     <div class="card">
       <h4>Expert Advisors</h4>
-      <p>
-        MT5 Expert Advisors developed with strict execution logic,
-        risk control, and no discretionary behavior.
-      </p>
+      <p>MT5 Expert Advisors with strict execution logic and disciplined risk control.</p>
       <a href="ea.html">View Expert Advisors</a>
     </div>
 
     <div class="card">
       <h4>Custom Development</h4>
-      <p>
-        Bespoke indicators and automation built from your rules,
-        your strategy, and your execution requirements.
-      </p>
+      <p>Bespoke tools built directly from your rules and execution requirements.</p>
       <a href="pricing.html">Request Access</a>
     </div>
-
   </div>
 </section>
 
@@ -306,4 +316,4 @@
 </a>
 
 </body>
-</html>
+  </html>
