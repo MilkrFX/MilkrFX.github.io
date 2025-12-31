@@ -10,14 +10,15 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background-color: #f8f9fb;
+      background-color: #f4f6f9;
       color: #111;
     }
 
+    /* ===== HEADER ===== */
     header {
-      background: #0f0f0f;
+      background: #0f172a;
       color: #fff;
-      padding: 22px;
+      padding: 26px 20px;
     }
 
     header h1 {
@@ -27,7 +28,7 @@
     }
 
     nav {
-      margin-top: 8px;
+      margin-top: 10px;
     }
 
     nav a {
@@ -36,66 +37,92 @@
       text-decoration: none;
       font-weight: 600;
       font-size: 14px;
+      opacity: 0.9;
     }
 
+    nav a:hover {
+      opacity: 1;
+    }
+
+    /* ===== HERO ===== */
     .hero {
       background:
-        linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+        linear-gradient(rgba(15,23,42,0.75), rgba(15,23,42,0.75)),
         url("assets/images/hero.jpeg");
       background-size: cover;
       background-position: center;
       color: #fff;
-      padding: 120px 20px;
+      padding: 140px 20px;
       text-align: center;
     }
 
     .hero h2 {
-      font-size: 44px;
-      margin-bottom: 15px;
+      font-size: 46px;
+      margin-bottom: 18px;
     }
 
     .hero p {
       font-size: 18px;
-      max-width: 720px;
+      max-width: 760px;
       margin: auto;
-      opacity: 0.9;
+      opacity: 0.92;
     }
 
     .hero .btn {
-      margin-top: 35px;
-      padding: 15px 32px;
+      margin-top: 40px;
+      padding: 16px 36px;
       background: #ffffff;
-      color: #0f0f0f;
-      border-radius: 6px;
+      color: #0f172a;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
       display: inline-block;
     }
 
+    /* ===== SECTIONS ===== */
     section {
-      padding: 70px 20px;
-      max-width: 1100px;
+      padding: 90px 20px;
+      max-width: 1150px;
       margin: auto;
     }
 
     h3 {
-      font-size: 32px;
-      margin-bottom: 30px;
+      font-size: 34px;
+      margin-bottom: 40px;
       text-align: center;
+      color: #0f172a;
     }
 
+    /* ===== GRID & CARDS ===== */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
+      gap: 35px;
     }
 
     .card {
-      background: #fff;
-      border-radius: 12px;
-      padding: 35px;
-      box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 40px 35px;
+      box-shadow: 0 14px 40px rgba(0,0,0,0.08);
       text-align: center;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+    }
+
+    .badge {
+      display: inline-block;
+      background: #0f172a;
+      color: #fff;
+      padding: 7px 16px;
+      font-size: 12px;
+      border-radius: 20px;
+      margin-bottom: 18px;
+      letter-spacing: 0.5px;
     }
 
     .card h4 {
@@ -104,10 +131,10 @@
     }
 
     .price {
-      font-size: 34px;
+      font-size: 36px;
       font-weight: bold;
       color: #16a34a;
-      margin: 15px 0 5px;
+      margin: 18px 0 6px;
     }
 
     .old-price {
@@ -116,89 +143,88 @@
       font-size: 15px;
     }
 
-    .badge {
-      display: inline-block;
-      background: #111;
-      color: #fff;
-      padding: 6px 14px;
-      font-size: 12px;
-      border-radius: 20px;
-      margin-bottom: 15px;
-    }
-
     .card p {
       font-size: 15px;
-      line-height: 1.6;
-      margin-bottom: 25px;
+      line-height: 1.7;
+      margin: 25px 0 30px;
+      color: #333;
     }
 
     .card a {
       display: inline-block;
-      padding: 14px 28px;
-      background: #111;
+      padding: 14px 30px;
+      background: #0f172a;
       color: #fff;
       text-decoration: none;
-      border-radius: 6px;
+      border-radius: 8px;
       font-weight: bold;
     }
 
+    /* ===== FOUNDER ===== */
     .founder {
       background: #ffffff;
-      border-radius: 14px;
-      padding: 50px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      border-radius: 18px;
+      padding: 60px;
+      box-shadow: 0 16px 45px rgba(0,0,0,0.08);
+      max-width: 850px;
+      margin: auto;
     }
 
     .founder p {
-      font-size: 16px;
-      line-height: 1.7;
+      font-size: 17px;
+      line-height: 1.8;
       color: #333;
     }
 
     .founder .name {
-      margin-top: 25px;
+      margin-top: 28px;
       font-weight: bold;
+      color: #0f172a;
     }
 
+    /* ===== CTA ===== */
     .cta {
       text-align: center;
-      background: #111;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
       color: #fff;
-      padding: 80px 20px;
+      padding: 100px 20px;
     }
 
     .cta h3 {
-      font-size: 34px;
-      margin-bottom: 15px;
+      font-size: 36px;
+      margin-bottom: 18px;
+      color: #fff;
     }
 
     .cta p {
       font-size: 18px;
-      max-width: 700px;
+      max-width: 720px;
       margin: auto;
       opacity: 0.9;
     }
 
     .cta a {
       display: inline-block;
-      margin-top: 30px;
-      padding: 16px 36px;
-      background: #fff;
-      color: #111;
+      margin-top: 35px;
+      padding: 18px 40px;
+      background: #ffffff;
+      color: #0f172a;
       text-decoration: none;
       font-weight: bold;
-      border-radius: 6px;
+      border-radius: 8px;
     }
 
+    /* ===== FOOTER ===== */
     footer {
-      background: #0f0f0f;
+      background: #0f172a;
       color: #fff;
-      padding: 30px;
+      padding: 35px;
       text-align: center;
       font-size: 14px;
+      opacity: 0.9;
     }
 
-    /* WHATSAPP FLOAT */
+    /* ===== WHATSAPP FLOAT ===== */
     .whatsapp-float {
       position: fixed;
       width: 56px;
@@ -209,7 +235,7 @@
       color: #fff;
       border-radius: 50%;
       font-size: 30px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.35);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -304,4 +330,4 @@
 </a>
 
 </body>
-</html>
+               </html>
