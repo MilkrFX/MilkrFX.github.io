@@ -40,36 +40,42 @@
 
         h1 {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
 
+        /* WHITE INDICATOR CARD */
         .indicator {
-            background: rgba(255,255,255,0.06);
-            padding: 28px;
-            border-radius: 14px;
-            margin-bottom: 40px;
+            background: #ffffff;
+            padding: 32px;
+            border-radius: 16px;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.35);
         }
 
         .indicator h3 {
             margin-top: 0;
+            color: #0b1530;
         }
 
-        .indicator img {
-            width: 100%;
-            max-width: 100%;
-            border-radius: 10px;
-            margin-top: 18px;
-            box-shadow: 0 0 25px rgba(0,0,0,0.45);
-        }
-
-        p {
-            color: #cbd2ff;
+        .indicator p {
+            color: #333333;
             line-height: 1.6;
+            max-width: 800px;
+        }
+
+        /* IMAGE CONTROL */
+        .indicator img {
+            display: block;
+            width: 100%;
+            max-width: 720px;   /* <<< THIS MAKES IT PROFESSIONAL SIZE */
+            margin: 30px auto 0;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
         }
 
         .note {
             text-align: center;
-            margin-top: 40px;
+            margin-top: 60px;
             font-size: 14px;
             color: #aab2ff;
         }
@@ -92,8 +98,9 @@
         <div class="indicator">
             <h3>Market Structure Indicator</h3>
             <p>
-                Identifies key structural shifts, swing highs and lows,
-                and directional bias to support rule-based decision making.
+                Identifies break of structure, change of character,
+                and swing high/low relationships to define directional bias
+                and structural context.
             </p>
             <img src="images/indicator-structure.jpeg" alt="Market Structure Indicator">
         </div>
@@ -102,8 +109,9 @@
         <div class="indicator">
             <h3>Execution Signal Indicator</h3>
             <p>
-                Highlights execution signals aligned with predefined
-                trading conditions. Designed for confirmation — not prediction.
+                Highlights rule-based buy and sell opportunities aligned
+                with predefined structural conditions and execution zones.
+                Designed for confirmation — not prediction.
             </p>
             <img src="images/indicator-signals.jpeg" alt="Execution Signal Indicator">
         </div>
