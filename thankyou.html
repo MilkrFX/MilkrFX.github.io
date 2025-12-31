@@ -39,23 +39,24 @@
 
   <script>
     const params = new URLSearchParams(window.location.search);
-    const product = params.get("product");
+    let product = params.get("product") || "";
+
+    // Normalize product name (handle + and encoding issues)
+    product = decodeURIComponent(product.replace(/\+/g, " ")).trim();
 
     let redirectPage = "https://milkrfx.github.io";
 
     if (product === "VIP Signals") {
       redirectPage = "https://milkrfx.github.io/deliver-vip.html";
-    }
-    if (product === "MilkrFX Indicator") {
+    } else if (product === "MilkrFX Indicator") {
       redirectPage = "https://milkrfx.github.io/deliver-indicator.html";
-    }
-    if (product === "Expert Advisor") {
+    } else if (product === "Expert Advisor") {
       redirectPage = "https://milkrfx.github.io/deliver-ea.html";
     }
 
     setTimeout(() => {
       window.location.href = redirectPage;
-    }, 3500);
+    }, 3000);
   </script>
 </head>
 
