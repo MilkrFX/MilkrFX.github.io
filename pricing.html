@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MilkrFX | Pricing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(180deg, #05080f, #0b1530);
+            color: #ffffff;
+        }
+
+        /* NAV */
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 18px;
+            background: rgba(0,0,0,0.4);
+            backdrop-filter: blur(6px);
+        }
+
+        .nav a {
+            color: #cfd6ff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .nav a:hover {
+            color: #7aa2ff;
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        /* PRICING GRID */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .price-card {
+            background: rgba(255,255,255,0.06);
+            border-radius: 14px;
+            padding: 28px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+
+        .price-card h2 {
+            margin-top: 0;
+            color: #ffffff;
+        }
+
+        .price {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #7aa2ff;
+        }
+
+        .price small {
+            font-size: 16px;
+            color: #cbd2ff;
+        }
+
+        .features {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .features li {
+            margin-bottom: 10px;
+            color: #cbd2ff;
+        }
+
+        .cta {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 24px;
+            border-radius: 8px;
+            background: #7aa2ff;
+            color: #05080f;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .cta:hover {
+            background: #9bb5ff;
+        }
+
+        /* PAYMENT INFO */
+        .payment-box {
+            margin-top: 60px;
+            background: rgba(255,255,255,0.05);
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        .payment-box p {
+            color: #cbd2ff;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #7f89c7;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="indicators.html">Indicators</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="disclaimer.html">Disclaimer</a>
+    </div>
+
+    <div class="container">
+        <h1>Pricing Plans</h1>
+
+        <div class="pricing-grid">
+
+            <!-- SIGNALS -->
+            <div class="price-card">
+                <h2>Signals Access</h2>
+                <div class="price">R499 <small>/ month</small></div>
+                <ul class="features">
+                    <li>✔ Institutional-style trade ideas</li>
+                    <li>✔ Market structure & execution logic</li>
+                    <li>✔ Risk-aware trade planning</li>
+                    <li>✔ VIP WhatsApp group access</li>
+                    <li>✔ No copy trading – manual execution</li>
+                </ul>
+                <a class="cta" href="https://wa.me/27664597933">Join via WhatsApp</a>
+            </div>
+
+            <!-- INDICATORS -->
+            <div class="price-card">
+                <h2>Indicators Package</h2>
+                <div class="price">R999 <small>/ once-off</small></div>
+                <ul class="features">
+                    <li>✔ Market Structure Indicator</li>
+                    <li>✔ BOS & CHoCH detection</li>
+                    <li>✔ Supply & Demand zones</li>
+                    <li>✔ Clean, non-repainting visuals</li>
+                    <li>✔ MT5 compatible</li>
+                </ul>
+                <a class="cta" href="https://wa.me/27664597933">Request Access</a>
+            </div>
+
+            <!-- EA -->
+            <div class="price-card">
+                <h2>Expert Advisor (EA)</h2>
+                <div class="price">Coming Soon</div>
+                <ul class="features">
+                    <li>✔ Rule-based execution engine</li>
+                    <li>✔ No martingale or grid logic</li>
+                    <li>✔ Risk controls built-in</li>
+                    <li>✔ Strategy derived from indicators</li>
+                    <li>✔ Fully transparent logic</li>
+                </ul>
+                <a class="cta" href="https://wa.me/27664597933">Get Notified</a>
+            </div>
+
+        </div>
+
+        <!-- PAYMENT METHODS -->
+        <div class="payment-box">
+            <h2>Payment Methods</h2>
+            <p>
+                We accept payments via <strong>Ozow (Instant EFT – South Africa)</strong>,
+                <strong>Bank Transfer (EFT)</strong>, <strong>Skrill</strong>,
+                and <strong>Bank Cards (Visa / Mastercard)</strong>.
+                <br><br>
+                Payment details are shared privately after confirmation to ensure
+                secure and accurate processing.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        © 2025 MilkrFX. All tools are analytical and educational only.
+    </footer>
+
+</body>
+</html>
