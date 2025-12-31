@@ -4,283 +4,201 @@
   <meta charset="UTF-8">
   <title>MilkrFX | Rule-Based Trading Tools</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="MilkrFX builds rule-based trading indicators, expert advisors, and premium tools for structured market analysis.">
+  <meta name="description" content="MilkrFX provides professional rule-based MT5 indicators and expert advisors focused on structure, discipline, and risk control.">
 
   <style>
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background-color: #f6f7fb;
-      color: #111;
+      background-color: #f2f4f7;
+      color: #222;
     }
 
-    /* ===== HEADER ===== */
-    header {
-      background: #0b0b0f;
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      background: #0d1117;
       color: #fff;
-      padding: 22px 28px;
+      padding: 16px 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
-    header h1 {
+    .navbar h1 {
       margin: 0;
-      font-size: 24px;
-      letter-spacing: 1px;
-      font-weight: 700;
+      font-size: 22px;
+      font-weight: bold;
     }
 
-    nav a {
-      color: #fff;
-      margin-left: 18px;
-      text-decoration: none;
-      font-weight: 600;
+    .nav-links a {
+      margin-left: 20px;
       font-size: 14px;
-      opacity: 0.9;
+      color: #c9d1d9;
     }
 
-    nav a:hover {
-      opacity: 1;
-      color: #ff3b3b;
+    .nav-links a:hover {
+      color: #ffffff;
     }
 
-    /* ===== HERO ===== */
+    /* HERO */
     .hero {
-      background:
-        linear-gradient(
-          rgba(5, 5, 10, 0.75),
-          rgba(5, 5, 10, 0.85)
-        ),
-        url("assets/images/hero.jpeg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      color: #fff;
-      padding: 140px 20px;
+      background: linear-gradient(135deg, #0d1117, #161b22);
+      color: #ffffff;
+      padding: 80px 20px;
       text-align: center;
     }
 
     .hero h2 {
-      font-size: 46px;
-      margin-bottom: 18px;
-      letter-spacing: 0.5px;
+      font-size: 38px;
+      max-width: 900px;
+      margin: 0 auto 20px;
     }
 
     .hero p {
-      font-size: 19px;
-      max-width: 760px;
-      margin: auto;
-      opacity: 0.9;
-      line-height: 1.6;
-    }
-
-    .hero .btn {
-      margin-top: 40px;
-      padding: 15px 34px;
-      background: #ff3b3b;
-      color: #fff;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      display: inline-block;
-      box-shadow: 0 8px 20px rgba(255,59,59,0.35);
-    }
-
-    .hero .btn:hover {
-      background: #e83232;
-    }
-
-    /* ===== SECTIONS ===== */
-    section {
-      padding: 70px 20px;
-      max-width: 1150px;
-      margin: auto;
-    }
-
-    h3 {
-      font-size: 30px;
-      margin-bottom: 30px;
-      text-align: center;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 28px;
-    }
-
-    .card {
-      background: #fff;
-      border-radius: 12px;
-      padding: 34px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-      transition: transform 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-    }
-
-    .card h4 {
-      margin-top: 0;
-      font-size: 21px;
-      margin-bottom: 12px;
-    }
-
-    .card p {
-      font-size: 15.5px;
-      line-height: 1.7;
-      opacity: 0.95;
-    }
-
-    /* ===== PHILOSOPHY ===== */
-    .philosophy {
+      font-size: 18px;
       max-width: 850px;
-      margin: auto;
-    }
-
-    /* ===== CTA ===== */
-    .cta {
-      text-align: center;
-      background: linear-gradient(135deg, #0b0b0f, #151520);
-      color: #fff;
-      padding: 80px 20px;
-    }
-
-    .cta h3 {
-      font-size: 34px;
-      margin-bottom: 18px;
-    }
-
-    .cta p {
-      font-size: 17px;
-      max-width: 720px;
-      margin: auto;
-      opacity: 0.9;
+      margin: 0 auto 30px;
+      color: #c9d1d9;
       line-height: 1.6;
     }
 
-    .cta a {
+    .hero-buttons a {
       display: inline-block;
-      margin-top: 30px;
-      padding: 15px 34px;
-      background: #ff3b3b;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
+      margin: 10px;
+      padding: 14px 28px;
       border-radius: 6px;
-      box-shadow: 0 8px 20px rgba(255,59,59,0.35);
+      font-size: 15px;
+      font-weight: bold;
     }
 
-    /* ===== FOOTER ===== */
-    footer {
-      background: #0b0b0f;
-      color: #fff;
-      padding: 35px 20px;
+    .btn-primary {
+      background: #238636;
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: #2ea043;
+    }
+
+    .btn-secondary {
+      border: 1px solid #30363d;
+      color: #c9d1d9;
+    }
+
+    .btn-secondary:hover {
+      background: #21262d;
+    }
+
+    /* SERVICES */
+    .services {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .service-card {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
       text-align: center;
+    }
+
+    .service-card h3 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    .service-card p {
       font-size: 14px;
-      opacity: 0.9;
+      color: #555;
+      line-height: 1.5;
     }
 
-    footer a {
-      color: #ff3b3b;
-      text-decoration: underline;
+    .service-card a {
+      display: inline-block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #238636;
+      font-size: 14px;
     }
 
-    /* ===== MOBILE ===== */
-    @media (max-width: 600px) {
-      .hero h2 {
-        font-size: 34px;
-      }
+    /* FOOTER */
+    footer {
+      background: #0d1117;
+      color: #8b949e;
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>MilkrFX</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="pricing.html">Pricing</a>
-    <a href="indicators.html">Indicators</a>
-    <a href="ea.html">Expert Advisors</a>
-    <a href="disclaimer.html">Disclaimer</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <h2>Rule-Based Trading Tools</h2>
-  <p>
-    Tools built on structure, discipline, and execution logic —
-    not hype, not promises.
-  </p>
-  <a href="pricing.html" class="btn">View Pricing & Access</a>
-</section>
-
-<section>
-  <h3>What We Build</h3>
-
-  <div class="grid">
-    <div class="card">
-      <h4>Trading Indicators</h4>
-      <p>
-        Custom indicators designed to highlight market structure,
-        trend behavior, and execution zones using predefined logic.
-      </p>
-    </div>
-
-    <div class="card">
-      <h4>Expert Advisors (EA)</h4>
-      <p>
-        Automated trading systems built from strict trading rules.
-        No discretionary logic, no signal guessing.
-      </p>
-    </div>
-
-    <div class="card">
-      <h4>VIP Access</h4>
-      <p>
-        Private access to premium tools, updates, and structured
-        market insights for advanced users.
-      </p>
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <h1>MilkrFX</h1>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="indicators.html">Indicators</a>
+      <a href="disclaimer.html">Disclaimer</a>
     </div>
   </div>
-</section>
 
-<section class="philosophy">
-  <h3>Our Philosophy</h3>
-
-  <div class="card">
+  <!-- HERO SECTION (OPTION 3) -->
+  <section class="hero">
+    <h2>Rule-Based Trading Tools Built for Discipline</h2>
     <p>
-      MilkrFX tools are built around rule-based execution, risk awareness,
-      and market structure understanding. We do not provide financial advice,
-      manage accounts, or guarantee performance.
+      Professional MT5 indicators and expert advisors designed around market structure,
+      risk control, and consistency — not promises or hype.
     </p>
-    <p>
-      Every product is designed for educational and analytical use,
-      allowing traders to make their own informed decisions.
-    </p>
-  </div>
-</section>
+    <div class="hero-buttons">
+      <a href="indicators.html" class="btn-primary">View Indicators</a>
+      <a href="#services" class="btn-secondary">How It Works</a>
+    </div>
+  </section>
 
-<section class="cta">
-  <h3>Get Started with MilkrFX</h3>
-  <p>
-    Explore our pricing and access options for indicators,
-    expert advisors, and VIP tools.
-  </p>
-  <a href="pricing.html">Go to Pricing</a>
-</section>
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="service-card">
+      <h3>Indicators</h3>
+      <p>
+        Visual MT5 indicators built to highlight structure, trends,
+        and key decision areas using objective rules.
+      </p>
+      <a href="indicators.html">Explore Indicators →</a>
+    </div>
 
-<footer>
-  <p>© 2025 MilkrFX. All rights reserved.</p>
-  <p>
-    Trading involves risk. No guarantees are provided.
-    Please read our <a href="disclaimer.html">full disclaimer</a>.
-  </p>
-</footer>
+    <div class="service-card">
+      <h3>Expert Advisors</h3>
+      <p>
+        Automated systems based strictly on predefined logic,
+        execution discipline, and risk parameters.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <h3>Rule-Based Systems</h3>
+      <p>
+        Every tool follows a clear framework focused on consistency,
+        repeatability, and controlled risk.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 MilkrFX. All rights reserved. | No financial advice provided.
+  </footer>
 
 </body>
 </html>
