@@ -4,71 +4,100 @@
   <meta charset="UTF-8">
   <title>Payment Successful | MilkrFX</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #ffffff;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f5f6fa;
+      color: #111;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       text-align: center;
     }
+
     .card {
-      background: #020617;
-      padding: 30px;
-      border-radius: 12px;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 14px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
       max-width: 420px;
-      box-shadow: 0 0 30px rgba(0,0,0,0.6);
+      width: 100%;
     }
+
     h1 {
-      color: #22c55e;
-      margin-bottom: 10px;
+      margin-top: 0;
+      font-size: 28px;
+      color: #16a34a;
     }
+
     p {
-      margin: 10px 0;
-      opacity: 0.9;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 14px 28px;
+      background: #16a34a;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .btn:hover {
+      background: #15803d;
+    }
+
+    .small {
+      margin-top: 15px;
+      font-size: 13px;
+      color: #666;
     }
   </style>
 </head>
+
 <body>
 
-  <div class="card">
-    <h1>Payment Successful</h1>
-    <p>Thank you for your purchase.</p>
-    <p id="productText"></p>
-    <p>You are being redirected to WhatsApp to complete delivery.</p>
+<div class="card">
+  <h1>Payment Successful</h1>
+  <p>
+    Thank you for your purchase.<br>
+    You will now be redirected to WhatsApp to receive your access and onboarding.
+  </p>
+
+  <a id="waLink" class="btn" href="#" target="_blank">
+    Open WhatsApp
+  </a>
+
+  <div class="small">
+    If WhatsApp does not open automatically,<br>
+    please click the button above.
   </div>
+</div>
 
-  <script>
-    // Read product from URL
-    const params = new URLSearchParams(window.location.search);
-    const product = params.get("product") || "Unknown Product";
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const product = params.get("product") || "MilkrFX Product";
 
-    // Show product on page
-    document.getElementById("productText").innerText =
-      "Product purchased: " + product;
+  const phoneNumber = "27664597933"; // MilkrFX WhatsApp number
+  const message = `Hi MilkrFX, I have completed payment for: ${product}. Please assist with access.`;
 
-    // 🔹 LOG PURCHASE TO GOOGLE SHEETS
-    fetch(
-      "https://script.google.com/macros/s/AKfycbzEvAxClZa8eJ-vaEPrZiDY8SE0SY4iiAWZ8XbQFRBMqelT2yHGFwO1OHRzv3g_X-UI_Q/exec" +
-      "?product=" + encodeURIComponent(product) +
-      "&source=YOCO"
-    );
+  const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
-    // 🔹 REDIRECT TO WHATSAPP AFTER 4 SECONDS
-    setTimeout(() => {
-      const message =
-        "Hi MilkrFX, I have completed payment for: " + product +
-        ". Please assist with delivery.";
+  document.getElementById("waLink").href = waUrl;
 
-      const whatsappUrl =
-        "https://wa.me/27664597933?text=" + encodeURIComponent(message);
-
-      window.location.href = whatsappUrl;
-    }, 4000);
-  </script>
+  // Auto-open WhatsApp after short delay
+  setTimeout(() => {
+    window.location.href = waUrl;
+  }, 1500);
+</script>
 
 </body>
 </html>
