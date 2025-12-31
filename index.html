@@ -50,7 +50,7 @@
     }
 
     .hero h2 {
-      font-size: 42px;
+      font-size: 44px;
       margin-bottom: 15px;
     }
 
@@ -63,8 +63,8 @@
 
     .hero .btn {
       margin-top: 35px;
-      padding: 14px 28px;
-      background: #fff;
+      padding: 15px 32px;
+      background: #ffffff;
       color: #0f0f0f;
       border-radius: 6px;
       text-decoration: none;
@@ -73,37 +73,73 @@
     }
 
     section {
-      padding: 60px 20px;
+      padding: 70px 20px;
       max-width: 1100px;
       margin: auto;
     }
 
     h3 {
-      font-size: 28px;
-      margin-bottom: 25px;
+      font-size: 32px;
+      margin-bottom: 30px;
+      text-align: center;
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
+      gap: 30px;
     }
 
     .card {
       background: #fff;
-      border-radius: 10px;
-      padding: 30px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      border-radius: 12px;
+      padding: 35px;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+      text-align: center;
     }
 
     .card h4 {
       margin-top: 0;
-      font-size: 20px;
+      font-size: 22px;
+    }
+
+    .price {
+      font-size: 34px;
+      font-weight: bold;
+      color: #16a34a;
+      margin: 15px 0 5px;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: #888;
+      font-size: 15px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #111;
+      color: #fff;
+      padding: 6px 14px;
+      font-size: 12px;
+      border-radius: 20px;
+      margin-bottom: 15px;
     }
 
     .card p {
       font-size: 15px;
       line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .card a {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #111;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
     }
 
     .founder {
@@ -128,16 +164,16 @@
       text-align: center;
       background: #111;
       color: #fff;
-      padding: 60px 20px;
+      padding: 80px 20px;
     }
 
     .cta h3 {
-      font-size: 32px;
+      font-size: 34px;
       margin-bottom: 15px;
     }
 
     .cta p {
-      font-size: 17px;
+      font-size: 18px;
       max-width: 700px;
       margin: auto;
       opacity: 0.9;
@@ -145,8 +181,8 @@
 
     .cta a {
       display: inline-block;
-      margin-top: 25px;
-      padding: 14px 30px;
+      margin-top: 30px;
+      padding: 16px 36px;
       background: #fff;
       color: #111;
       text-decoration: none;
@@ -162,12 +198,7 @@
       font-size: 14px;
     }
 
-    footer a {
-      color: #fff;
-      text-decoration: underline;
-    }
-
-    /* WHATSAPP FLOATING BUBBLE */
+    /* WHATSAPP FLOAT */
     .whatsapp-float {
       position: fixed;
       width: 56px;
@@ -177,18 +208,13 @@
       background-color: #25D366;
       color: #fff;
       border-radius: 50%;
-      text-align: center;
       font-size: 30px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      z-index: 1000;
       display: flex;
       align-items: center;
       justify-content: center;
       text-decoration: none;
-    }
-
-    .whatsapp-float:hover {
-      background-color: #1ebe5d;
+      z-index: 1000;
     }
   </style>
 </head>
@@ -208,28 +234,42 @@
 
 <section class="hero">
   <h2>Rule-Based Trading Tools</h2>
-  <p>
-    Tools built on structure, discipline, and execution logic —
-    not hype, not promises.
-  </p>
-  <a href="pricing.html" class="btn">View Early Bird Access</a>
+  <p>Built on structure, discipline, and execution logic — not hype.</p>
+  <a href="#earlybird" class="btn">Get Early Bird Access</a>
 </section>
 
-<section>
-  <h3>What We Build</h3>
+<section id="earlybird">
+  <h3>Early Bird Access (Limited)</h3>
+
   <div class="grid">
+
     <div class="card">
-      <h4>Trading Indicators</h4>
-      <p>Custom indicators designed to highlight structure and execution zones.</p>
+      <span class="badge">FIRST 10 CLIENTS</span>
+      <h4>MilkrFX Indicator</h4>
+      <div class="price">R500</div>
+      <div class="old-price">Future Price: R950</div>
+      <p>Market structure & execution confirmation indicator.</p>
+      <a href="pricing.html">Get Access</a>
     </div>
+
     <div class="card">
-      <h4>Expert Advisors</h4>
-      <p>Automated systems built from strict, rule-based execution logic.</p>
+      <span class="badge">FIRST 10 CLIENTS</span>
+      <h4>Expert Advisor</h4>
+      <div class="price">R850</div>
+      <div class="old-price">Future Price: R1,499</div>
+      <p>Rule-based MT5 Expert Advisor with strict execution logic.</p>
+      <a href="pricing.html">Get Access</a>
     </div>
+
     <div class="card">
+      <span class="badge">FIRST 10 CLIENTS</span>
       <h4>VIP Access</h4>
-      <p>Private access to premium tools and structured insights.</p>
+      <div class="price">R250</div>
+      <div class="old-price">Future Price: R500</div>
+      <p>Premium access to tools, insights, and private releases.</p>
+      <a href="pricing.html">Get Access</a>
     </div>
+
   </div>
 </section>
 
@@ -237,29 +277,25 @@
   <h3>Founder’s Message</h3>
   <div class="founder">
     <p>
-      MilkrFX was created to move away from hype-driven trading
-      and return to structured execution, rules, and discipline.
+      MilkrFX was created to eliminate hype and focus on structured,
+      rule-based execution that traders can trust.
     </p>
-    <p class="name">
-      — Jacques<br>
-      Founder, MilkrFX
-    </p>
+    <p class="name">— Jacques<br>Founder, MilkrFX</p>
   </div>
 </section>
 
 <section class="cta">
-  <h3>Early Bird Access Now Open</h3>
-  <p>Founding pricing available for a limited number of clients.</p>
-  <a href="pricing.html">View Pricing</a>
+  <h3>Early Bird Spots Are Limited</h3>
+  <p>Once filled, pricing increases permanently.</p>
+  <a href="pricing.html">Secure Your Spot</a>
 </section>
 
 <footer>
-  <p>© 2025 MilkrFX. All rights reserved.</p>
+  © 2025 MilkrFX. All rights reserved.
 </footer>
 
-<!-- WHATSAPP BUTTON -->
 <a
-  href="https://wa.me/27664597933?text=Hi%20MilkrFX%2C%20I%20would%20like%20more%20information."
+  href="https://wa.me/27664597933?text=Hi%20MilkrFX%2C%20I%20would%20like%20Early%20Bird%20Access."
   class="whatsapp-float"
   target="_blank"
   aria-label="Chat on WhatsApp"
