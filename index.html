@@ -38,15 +38,25 @@
       font-size: 14px;
     }
 
+    /* ===== HERO WITH IMAGE ===== */
     .hero {
-      background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+      background:
+        linear-gradient(
+          rgba(0, 0, 0, 0.65),
+          rgba(0, 0, 0, 0.65)
+        ),
+        url("assets/images/hero.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
       color: #fff;
-      padding: 80px 20px;
+      padding: 120px 20px;
       text-align: center;
     }
 
     .hero h2 {
-      font-size: 40px;
+      font-size: 42px;
       margin-bottom: 15px;
     }
 
@@ -58,7 +68,7 @@
     }
 
     .hero .btn {
-      margin-top: 30px;
+      margin-top: 35px;
       padding: 14px 28px;
       background: #fff;
       color: #0f0f0f;
@@ -163,9 +173,8 @@
 <section class="hero">
   <h2>Rule-Based Trading Tools</h2>
   <p>
-    MilkrFX develops structured trading indicators, expert advisors,
-    and premium tools designed for disciplined market analysis
-    and execution logic.
+    Tools built on structure, discipline, and execution logic —
+    not hype, not promises.
   </p>
 
   <a href="pricing.html" class="btn">View Pricing & Access</a>
