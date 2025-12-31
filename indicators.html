@@ -43,10 +43,10 @@
             margin-bottom: 60px;
         }
 
-        /* GRID FOR DESKTOP */
+        /* RESPONSIVE GRID (LAPTOP SAFE) */
         .indicator-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
             gap: 40px;
         }
 
@@ -71,7 +71,7 @@
 
         .indicator img {
             width: 100%;
-            max-width: 480px;   /* <<< PRO SIZE */
+            max-width: 460px;
             display: block;
             margin: 20px auto 0;
             border-radius: 10px;
@@ -85,8 +85,8 @@
             color: #aab2ff;
         }
 
-        /* MOBILE STACK */
-        @media (max-width: 900px) {
+        /* MOBILE ONLY */
+        @media (max-width: 520px) {
             .indicator-grid {
                 grid-template-columns: 1fr;
             }
@@ -96,7 +96,6 @@
 
 <body>
 
-    <!-- Navigation -->
     <div class="nav">
         <a href="index.html">Home</a>
         <a href="indicators.html">Indicators</a>
@@ -108,18 +107,16 @@
 
         <div class="indicator-grid">
 
-            <!-- Indicator 1 -->
             <div class="indicator">
                 <h3>Market Structure Indicator</h3>
                 <p>
                     Identifies break of structure, change of character,
-                    and swing high/low relationships to define market bias
-                    and structural context.
+                    and swing high/low relationships to define directional
+                    bias and structural context.
                 </p>
                 <img src="images/indicator-structure.jpeg" alt="Market Structure Indicator">
             </div>
 
-            <!-- Indicator 2 -->
             <div class="indicator">
                 <h3>Execution Signal Indicator</h3>
                 <p>
