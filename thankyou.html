@@ -5,58 +5,67 @@
   <title>Payment Successful | MilkrFX</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <script>
-    // CHANGE THIS MESSAGE PER PRODUCT USING URL PARAM
-    const params = new URLSearchParams(window.location.search);
-    const product = params.get("product") || "a MilkrFX product";
-
-    const message = encodeURIComponent(
-      `Hi MilkrFX, I have successfully purchased ${product}. My payment is complete.`
-    );
-
-    // Redirect to WhatsApp after 3 seconds
-    setTimeout(() => {
-      window.location.href = `https://wa.me/27664597933?text=${message}`;
-    }, 3000);
-  </script>
-
   <style>
     body {
+      margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: #f8f9fb;
+      background: #0f172a;
+      color: #ffffff;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       height: 100vh;
       text-align: center;
-      color: #111;
     }
 
     .box {
-      background: #fff;
+      background: #111827;
       padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-      max-width: 420px;
+      border-radius: 12px;
+      max-width: 500px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
     }
 
     h1 {
-      color: #00c853;
-      margin-bottom: 10px;
+      margin-top: 0;
+      color: #22c55e;
     }
 
     p {
-      font-size: 15px;
-      color: #444;
+      font-size: 16px;
+      line-height: 1.6;
     }
   </style>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const product = params.get("product");
+
+    let redirectPage = "https://milkrfx.github.io";
+
+    if (product === "VIP Signals") {
+      redirectPage = "https://milkrfx.github.io/deliver-vip.html";
+    }
+    if (product === "MilkrFX Indicator") {
+      redirectPage = "https://milkrfx.github.io/deliver-indicator.html";
+    }
+    if (product === "Expert Advisor") {
+      redirectPage = "https://milkrfx.github.io/deliver-ea.html";
+    }
+
+    setTimeout(() => {
+      window.location.href = redirectPage;
+    }, 3500);
+  </script>
 </head>
 
 <body>
   <div class="box">
     <h1>Payment Successful</h1>
-    <p>Thank you for your purchase.</p>
-    <p>You are being redirected to WhatsApp to complete delivery.</p>
+    <p>
+      Thank you for your purchase.<br><br>
+      You are being redirected to your delivery page.
+    </p>
   </div>
 </body>
 </html>
