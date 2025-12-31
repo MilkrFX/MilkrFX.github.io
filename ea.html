@@ -1,95 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>MilkrFX Expert Advisor | Automated MT5 Trading</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <title>Expert Advisors | MilkrFX</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f5f5f5;
-      color: #111;
-      line-height: 1.6;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
     }
 
     header {
-      background: linear-gradient(135deg, #0f172a, #020617);
-      color: #fff;
-      padding: 70px 20px;
+      padding: 20px;
+      background: #020617;
       text-align: center;
     }
 
     header h1 {
-      font-size: 38px;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 18px;
-      max-width: 800px;
-      margin: auto;
-      opacity: 0.9;
+      margin: 0;
+      color: #22c55e;
     }
 
     .container {
       max-width: 1100px;
-      margin: 60px auto;
+      margin: 40px auto;
       padding: 0 20px;
     }
 
-    .section {
-      background: #fff;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      margin-bottom: 40px;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
     }
 
-    .section h2 {
+    .card {
+      background: #020617;
+      border-radius: 14px;
+      padding: 25px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.5);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card h2 {
       margin-top: 0;
-      color: #0f172a;
-      font-size: 28px;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    ul li {
-      margin-bottom: 10px;
-    }
-
-    .cta {
-      text-align: center;
-      padding: 50px 20px;
-      background: #0f172a;
-      color: #fff;
-      border-radius: 12px;
-    }
-
-    .cta h2 {
-      margin-top: 0;
-      font-size: 32px;
+      color: #22c55e;
     }
 
     .price {
-      font-size: 40px;
-      color: #22c55e;
+      font-size: 22px;
+      margin: 15px 0;
       font-weight: bold;
-      margin: 20px 0;
+    }
+
+    ul {
+      padding-left: 18px;
+      line-height: 1.6;
     }
 
     .buy-btn {
-      display: inline-block;
-      padding: 16px 34px;
+      margin-top: 20px;
+      padding: 14px;
+      text-align: center;
       background: #22c55e;
-      color: #fff;
+      color: #020617;
       text-decoration: none;
-      font-size: 18px;
-      border-radius: 8px;
       font-weight: bold;
+      border-radius: 8px;
+      transition: 0.3s;
     }
 
     .buy-btn:hover {
@@ -98,91 +80,69 @@
 
     footer {
       text-align: center;
-      padding: 25px;
+      padding: 20px;
       font-size: 14px;
-      color: #666;
+      opacity: 0.6;
     }
   </style>
 </head>
-
 <body>
 
 <header>
-  <h1>MilkrFX Expert Advisor</h1>
-  <p>
-    A professional, rule-based MT5 Expert Advisor designed for disciplined,
-    structured, and emotion-free trading.
-  </p>
+  <h1>MilkrFX Expert Advisors</h1>
+  <p>Rule-based automated trading systems for MetaTrader 5</p>
 </header>
 
 <div class="container">
 
-  <div class="section">
-    <h2>What Is the MilkrFX EA?</h2>
-    <p>
-      The MilkrFX Expert Advisor is a fully automated trading system for MetaTrader 5.
-      It executes trades strictly based on predefined rules, eliminating emotional
-      decision-making and inconsistent execution.
-    </p>
-    <p>
-      This EA is designed for traders who value structure, risk management, and
-      repeatable execution over gambling or over-optimization.
-    </p>
-  </div>
+  <div class="grid">
 
-  <div class="section">
-    <h2>Core Features</h2>
-    <ul>
-      <li>Rule-based automated execution</li>
-      <li>Trend and structure-driven logic</li>
-      <li>Built-in risk management rules</li>
-      <li>Designed for MT5 (MetaTrader 5)</li>
-      <li>No martingale or grid strategies</li>
-      <li>No account management or signal copying</li>
-    </ul>
-  </div>
+    <!-- EA 1 -->
+    <div class="card">
+      <h2>MilkrFX Trend Execution EA</h2>
 
-  <div class="section">
-    <h2>Who Is This EA For?</h2>
-    <ul>
-      <li>Traders who want consistency over hype</li>
-      <li>Users who understand trading risk</li>
-      <li>Those looking to automate a rules-based approach</li>
-      <li>MT5 traders seeking disciplined execution</li>
-    </ul>
-  </div>
+      <ul>
+        <li>Rule-based automated execution</li>
+        <li>Designed for MT5</li>
+        <li>Market structure & trend logic</li>
+        <li>Manual risk control</li>
+        <li>No martingale or grid</li>
+      </ul>
 
-  <div class="section">
-    <h2>Important Disclaimer</h2>
-    <p>
-      Trading involves risk. The MilkrFX Expert Advisor does not guarantee profits
-      and is not a get-rich-quick system. Past performance is not indicative of
-      future results.
-    </p>
-    <p>
-      This product does not include account management or financial advice.
-    </p>
-  </div>
+      <div class="price">R1499</div>
 
-  <div class="cta">
-    <h2>Get the MilkrFX Expert Advisor</h2>
-    <div class="price">R1,499</div>
+      <a class="buy-btn"
+         href="https://pay.yoco.com/r/7yqglL&redirectOnPaymentSuccess=https://milkrfx.github.io/thankyou.html?product=Trend%20Execution%20EA">
+        Buy Now
+      </a>
+    </div>
 
-    <a class="buy-btn"
-       href="https://pay.yoco.com/r/7yqglL&redirectOnPaymentSuccess=https%3A%2F%2Fmilkrfx.github.io%2Fthankyou.html%3Fproduct%3DExpert%20Advisor"
-       target="_blank">
-      Buy Now
-    </a>
+    <!-- EA 2 -->
+    <div class="card">
+      <h2>MilkrFX Sniper Structure EA</h2>
 
-    <p style="margin-top:20px; font-size:14px; opacity:0.85;">
-      Secure checkout • Instant access after payment
-    </p>
+      <ul>
+        <li>Precision-based entry logic</li>
+        <li>MT5 compatible</li>
+        <li>Structure & momentum rules</li>
+        <li>Session-aware execution</li>
+        <li>No account management</li>
+      </ul>
+
+      <div class="price">R1499</div>
+
+      <a class="buy-btn"
+         href="https://pay.yoco.com/r/7yqglL&redirectOnPaymentSuccess=https://milkrfx.github.io/thankyou.html?product=Sniper%20Structure%20EA">
+        Buy Now
+      </a>
+    </div>
+
   </div>
 
 </div>
 
 <footer>
-  © 2025 MilkrFX. All rights reserved.
+  © 2025 MilkrFX. Trading involves risk. No guarantees. Rule-based systems only.
 </footer>
 
 </body>
