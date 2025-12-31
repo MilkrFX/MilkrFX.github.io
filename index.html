@@ -38,25 +38,13 @@
       font-size: 14px;
     }
 
-    nav a.whatsapp {
-      background: #25D366;
-      padding: 6px 12px;
-      border-radius: 5px;
-      color: #fff;
-    }
-
-    /* ===== HERO WITH IMAGE ===== */
     .hero {
       background:
-        linear-gradient(
-          rgba(0, 0, 0, 0.65),
-          rgba(0, 0, 0, 0.65)
-        ),
+        linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
         url("assets/images/hero.jpeg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-
       color: #fff;
       padding: 120px 20px;
       text-align: center;
@@ -119,6 +107,58 @@
       line-height: 1.6;
     }
 
+    /* ===== EARLY BELIEVER ACCESS ===== */
+    .early-access {
+      background: #0f0f0f;
+      color: #ffffff;
+      border-radius: 14px;
+      padding: 50px 30px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .early-access h3 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .early-access p {
+      max-width: 720px;
+      margin: auto;
+      font-size: 16px;
+      line-height: 1.6;
+      opacity: 0.95;
+    }
+
+    .early-access ul {
+      list-style: none;
+      padding: 0;
+      margin: 30px 0;
+    }
+
+    .early-access li {
+      margin: 10px 0;
+      font-size: 15px;
+    }
+
+    .slots {
+      margin-top: 25px;
+      font-weight: bold;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+    }
+
+    .early-access a {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 30px;
+      background: #ffffff;
+      color: #0f0f0f;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+    }
+
     .cta {
       text-align: center;
       background: #111;
@@ -161,26 +201,6 @@
       color: #fff;
       text-decoration: underline;
     }
-
-    /* ===== FLOATING WHATSAPP BUTTON ===== */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: #fff;
-      padding: 14px 18px;
-      border-radius: 50px;
-      font-weight: bold;
-      text-decoration: none;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-      z-index: 999;
-      font-size: 14px;
-    }
-
-    .whatsapp-float:hover {
-      opacity: 0.9;
-    }
   </style>
 </head>
 
@@ -194,7 +214,6 @@
     <a href="indicators.html">Indicators</a>
     <a href="ea.html">Expert Advisors</a>
     <a href="disclaimer.html">Disclaimer</a>
-    <a class="whatsapp" href="https://wa.me/27664597933" target="_blank">WhatsApp Support</a>
   </nav>
 </header>
 
@@ -204,13 +223,11 @@
     Tools built on structure, discipline, and execution logic —
     not hype, not promises.
   </p>
-
   <a href="pricing.html" class="btn">View Pricing & Access</a>
 </section>
 
 <section>
   <h3>What We Build</h3>
-
   <div class="grid">
     <div class="card">
       <h4>Trading Indicators</h4>
@@ -219,7 +236,6 @@
         trend behavior, and execution zones using predefined logic.
       </p>
     </div>
-
     <div class="card">
       <h4>Expert Advisors (EA)</h4>
       <p>
@@ -227,7 +243,6 @@
         No discretionary logic, no signal guessing.
       </p>
     </div>
-
     <div class="card">
       <h4>VIP Access</h4>
       <p>
@@ -239,18 +254,27 @@
 </section>
 
 <section>
-  <h3>Our Philosophy</h3>
-
-  <div class="card">
+  <div class="early-access">
+    <h3>Early Believer Access</h3>
     <p>
-      MilkrFX tools are built around rule-based execution, risk awareness,
-      and market structure understanding. We do not provide financial advice,
-      manage accounts, or guarantee performance.
+      The first 10 clients receive Early Believer Access to MilkrFX tools.
+      This tier is reserved for traders who support the platform from the beginning.
     </p>
 
-    <p>
-      Every product is designed for educational and analytical use,
-      allowing traders to make their own informed decisions.
+    <ul>
+      <li>• Reduced early access pricing</li>
+      <li>• Priority onboarding & direct support</li>
+      <li>• Locked-in access to current tools</li>
+      <li>• Early access to future updates</li>
+    </ul>
+
+    <div class="slots">Slots Remaining: 7 / 10</div>
+
+    <a href="pricing.html">View Early Access Options</a>
+
+    <p style="font-size:13px; opacity:0.8; margin-top:20px;">
+      All tools are rule-based and provided for educational and analytical purposes only.
+      No performance guarantees are offered.
     </p>
   </div>
 </section>
@@ -258,10 +282,9 @@
 <section class="cta">
   <h3>Get Started with MilkrFX</h3>
   <p>
-    Explore our pricing and access options for indicators,
+    Explore pricing and access options for indicators,
     expert advisors, and VIP tools.
   </p>
-
   <a href="pricing.html">Go to Pricing</a>
 </section>
 
@@ -272,11 +295,6 @@
     Please read our <a href="disclaimer.html">full disclaimer</a>.
   </p>
 </footer>
-
-<!-- FLOATING WHATSAPP BUTTON -->
-<a class="whatsapp-float" href="https://wa.me/27664597933" target="_blank">
-  WhatsApp Support
-</a>
 
 </body>
 </html>
