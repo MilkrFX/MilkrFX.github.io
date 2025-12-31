@@ -24,100 +24,92 @@
       color: var(--text-main);
     }
 
-    /* ===== HEADER ===== */
     header {
-      background: linear-gradient(135deg, var(--brand-dark), #111827);
-      padding: 70px 20px;
+      background: var(--brand-dark);
+      padding: 55px 20px;
       text-align: center;
-      color: #ffffff;
+      color: #fff;
     }
 
     header h1 {
       margin: 0;
-      font-size: 40px;
+      font-size: 38px;
     }
 
     header p {
-      margin-top: 14px;
-      font-size: 17px;
+      margin-top: 12px;
+      font-size: 16px;
       opacity: 0.9;
-      max-width: 700px;
+      max-width: 720px;
       margin-left: auto;
       margin-right: auto;
+      line-height: 1.6;
     }
 
-    /* ===== CONTAINER ===== */
     .container {
       max-width: 1150px;
-      margin: 70px auto;
+      margin: 80px auto;
       padding: 0 20px;
     }
 
-    /* ===== PRICING GRID ===== */
     .pricing-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 35px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
     }
 
     .pricing-card {
       background: var(--card-bg);
       border-radius: 18px;
-      padding: 45px 35px;
+      padding: 45px 38px;
       box-shadow: 0 16px 45px rgba(0,0,0,0.08);
       text-align: center;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-
-    .pricing-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 22px 55px rgba(0,0,0,0.12);
     }
 
     .badge {
       display: inline-block;
       background: var(--success);
-      color: #ffffff;
-      padding: 7px 16px;
+      color: #fff;
+      padding: 6px 16px;
       border-radius: 50px;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: bold;
       margin-bottom: 18px;
       letter-spacing: 0.5px;
     }
 
     .pricing-card h3 {
-      margin-top: 0;
+      margin: 0;
       font-size: 24px;
       color: var(--brand-dark);
     }
 
     .old-price {
-      font-size: 15px;
-      color: #888;
+      font-size: 14px;
+      color: #6b7280;
       text-decoration: line-through;
-      margin-top: 10px;
+      margin-top: 12px;
     }
 
     .price {
       font-size: 38px;
       font-weight: bold;
       color: var(--success);
-      margin: 12px 0;
+      margin: 8px 0 18px;
     }
 
     .pricing-card p {
       font-size: 15px;
       line-height: 1.7;
-      margin: 26px 0 34px;
       color: var(--text-muted);
+      margin-bottom: 32px;
     }
 
     .buy-btn {
       display: inline-block;
-      padding: 16px 34px;
+      padding: 16px 36px;
       background: var(--brand-primary);
-      color: #ffffff;
+      color: #fff;
       text-decoration: none;
       font-size: 16px;
       border-radius: 10px;
@@ -128,21 +120,22 @@
       background: var(--brand-primary-hover);
     }
 
-    /* ===== NOTICE ===== */
     .note {
-      margin-top: 70px;
+      margin-top: 90px;
       background: #e5e7eb;
-      padding: 35px;
+      padding: 32px;
       border-radius: 14px;
       font-size: 14px;
-      color: #333;
+      color: #374151;
       line-height: 1.7;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    /* ===== FOOTER ===== */
     footer {
       text-align: center;
-      padding: 35px;
+      padding: 40px;
       font-size: 14px;
       color: #6b7280;
     }
@@ -152,10 +145,11 @@
 <body>
 
 <header>
-  <h1>Early Bird Pricing</h1>
+  <h1>Pricing</h1>
   <p>
-    Founding access for the first MilkrFX clients.
-    Once Early Bird slots are filled, pricing will revert to standard rates.
+    Transparent pricing for rule-based trading tools.
+    All products are developed with a focus on structure,
+    discipline, and execution logic.
   </p>
 </header>
 
@@ -165,51 +159,45 @@
 
     <!-- INDICATOR -->
     <div class="pricing-card">
-      <span class="badge">EARLY BIRD</span>
+      <span class="badge">FOUNDING ACCESS</span>
       <h3>MilkrFX Indicator</h3>
-      <div class="old-price">Future Price: R950</div>
+      <div class="old-price">Standard Price: R950</div>
       <div class="price">R500</div>
       <p>
-        Rule-based market structure and confirmation indicator,
-        designed for disciplined, repeatable analysis.
+        Market structure and confirmation indicator designed
+        for disciplined, repeatable analysis.
       </p>
-      <a class="buy-btn"
-         href="https://pay.yoco.com/r/25ZlAR"
-         target="_blank">
+      <a class="buy-btn" href="https://pay.yoco.com/r/25ZlAR" target="_blank">
         Purchase Access
       </a>
     </div>
 
     <!-- EA -->
     <div class="pricing-card">
-      <span class="badge">EARLY BIRD</span>
+      <span class="badge">FOUNDING ACCESS</span>
       <h3>Expert Advisor (EA)</h3>
-      <div class="old-price">Future Price: R1,499</div>
+      <div class="old-price">Standard Price: R1,499</div>
       <div class="price">R850</div>
       <p>
-        Fully automated MT5 Expert Advisor built on strict,
-        rule-based execution and risk control logic.
+        MT5 Expert Advisor built on strict rule-based
+        execution and controlled risk logic.
       </p>
-      <a class="buy-btn"
-         href="https://pay.yoco.com/r/2pyJnJ"
-         target="_blank">
+      <a class="buy-btn" href="https://pay.yoco.com/r/2pyJnJ" target="_blank">
         Purchase Access
       </a>
     </div>
 
     <!-- VIP -->
     <div class="pricing-card">
-      <span class="badge">EARLY BIRD</span>
+      <span class="badge">FOUNDING ACCESS</span>
       <h3>VIP Access</h3>
-      <div class="old-price">Future Price: R500 / month</div>
+      <div class="old-price">Standard Price: R500 / month</div>
       <div class="price">R250</div>
       <p>
-        Private access to premium tools, updates, and structured
-        insights for serious traders.
+        Private access to premium tools, updates,
+        and structured market insights.
       </p>
-      <a class="buy-btn"
-         href="https://pay.yoco.com/r/4aaKRd"
-         target="_blank">
+      <a class="buy-btn" href="https://pay.yoco.com/r/4aaKRd" target="_blank">
         Join VIP
       </a>
     </div>
@@ -218,11 +206,10 @@
 
   <div class="note">
     <strong>Important Notice</strong><br><br>
-    Early Bird access is limited to the first set of clients.
-    Once these slots are filled, pricing will revert to standard rates.
-    <br><br>
-    MilkrFX tools are rule-based and provided strictly for analytical
-    and educational purposes. No guarantees or performance claims are made.
+    Founding access is limited and pricing may change once
+    initial capacity is reached. MilkrFX products are
+    rule-based tools provided for analytical and educational
+    purposes only. No guarantees or profit claims are made.
   </div>
 
 </div>
