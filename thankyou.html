@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment Successful | MilkrFX</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script>
+    // CHANGE THIS MESSAGE PER PRODUCT USING URL PARAM
+    const params = new URLSearchParams(window.location.search);
+    const product = params.get("product") || "a MilkrFX product";
+
+    const message = encodeURIComponent(
+      `Hi MilkrFX, I have successfully purchased ${product}. My payment is complete.`
+    );
+
+    // Redirect to WhatsApp after 3 seconds
+    setTimeout(() => {
+      window.location.href = `https://wa.me/27664597933?text=${message}`;
+    }, 3000);
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f8f9fb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      color: #111;
+    }
+
+    .box {
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      max-width: 420px;
+    }
+
+    h1 {
+      color: #00c853;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 15px;
+      color: #444;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <h1>Payment Successful</h1>
+    <p>Thank you for your purchase.</p>
+    <p>You are being redirected to WhatsApp to complete delivery.</p>
+  </div>
+</body>
+</html>
