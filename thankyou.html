@@ -4,69 +4,71 @@
   <meta charset="UTF-8">
   <title>Payment Successful | MilkrFX</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <style>
     body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: Arial, sans-serif;
       background: #0f172a;
       color: #ffffff;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       height: 100vh;
       text-align: center;
     }
-
-    .box {
-      background: #111827;
-      padding: 40px;
+    .card {
+      background: #020617;
+      padding: 30px;
       border-radius: 12px;
-      max-width: 500px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+      max-width: 420px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.6);
     }
-
     h1 {
-      margin-top: 0;
       color: #22c55e;
+      margin-bottom: 10px;
     }
-
     p {
-      font-size: 16px;
-      line-height: 1.6;
+      margin: 10px 0;
+      opacity: 0.9;
     }
   </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Payment Successful</h1>
+    <p>Thank you for your purchase.</p>
+    <p id="productText"></p>
+    <p>You are being redirected to WhatsApp to complete delivery.</p>
+  </div>
 
   <script>
+    // Read product from URL
     const params = new URLSearchParams(window.location.search);
-    let product = params.get("product") || "";
+    const product = params.get("product") || "Unknown Product";
 
-    // Normalize product name (handle + and encoding issues)
-    product = decodeURIComponent(product.replace(/\+/g, " ")).trim();
+    // Show product on page
+    document.getElementById("productText").innerText =
+      "Product purchased: " + product;
 
-    let redirectPage = "https://milkrfx.github.io";
+    // 🔹 LOG PURCHASE TO GOOGLE SHEETS
+    fetch(
+      "https://script.google.com/macros/s/AKfycbzEvAxClZa8eJ-vaEPrZiDY8SE0SY4iiAWZ8XbQFRBMqelT2yHGFwO1OHRzv3g_X-UI_Q/exec" +
+      "?product=" + encodeURIComponent(product) +
+      "&source=YOCO"
+    );
 
-    if (product === "VIP Signals") {
-      redirectPage = "https://milkrfx.github.io/deliver-vip.html";
-    } else if (product === "MilkrFX Indicator") {
-      redirectPage = "https://milkrfx.github.io/deliver-indicator.html";
-    } else if (product === "Expert Advisor") {
-      redirectPage = "https://milkrfx.github.io/deliver-ea.html";
-    }
-
+    // 🔹 REDIRECT TO WHATSAPP AFTER 4 SECONDS
     setTimeout(() => {
-      window.location.href = redirectPage;
-    }, 3000);
-  </script>
-</head>
+      const message =
+        "Hi MilkrFX, I have completed payment for: " + product +
+        ". Please assist with delivery.";
 
-<body>
-  <div class="box">
-    <h1>Payment Successful</h1>
-    <p>
-      Thank you for your purchase.<br><br>
-      You are being redirected to your delivery page.
-    </p>
-  </div>
+      const whatsappUrl =
+        "https://wa.me/27664597933?text=" + encodeURIComponent(message);
+
+      window.location.href = whatsappUrl;
+    }, 4000);
+  </script>
+
 </body>
 </html>
