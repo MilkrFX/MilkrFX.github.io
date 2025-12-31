@@ -1,139 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>MilkrFX | Indicators</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MilkrFX Indicators</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: linear-gradient(180deg, #05080f, #0b1530);
-            color: #ffffff;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f4f7;
+    color: #1a1a1a;
+}
 
-        .nav {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            padding: 18px;
-            background: rgba(0,0,0,0.45);
-            backdrop-filter: blur(6px);
-        }
+/* NAV */
+nav {
+    background: #0b0f19;
+    padding: 15px 30px;
+}
 
-        .nav a {
-            color: #cfd6ff;
-            text-decoration: none;
-            font-weight: 600;
-        }
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+}
 
-        .nav a:hover {
-            color: #7aa2ff;
-        }
+/* PAGE */
+.container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
 
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 60px 20px;
-        }
+h1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
 
-        h1 {
-            text-align: center;
-            margin-bottom: 60px;
-        }
+/* GRID */
+.indicator-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
 
-        /* RESPONSIVE GRID (LAPTOP SAFE) */
-        .indicator-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
-            gap: 40px;
-        }
+/* CARD */
+.indicator-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    text-align: center;
+}
 
-        /* WHITE CARD */
-        .indicator {
-            background: #ffffff;
-            padding: 28px;
-            border-radius: 16px;
-            box-shadow: 0 10px 35px rgba(0,0,0,0.35);
-        }
+.indicator-card h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
 
-        .indicator h3 {
-            margin-top: 0;
-            color: #0b1530;
-        }
+.indicator-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
 
-        .indicator p {
-            color: #333333;
-            line-height: 1.6;
-            font-size: 15px;
-        }
+/* IMAGE CONTROL */
+.indicator-card img {
+    max-width: 92%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
 
-        .indicator img {
-            width: 100%;
-            max-width: 460px;
-            display: block;
-            margin: 20px auto 0;
-            border-radius: 10px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-        }
+/* MOBILE */
+@media (max-width: 900px) {
+    .indicator-grid {
+        grid-template-columns: 1fr;
+    }
 
-        .note {
-            text-align: center;
-            margin-top: 60px;
-            font-size: 14px;
-            color: #aab2ff;
-        }
-
-        /* MOBILE ONLY */
-        @media (max-width: 520px) {
-            .indicator-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    .indicator-card img {
+        max-width: 100%;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <div class="nav">
-        <a href="index.html">Home</a>
-        <a href="indicators.html">Indicators</a>
-        <a href="disclaimer.html">Disclaimer</a>
-    </div>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="indicators.html">Indicators</a>
+    <a href="disclaimer.html">Disclaimer</a>
+</nav>
 
-    <div class="container">
-        <h1>Analytical Indicators</h1>
+<div class="container">
+    <h1>MilkrFX Indicators</h1>
 
-        <div class="indicator-grid">
+    <div class="indicator-grid">
 
-            <div class="indicator">
-                <h3>Market Structure Indicator</h3>
-                <p>
-                    Identifies break of structure, change of character,
-                    and swing high/low relationships to define directional
-                    bias and structural context.
-                </p>
-                <img src="images/indicator-structure.jpeg" alt="Market Structure Indicator">
-            </div>
-
-            <div class="indicator">
-                <h3>Execution Signal Indicator</h3>
-                <p>
-                    Highlights rule-based buy and sell opportunities aligned
-                    with predefined structural conditions and execution zones.
-                    Designed for confirmation, not prediction.
-                </p>
-                <img src="images/indicator-signals.jpeg" alt="Execution Signal Indicator">
-            </div>
-
+        <!-- STRUCTURE -->
+        <div class="indicator-card">
+            <h2>Market Structure Indicator</h2>
+            <p>
+                Identifies break of structure, change of character, and swing
+                high/low relationships to define directional bias and structural context.
+            </p>
+            <img src="images/indicator-structure.jpeg" alt="Market Structure Indicator">
         </div>
 
-        <p class="note">
-            Indicators are analytical tools only and do not constitute financial advice
-            or automated trading systems.
-        </p>
+        <!-- SIGNALS -->
+        <div class="indicator-card">
+            <h2>Execution Signal Indicator</h2>
+            <p>
+                Highlights rule-based buy and sell opportunities aligned with predefined
+                structural conditions and execution zones. Designed for confirmation, not prediction.
+            </p>
+            <img src="images/indicator-signals.jpeg" alt="Execution Signal Indicator">
+        </div>
+
     </div>
+</div>
 
 </body>
 </html>
