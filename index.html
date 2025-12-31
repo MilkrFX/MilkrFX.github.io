@@ -106,7 +106,6 @@
       line-height: 1.6;
     }
 
-    /* FOUNDER SECTION */
     .founder {
       background: #ffffff;
       border-radius: 14px;
@@ -167,6 +166,30 @@
       color: #fff;
       text-decoration: underline;
     }
+
+    /* WHATSAPP FLOATING BUBBLE */
+    .whatsapp-float {
+      position: fixed;
+      width: 56px;
+      height: 56px;
+      bottom: 25px;
+      right: 25px;
+      background-color: #25D366;
+      color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+
+    .whatsapp-float:hover {
+      background-color: #1ebe5d;
+    }
   </style>
 </head>
 
@@ -197,26 +220,15 @@
   <div class="grid">
     <div class="card">
       <h4>Trading Indicators</h4>
-      <p>
-        Custom indicators designed to highlight market structure,
-        trend behavior, and execution zones using predefined logic.
-      </p>
+      <p>Custom indicators designed to highlight structure and execution zones.</p>
     </div>
-
     <div class="card">
-      <h4>Expert Advisors (EA)</h4>
-      <p>
-        Automated trading systems built from strict trading rules.
-        No discretionary logic, no signal guessing.
-      </p>
+      <h4>Expert Advisors</h4>
+      <p>Automated systems built from strict, rule-based execution logic.</p>
     </div>
-
     <div class="card">
       <h4>VIP Access</h4>
-      <p>
-        Private access to premium tools, updates, and structured
-        market insights for advanced users.
-      </p>
+      <p>Private access to premium tools and structured insights.</p>
     </div>
   </div>
 </section>
@@ -227,16 +239,7 @@
     <p>
       MilkrFX was created to move away from hype-driven trading
       and return to structured execution, rules, and discipline.
-      These tools were built out of necessity — not to sell dreams,
-      but to provide clarity and consistency in the markets.
     </p>
-
-    <p>
-      Everything we build is designed to help
-      traders think clearly, execute rules properly, and take
-      responsibility for their own decisions.
-    </p>
-
     <p class="name">
       — Jacques<br>
       Founder, MilkrFX
@@ -246,20 +249,23 @@
 
 <section class="cta">
   <h3>Early Bird Access Now Open</h3>
-  <p>
-    Founding pricing available for a limited number of clients.
-    Once Early Bird access is filled, standard pricing applies.
-  </p>
+  <p>Founding pricing available for a limited number of clients.</p>
   <a href="pricing.html">View Pricing</a>
 </section>
 
 <footer>
   <p>© 2025 MilkrFX. All rights reserved.</p>
-  <p>
-    Trading involves risk. No guarantees are provided.
-    Please read our <a href="disclaimer.html">full disclaimer</a>.
-  </p>
 </footer>
+
+<!-- WHATSAPP BUTTON -->
+<a
+  href="https://wa.me/27664597933?text=Hi%20MilkrFX%2C%20I%20would%20like%20more%20information."
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="Chat on WhatsApp"
+>
+  ☎
+</a>
 
 </body>
 </html>
