@@ -1,157 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>MilkrFX | Rule-Based Trading Tools</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="MilkrFX builds rule-based trading indicators, expert advisors, and premium tools for structured market analysis.">
+  <meta charset="UTF-8">
+  <title>MilkrFX | Rule-Based Trading Tools</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MilkrFX builds rule-based trading indicators, expert advisors, and premium tools for structured market analysis.">
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f8f9fb;
-  color: #111;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f8f9fb;
+      color: #111;
+    }
 
-header {
-  background: #0f0f0f;
-  color: #fff;
-  padding: 22px;
-}
+    header {
+      background: #0f0f0f;
+      color: #fff;
+      padding: 22px;
+    }
 
-header h1 {
-  margin: 0;
-  font-size: 26px;
-  letter-spacing: 1px;
-}
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+      letter-spacing: 1px;
+    }
 
-header p {
-  font-size: 13px;
-  opacity: 0.7;
-  margin-top: 4px;
-}
+    nav {
+      margin-top: 8px;
+    }
 
-nav {
-  margin-top: 10px;
-}
+    nav a {
+      color: #fff;
+      margin-right: 18px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+    }
 
-nav a {
-  color: #fff;
-  margin-right: 18px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 14px;
-}
+    .hero {
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+        url("assets/images/hero.jpeg");
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding: 120px 20px;
+      text-align: center;
+    }
 
-.hero {
-  background:
-    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-    url("assets/images/hero.jpeg");
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  padding: 120px 20px;
-  text-align: center;
-}
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
 
-.hero h2 {
-  font-size: 42px;
-  margin-bottom: 15px;
-}
+    .hero p {
+      font-size: 18px;
+      max-width: 720px;
+      margin: auto;
+      opacity: 0.9;
+    }
 
-.hero p {
-  font-size: 18px;
-  max-width: 720px;
-  margin: auto;
-  opacity: 0.9;
-}
+    .hero .btn {
+      margin-top: 35px;
+      padding: 14px 28px;
+      background: #fff;
+      color: #0f0f0f;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
 
-.hero a {
-  margin-top: 35px;
-  padding: 14px 28px;
-  background: #fff;
-  color: #0f0f0f;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-}
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
 
-section {
-  padding: 60px 20px;
-  max-width: 1100px;
-  margin: auto;
-}
+    h3 {
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
 
-h3 {
-  font-size: 28px;
-  margin-bottom: 25px;
-}
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-}
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
 
-.card {
-  background: #fff;
-  border-radius: 10px;
-  padding: 30px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-}
+    .card h4 {
+      margin-top: 0;
+      font-size: 20px;
+    }
 
-.brand-badge {
-  display: inline-block;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  background: #0f0f0f;
-  color: #ffffff;
-  margin-bottom: 15px;
-}
+    .card p {
+      font-size: 15px;
+      line-height: 1.6;
+    }
 
-.early-access {
-  background: #0f0f0f;
-  color: #fff;
-  border-radius: 14px;
-  padding: 50px 30px;
-  text-align: center;
-}
+    /* FOUNDER SECTION */
+    .founder {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 50px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
 
-.early-access ul {
-  list-style: none;
-  padding: 0;
-  margin: 25px 0;
-}
+    .founder p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #333;
+    }
 
-.early-access li {
-  margin: 10px 0;
-}
+    .founder .name {
+      margin-top: 25px;
+      font-weight: bold;
+    }
 
-.slots {
-  margin-top: 20px;
-  font-weight: bold;
-}
+    .cta {
+      text-align: center;
+      background: #111;
+      color: #fff;
+      padding: 60px 20px;
+    }
 
-footer {
-  background: #0f0f0f;
-  color: #fff;
-  padding: 30px;
-  text-align: center;
-  font-size: 14px;
-}
-</style>
+    .cta h3 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      font-size: 17px;
+      max-width: 700px;
+      margin: auto;
+      opacity: 0.9;
+    }
+
+    .cta a {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 14px 30px;
+      background: #fff;
+      color: #111;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+    }
+
+    footer {
+      background: #0f0f0f;
+      color: #fff;
+      padding: 30px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
   <h1>MilkrFX</h1>
-  <p>Rule-Based Trading Tools</p>
   <nav>
     <a href="index.html">Home</a>
     <a href="pricing.html">Pricing</a>
@@ -162,9 +184,12 @@ footer {
 </header>
 
 <section class="hero">
-  <h2>Structured Trading. No Hype.</h2>
-  <p>Professional tools built on discipline, execution logic, and repeatable rules.</p>
-  <a href="pricing.html">View Access</a>
+  <h2>Rule-Based Trading Tools</h2>
+  <p>
+    Tools built on structure, discipline, and execution logic —
+    not hype, not promises.
+  </p>
+  <a href="pricing.html" class="btn">View Early Bird Access</a>
 </section>
 
 <section>
@@ -172,49 +197,69 @@ footer {
   <div class="grid">
     <div class="card">
       <h4>Trading Indicators</h4>
-      <p>Visual market structure, trend logic, and execution zones.</p>
+      <p>
+        Custom indicators designed to highlight market structure,
+        trend behavior, and execution zones using predefined logic.
+      </p>
     </div>
+
     <div class="card">
-      <h4>Expert Advisors</h4>
-      <p>Automated MT5 systems based on strict, rule-defined execution.</p>
+      <h4>Expert Advisors (EA)</h4>
+      <p>
+        Automated trading systems built from strict trading rules.
+        No discretionary logic, no signal guessing.
+      </p>
     </div>
+
     <div class="card">
       <h4>VIP Access</h4>
-      <p>Private access to premium tools and early releases.</p>
+      <p>
+        Private access to premium tools, updates, and structured
+        market insights for advanced users.
+      </p>
     </div>
   </div>
 </section>
 
 <section>
-  <div class="early-access">
-    <span class="brand-badge">FOUNDING ACCESS</span>
-    <h3>Early Believer Access</h3>
+  <h3>Founder’s Message</h3>
+  <div class="founder">
     <p>
-      Reserved for the first 10 clients who support MilkrFX from the beginning.
+      MilkrFX was created to move away from hype-driven trading
+      and return to structured execution, rules, and discipline.
+      These tools were built out of necessity — not to sell dreams,
+      but to provide clarity and consistency in the markets.
     </p>
 
-    <ul>
-      <li>Reduced early access pricing</li>
-      <li>Priority onboarding & support</li>
-      <li>Locked-in access to current tools</li>
-      <li>Early access to future updates</li>
-    </ul>
+    <p>
+      MilkrFX does not promise profits, manage funds, or provide
+      financial advice. Everything we build is designed to help
+      traders think clearly, execute rules properly, and take
+      responsibility for their own decisions.
+    </p>
 
-    <div class="slots">Slots Remaining: 7 / 10</div>
-
-    <a href="pricing.html" style="margin-top:25px; display:inline-block; background:#fff; color:#0f0f0f; padding:14px 28px; border-radius:6px; text-decoration:none; font-weight:bold;">
-      View Pricing
-    </a>
-
-    <p style="font-size:12px; opacity:0.7; margin-top:20px;">
-      Educational tools only. No performance guarantees.
+    <p class="name">
+      — Jacques<br>
+      Founder, MilkrFX
     </p>
   </div>
 </section>
 
+<section class="cta">
+  <h3>Early Bird Access Now Open</h3>
+  <p>
+    Founding pricing available for a limited number of clients.
+    Once Early Bird access is filled, standard pricing applies.
+  </p>
+  <a href="pricing.html">View Pricing</a>
+</section>
+
 <footer>
-  © 2025 MilkrFX. All rights reserved.<br>
-  Independent trading tools • No account management • No guarantees
+  <p>© 2025 MilkrFX. All rights reserved.</p>
+  <p>
+    Trading involves risk. No guarantees are provided.
+    Please read our <a href="disclaimer.html">full disclaimer</a>.
+  </p>
 </footer>
 
 </body>
