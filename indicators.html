@@ -13,13 +13,12 @@
             color: #ffffff;
         }
 
-        /* Navigation */
         .nav {
             display: flex;
             justify-content: center;
             gap: 30px;
             padding: 18px;
-            background: rgba(0,0,0,0.4);
+            background: rgba(0,0,0,0.45);
             backdrop-filter: blur(6px);
         }
 
@@ -33,7 +32,6 @@
             color: #7aa2ff;
         }
 
-        /* Layout */
         .container {
             max-width: 1100px;
             margin: auto;
@@ -45,45 +43,35 @@
             margin-bottom: 50px;
         }
 
-        /* Indicator Cards */
-        .indicator-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .indicator-card {
-            background: #ffffff;
-            color: #000000;
+        .indicator {
+            background: rgba(255,255,255,0.06);
+            padding: 28px;
             border-radius: 14px;
-            padding: 22px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            text-align: left;
+            margin-bottom: 40px;
         }
 
-        .indicator-card img {
-            width: 100%;
-            border-radius: 10px;
-            margin-bottom: 16px;
-        }
-
-        .indicator-card h3 {
+        .indicator h3 {
             margin-top: 0;
-            margin-bottom: 10px;
-            font-size: 1.2rem;
         }
 
-        .indicator-card p {
-            font-size: 0.95rem;
-            line-height: 1.5;
-            color: #333;
+        .indicator img {
+            width: 100%;
+            max-width: 100%;
+            border-radius: 10px;
+            margin-top: 18px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.45);
+        }
+
+        p {
+            color: #cbd2ff;
+            line-height: 1.6;
         }
 
         .note {
-            margin-top: 40px;
             text-align: center;
-            font-size: 0.85rem;
-            color: #aab0ff;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #aab2ff;
         }
     </style>
 </head>
@@ -97,39 +85,32 @@
         <a href="disclaimer.html">Disclaimer</a>
     </div>
 
-    <!-- Content -->
     <div class="container">
         <h1>Analytical Indicators</h1>
 
-        <div class="indicator-grid">
+        <!-- Indicator 1 -->
+        <div class="indicator">
+            <h3>Market Structure Indicator</h3>
+            <p>
+                Identifies key structural shifts, swing highs and lows,
+                and directional bias to support rule-based decision making.
+            </p>
+            <img src="images/indicator-structure.jpeg" alt="Market Structure Indicator">
+        </div>
 
-            <!-- Indicator 1 -->
-            <div class="indicator-card">
-                <img src="images/indicator-structure.png" alt="Market Structure Indicator">
-                <h3>Market Structure & Order Flow</h3>
-                <p>
-                    Visual indicator highlighting market structure concepts such as
-                    Break of Structure (BOS), Change of Character (CHoCH), and key swing
-                    highs and lows. Supply and demand zones are displayed to support
-                    structured market analysis.
-                </p>
-            </div>
-
-            <!-- Indicator 2 -->
-            <div class="indicator-card">
-                <img src="images/indicator-signals.png" alt="Buy and Sell Opportunity Markers">
-                <h3>Buy & Sell Opportunity Markers</h3>
-                <p>
-                    Displays visual buy and sell markers based on reactions around
-                    supply and demand areas. Reference levels are shown to illustrate
-                    common planning zones without implying prediction or automation.
-                </p>
-            </div>
-
+        <!-- Indicator 2 -->
+        <div class="indicator">
+            <h3>Execution Signal Indicator</h3>
+            <p>
+                Highlights execution signals aligned with predefined
+                trading conditions. Designed for confirmation — not prediction.
+            </p>
+            <img src="images/indicator-signals.jpeg" alt="Execution Signal Indicator">
         </div>
 
         <p class="note">
-            *Visuals shown are for illustrative purposes only. Indicators are analytical tools and do not constitute financial advice.
+            Indicators are analytical tools only and do not constitute financial advice
+            or automated trading systems.
         </p>
     </div>
 
