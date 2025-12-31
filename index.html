@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>MilkrFX | Rule-Based Trading Tools</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="MilkrFX builds rule-based trading indicators, expert advisors, and premium tools for structured market analysis.">
+  <meta name="description" content="MilkrFX develops rule-based trading indicators and expert advisors focused on structure, discipline, and execution logic.">
 
   <style>
     :root {
@@ -24,11 +24,10 @@
       color: var(--text-main);
     }
 
-    /* ===== HEADER ===== */
     header {
       background: var(--brand-dark);
       color: #fff;
-      padding: 26px 20px;
+      padding: 28px 20px;
     }
 
     header h1 {
@@ -42,7 +41,7 @@
     }
 
     nav a {
-      color: #e5e7eb;
+      color: #d1d5db;
       margin-right: 18px;
       text-decoration: none;
       font-weight: 600;
@@ -53,21 +52,21 @@
       color: #ffffff;
     }
 
-    /* ===== HERO ===== */
     .hero {
       background:
-        linear-gradient(rgba(11,18,32,0.8), rgba(11,18,32,0.8)),
+        linear-gradient(rgba(11,18,32,0.82), rgba(11,18,32,0.82)),
         url("assets/images/hero.jpeg");
       background-size: cover;
       background-position: center;
       color: #fff;
-      padding: 140px 20px;
+      padding: 150px 20px;
       text-align: center;
     }
 
     .hero h2 {
-      font-size: 46px;
+      font-size: 44px;
       margin-bottom: 18px;
+      font-weight: 700;
     }
 
     .hero p {
@@ -75,11 +74,12 @@
       max-width: 760px;
       margin: auto;
       opacity: 0.92;
+      line-height: 1.6;
     }
 
     .hero .btn {
-      margin-top: 40px;
-      padding: 16px 36px;
+      margin-top: 42px;
+      padding: 16px 38px;
       background: var(--brand-primary);
       color: #ffffff;
       border-radius: 8px;
@@ -92,39 +92,31 @@
       background: var(--brand-primary-hover);
     }
 
-    /* ===== SECTIONS ===== */
     section {
-      padding: 90px 20px;
+      padding: 95px 20px;
       max-width: 1150px;
       margin: auto;
     }
 
     h3 {
       font-size: 34px;
-      margin-bottom: 40px;
+      margin-bottom: 45px;
       text-align: center;
       color: var(--brand-dark);
     }
 
-    /* ===== SERVICES ===== */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 35px;
+      gap: 38px;
     }
 
     .card {
       background: var(--card-bg);
       border-radius: 16px;
-      padding: 40px 35px;
-      box-shadow: 0 14px 40px rgba(0,0,0,0.08);
+      padding: 42px 36px;
+      box-shadow: 0 14px 38px rgba(0,0,0,0.08);
       text-align: center;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 50px rgba(0,0,0,0.12);
     }
 
     .card h4 {
@@ -136,13 +128,13 @@
     .card p {
       font-size: 15px;
       line-height: 1.7;
-      margin: 22px 0 28px;
+      margin: 24px 0 30px;
       color: var(--text-muted);
     }
 
     .card a {
       display: inline-block;
-      padding: 14px 30px;
+      padding: 14px 32px;
       background: var(--brand-primary);
       color: #fff;
       text-decoration: none;
@@ -154,14 +146,14 @@
       background: var(--brand-primary-hover);
     }
 
-    /* ===== FOUNDER ===== */
     .founder {
       background: #ffffff;
       border-radius: 18px;
-      padding: 60px;
+      padding: 65px;
       box-shadow: 0 16px 45px rgba(0,0,0,0.08);
-      max-width: 850px;
+      max-width: 860px;
       margin: auto;
+      text-align: center;
     }
 
     .founder p {
@@ -171,17 +163,16 @@
     }
 
     .founder .name {
-      margin-top: 28px;
+      margin-top: 30px;
       font-weight: bold;
       color: var(--brand-dark);
     }
 
-    /* ===== CTA ===== */
     .cta {
       text-align: center;
       background: linear-gradient(135deg, var(--brand-dark), #111827);
       color: #fff;
-      padding: 100px 20px;
+      padding: 105px 20px;
     }
 
     .cta h3 {
@@ -195,12 +186,13 @@
       max-width: 720px;
       margin: auto;
       opacity: 0.9;
+      line-height: 1.6;
     }
 
     .cta a {
       display: inline-block;
-      margin-top: 35px;
-      padding: 18px 40px;
+      margin-top: 38px;
+      padding: 18px 42px;
       background: var(--brand-primary);
       color: #ffffff;
       text-decoration: none;
@@ -212,16 +204,14 @@
       background: var(--brand-primary-hover);
     }
 
-    /* ===== FOOTER ===== */
     footer {
       background: var(--brand-dark);
-      color: #e5e7eb;
-      padding: 35px;
+      color: #d1d5db;
+      padding: 38px;
       text-align: center;
       font-size: 14px;
     }
 
-    /* ===== WHATSAPP FLOAT ===== */
     .whatsapp-float {
       position: fixed;
       width: 56px;
@@ -257,30 +247,42 @@
 
 <section class="hero">
   <h2>Rule-Based Trading Tools</h2>
-  <p>Built on structure, discipline, and execution logic — not hype.</p>
+  <p>
+    Structured trading indicators and expert advisors built for
+    disciplined execution — not speculation or hype.
+  </p>
   <a href="pricing.html" class="btn">View Pricing</a>
 </section>
 
 <section>
-  <h3>What We Build</h3>
+  <h3>Our Focus</h3>
 
   <div class="grid">
     <div class="card">
       <h4>Trading Indicators</h4>
-      <p>Precision-built indicators focused on market structure and rule-based confirmation.</p>
+      <p>
+        Market structure and confirmation indicators designed for
+        repeatable, rule-based analysis.
+      </p>
       <a href="indicators.html">View Indicators</a>
     </div>
 
     <div class="card">
       <h4>Expert Advisors</h4>
-      <p>MT5 Expert Advisors with strict execution logic and disciplined risk control.</p>
+      <p>
+        MT5 Expert Advisors engineered with strict execution logic
+        and controlled risk parameters.
+      </p>
       <a href="ea.html">View Expert Advisors</a>
     </div>
 
     <div class="card">
       <h4>Custom Development</h4>
-      <p>Bespoke tools built directly from your rules and execution requirements.</p>
-      <a href="pricing.html">Request Access</a>
+      <p>
+        Bespoke trading tools built directly from defined rules
+        and execution requirements.
+      </p>
+      <a href="pricing.html">Request Information</a>
     </div>
   </div>
 </section>
@@ -289,17 +291,21 @@
   <h3>Founder’s Message</h3>
   <div class="founder">
     <p>
-      MilkrFX was created to eliminate hype and focus on structured,
-      rule-based execution that traders can trust.
+      MilkrFX was established to move away from marketing-driven
+      trading products and focus instead on disciplined,
+      rule-based execution tools traders can rely on.
     </p>
     <p class="name">— Jacques<br>Founder, MilkrFX</p>
   </div>
 </section>
 
 <section class="cta">
-  <h3>Serious Tools for Disciplined Traders</h3>
-  <p>Explore our pricing or speak to us directly if you have questions.</p>
-  <a href="pricing.html">Go to Pricing</a>
+  <h3>Designed for Disciplined Traders</h3>
+  <p>
+    Review our pricing or contact us directly for further
+    information about our tools.
+  </p>
+  <a href="pricing.html">View Pricing</a>
 </section>
 
 <footer>
@@ -316,4 +322,4 @@
 </a>
 
 </body>
-  </html>
+</html>
