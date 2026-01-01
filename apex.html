@@ -2,71 +2,135 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>MilkrFX | FX Apex Expert Advisor</title>
+<title>FX Apex | Mobile Rule-Based Trading Bot</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="FX Apex is a rule-based MetaTrader 5 expert advisor designed for structured execution and trader-controlled risk.">
+<meta name="description" content="FX Apex is a mobile-friendly, rule-based MetaTrader 5 expert advisor designed for structured execution and trader-controlled risk.">
 
 <style>
+:root{
+  --dark:#0b1220;
+  --primary:#1d4ed8;
+  --bg:#f4f6f9;
+  --text:#111827;
+  --muted:#4b5563;
+}
+
 body{
   margin:0;
   font-family:Arial, Helvetica, sans-serif;
-  background:#f4f6f9;
-  color:#111827;
+  background:var(--bg);
+  color:var(--text);
 }
-header{
-  background:#0b1220;
+
+/* Apex Nav */
+.apex-header{
+  background:var(--dark);
   color:#fff;
-  padding:28px 20px;
+  padding:16px 18px;
+  position:sticky;
+  top:0;
+  z-index:100;
 }
-header h1{
-  margin:0;
-  font-size:26px;
+
+.apex-nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
 }
-nav{
-  margin-top:10px;
-}
-nav a{
+
+.apex-nav a{
   color:#d1d5db;
-  margin-right:18px;
   text-decoration:none;
   font-weight:600;
   font-size:14px;
+  margin-right:14px;
 }
-nav a:hover{
-  color:#ffffff;
+
+.apex-nav a:hover{
+  color:#fff;
 }
+
+.apex-nav-left{
+  display:flex;
+  align-items:center;
+}
+
+.apex-badge{
+  background:var(--primary);
+  color:#fff;
+  padding:6px 10px;
+  border-radius:6px;
+  font-size:13px;
+  margin-left:10px;
+}
+
+/* Sections */
 section{
   max-width:1100px;
   margin:auto;
   padding:90px 20px;
 }
+
+.hero{
+  text-align:center;
+}
+
+.hero h1{
+  font-size:42px;
+  margin-bottom:16px;
+}
+
+.hero p{
+  max-width:760px;
+  margin:auto;
+  font-size:17px;
+  line-height:1.6;
+  color:var(--muted);
+}
+
 .card{
-  background:#ffffff;
+  background:#fff;
   border-radius:16px;
   padding:42px 36px;
   box-shadow:0 14px 38px rgba(0,0,0,0.08);
 }
-.card h2{
-  margin-top:0;
-  color:#0b1220;
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
 }
-.card p{
-  line-height:1.7;
-  color:#4b5563;
-}
+
 ul{
   margin-top:20px;
 }
+
 ul li{
   margin-bottom:10px;
 }
+
 .note{
   font-size:13px;
   color:#6b7280;
   margin-top:18px;
 }
+
+/* Buttons */
+.btn{
+  display:inline-block;
+  margin-top:26px;
+  padding:14px 34px;
+  background:var(--primary);
+  color:#fff;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* Footer */
 footer{
-  background:#0b1220;
+  background:var(--dark);
   color:#d1d5db;
   padding:38px;
   text-align:center;
@@ -77,50 +141,85 @@ footer{
 
 <body>
 
-<header>
-  <h1>MilkrFX</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="pricing.html">Pricing</a>
-    <a href="indicators.html">Indicators</a>
-    <a href="ea.html">Expert Advisors</a>
-    <a href="disclaimer.html">Disclaimer</a>
+<!-- APEX NAVIGATION -->
+<header class="apex-header">
+  <nav class="apex-nav">
+    <div class="apex-nav-left">
+      <a href="index.html">← Back to MilkrFX</a>
+      <span class="apex-badge">FX Apex</span>
+    </div>
+    <div>
+      <a href="#apex">Apex</a>
+      <a href="#features">Features</a>
+      <a href="#setup">Setup</a>
+      <a href="https://wa.me/27664597933" target="_blank">Support</a>
+    </div>
   </nav>
 </header>
 
-<section>
+<!-- HERO -->
+<section id="apex" class="hero">
+  <h1>FX Apex</h1>
+  <p>
+    A mobile-friendly, rule-based MetaTrader 5 expert advisor built for
+    traders who want structured execution without being tied to charts
+    all day.
+  </p>
+</section>
+
+<!-- FEATURES -->
+<section id="features">
+  <div class="grid">
+    <div class="card">
+      <h2>Rule-Based Execution</h2>
+      <p>
+        FX Apex operates strictly on predefined logic. No emotions,
+        no discretionary decisions — only coded rules.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Mobile-First Friendly</h2>
+      <p>
+        Designed for traders who monitor and manage trades from
+        their phone while the EA handles execution logic.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>User-Controlled Risk</h2>
+      <p>
+        All lot sizing, risk parameters, and trade management
+        remain under the trader’s control.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- SETUP -->
+<section id="setup">
   <div class="card">
-    <h2>FX Apex – Rule-Based Expert Advisor</h2>
-
-    <p>
-      FX Apex is a MetaTrader 5 expert advisor developed around predefined,
-      rule-based execution logic. It is designed for traders who prefer
-      structured and systematic trading models rather than discretionary
-      execution.
-    </p>
-
-    <p>
-      The EA operates strictly according to coded rules and parameters
-      defined by the user. All risk management, lot sizing, and execution
-      decisions remain under the trader’s control.
-    </p>
+    <h2>Setup & Usage</h2>
 
     <ul>
-      <li>No account management</li>
-      <li>No performance guarantees</li>
-      <li>User-controlled risk settings</li>
-      <li>Rule-based execution logic</li>
+      <li>Install FX Apex on MetaTrader 5 (desktop or VPS)</li>
+      <li>Configure risk and execution settings</li>
+      <li>Monitor trades and manage positions from mobile</li>
     </ul>
 
     <p class="note">
-      FX Apex is provided for educational and technical purposes only.
-      Past performance does not guarantee future results.
+      FX Apex does not manage accounts, does not guarantee results,
+      and requires user supervision at all times.
     </p>
+
+    <a href="https://wa.me/27664597933" target="_blank" class="btn">
+      Get Setup Assistance
+    </a>
   </div>
 </section>
 
 <footer>
-  © 2026 MilkrFX. Automated trading tools require user supervision.
+  © 2026 MilkrFX. FX Apex is a rule-based execution tool. No financial advice.
 </footer>
 
 </body>
