@@ -135,7 +135,19 @@
       text-align: center;
     }
 
-    /* Recommended Broker */
+    .card h4 {
+      margin-top: 0;
+      font-size: 22px;
+      color: var(--brand-dark);
+    }
+
+    .card p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--text-muted);
+    }
+
+    /* Broker */
     .broker-card {
       max-width: 420px;
       margin: auto;
@@ -172,12 +184,10 @@
       border-radius: 10px;
       text-decoration: none;
       font-weight: bold;
-      transition: transform 0.25s ease, background 0.25s ease;
     }
 
     .broker-btn:hover {
       background: var(--brand-primary-hover);
-      transform: scale(1.06);
     }
 
     footer {
@@ -202,11 +212,6 @@
       justify-content: center;
       box-shadow: 0 6px 18px rgba(0,0,0,0.35);
       z-index: 999;
-      transition: transform 0.25s ease;
-    }
-
-    .whatsapp-float:hover {
-      transform: scale(1.08);
     }
   </style>
 </head>
@@ -226,9 +231,39 @@
 
 <section class="hero">
   <h2>Rule-Based Trading Tools</h2>
-  <p>Structured trading indicators and expert advisors built for disciplined execution.</p>
+  <p>Structured indicators and expert advisors built for disciplined execution — not speculation.</p>
   <a href="pricing.html" class="btn">View Pricing</a>
   <a href="https://one.exnessonelink.com/a/gjrchju5te" target="_blank" class="btn-secondary">Trade with Exness</a>
+</section>
+
+<section>
+  <h3>About MilkrFX</h3>
+  <div class="grid">
+    <div class="card">
+      <h4>Who We Are</h4>
+      <p>
+        MilkrFX is a development-focused trading brand creating rule-based
+        indicators and expert advisors for MetaTrader platforms.
+      </p>
+    </div>
+
+    <div class="card">
+      <h4>Our Philosophy</h4>
+      <p>
+        We do not sell signals or manage accounts.
+        Every tool is built from defined rules and structured logic,
+        designed to support consistent execution.
+      </p>
+    </div>
+
+    <div class="card">
+      <h4>Who It’s For</h4>
+      <p>
+        Traders who value structure, discipline, and repeatable processes —
+        whether trading manually or through automation.
+      </p>
+    </div>
+  </div>
 </section>
 
 <section>
@@ -248,12 +283,10 @@
       <div class="stars">★★★★★</div>
       <p>“Execution remains stable even during volatile sessions.”</p>
     </div>
-
     <div class="card">
       <div class="stars">★★★★★</div>
       <p>“Withdrawals and platform performance have been consistent.”</p>
     </div>
-
     <div class="card">
       <div class="stars">★★★★★</div>
       <p>“Works well with rule-based and automated trading systems.”</p>
@@ -265,7 +298,6 @@
   © 2025 MilkrFX. All rights reserved.
 </footer>
 
-<!-- WhatsApp float button -->
 <a
   href="https://wa.me/27664597933?text=Hi%20MilkrFX%2C%20I%20have%20a%20question%20about%20your%20tools."
   class="whatsapp-float"
