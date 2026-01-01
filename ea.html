@@ -24,6 +24,11 @@
       color: #22c55e;
     }
 
+    header p {
+      margin-top: 8px;
+      opacity: 0.85;
+    }
+
     .container {
       max-width: 1100px;
       margin: 40px auto;
@@ -32,14 +37,14 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 30px;
     }
 
     .card {
       background: #020617;
       border-radius: 14px;
-      padding: 25px;
+      padding: 30px;
       box-shadow: 0 0 25px rgba(0,0,0,0.5);
       display: flex;
       flex-direction: column;
@@ -51,19 +56,20 @@
       color: #22c55e;
     }
 
-    .price {
-      font-size: 22px;
-      margin: 15px 0;
-      font-weight: bold;
+    .card p {
+      line-height: 1.7;
+      opacity: 0.9;
+      margin-bottom: 18px;
     }
 
     ul {
       padding-left: 18px;
-      line-height: 1.6;
+      line-height: 1.7;
+      margin-bottom: 20px;
     }
 
     .buy-btn {
-      margin-top: 20px;
+      margin-top: auto;
       padding: 14px;
       text-align: center;
       background: #22c55e;
@@ -90,7 +96,7 @@
 
 <header>
   <h1>MilkrFX Expert Advisors</h1>
-  <p>Rule-based automated trading systems for MetaTrader 5</p>
+  <p>Professional rule-based automated trading systems for MetaTrader 5</p>
 </header>
 
 <div class="container">
@@ -101,19 +107,31 @@
     <div class="card">
       <h2>MilkrFX Trend Execution EA</h2>
 
-      <ul>
-        <li>Rule-based automated execution</li>
-        <li>Designed for MT5</li>
-        <li>Market structure & trend logic</li>
-        <li>Manual risk control</li>
-        <li>No martingale or grid</li>
-      </ul>
+      <p>
+        The MilkrFX Trend Execution EA is a professional automated trading system
+        designed to execute trades strictly in the direction of established market trends.
+        It focuses on disciplined rule-based execution, removing emotional decision-making
+        while allowing traders to maintain full control over risk parameters.
+      </p>
 
-      <div class="price">R1499</div>
+      <p>
+        This EA is built for traders who value structure, consistency, and long-term
+        sustainability. It does not rely on aggressive recovery techniques or account
+        manipulation. Instead, it follows predefined trend conditions and executes
+        only when market criteria are clearly met.
+      </p>
+
+      <ul>
+        <li>Fully automated trend-based trade execution</li>
+        <li>Compatible with MetaTrader 5</li>
+        <li>Clear rule-driven logic with no discretionary input</li>
+        <li>User-controlled risk and position sizing</li>
+        <li>No martingale, grid, or hedging strategies</li>
+      </ul>
 
       <a class="buy-btn"
          href="https://pay.yoco.com/r/7yqglL&redirectOnPaymentSuccess=https://milkrfx.github.io/thankyou.html?product=Trend%20Execution%20EA">
-        Buy Now
+        Purchase Access
       </a>
     </div>
 
@@ -121,19 +139,31 @@
     <div class="card">
       <h2>MilkrFX Sniper Structure EA</h2>
 
-      <ul>
-        <li>Precision-based entry logic</li>
-        <li>MT5 compatible</li>
-        <li>Structure & momentum rules</li>
-        <li>Session-aware execution</li>
-        <li>No account management</li>
-      </ul>
+      <p>
+        The MilkrFX Sniper Structure EA is a precision-focused automated system
+        engineered for high-quality trade execution based on market structure
+        and momentum conditions. It is designed to trade selectively, entering
+        only when predefined structural criteria align.
+      </p>
 
-      <div class="price">R1499</div>
+      <p>
+        This EA is ideal for traders who prefer fewer, higher-quality trades
+        rather than high-frequency execution. It operates with strict internal
+        rules, respects market sessions, and avoids overtrading during low-quality
+        market conditions.
+      </p>
+
+      <ul>
+        <li>Structure-based sniper-style trade entries</li>
+        <li>Built specifically for MetaTrader 5</li>
+        <li>Session-aware execution logic</li>
+        <li>Rule-based momentum confirmation</li>
+        <li>No account management or high-risk techniques</li>
+      </ul>
 
       <a class="buy-btn"
          href="https://pay.yoco.com/r/7yqglL&redirectOnPaymentSuccess=https://milkrfx.github.io/thankyou.html?product=Sniper%20Structure%20EA">
-        Buy Now
+        Purchase Access
       </a>
     </div>
 
@@ -142,7 +172,7 @@
 </div>
 
 <footer>
-  © 2025 MilkrFX. Trading involves risk. No guarantees. Rule-based systems only.
+  © 2025 MilkrFX. Trading involves risk. No guarantees or profit promises. Rule-based systems only.
 </footer>
 
 </body>
