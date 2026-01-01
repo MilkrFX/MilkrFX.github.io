@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>FX Apex | Mobile Rule-Based Trading Bot</title>
+<title>FX Apex | Rule-Based MT5 Trading Bot</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="FX Apex is a mobile-friendly, rule-based MetaTrader 5 expert advisor designed for structured execution and trader-controlled risk.">
+<meta name="description" content="FX Apex is a rule-based MetaTrader 5 expert advisor built for structured execution, mobile monitoring, and trader-controlled risk.">
 
 <style>
 :root{
@@ -22,7 +22,7 @@ body{
   color:var(--text);
 }
 
-/* Apex Nav */
+/* NAV */
 .apex-header{
   background:var(--dark);
   color:#fff;
@@ -34,8 +34,8 @@ body{
 
 .apex-nav{
   display:flex;
-  align-items:center;
   justify-content:space-between;
+  align-items:center;
   flex-wrap:wrap;
 }
 
@@ -47,14 +47,7 @@ body{
   margin-right:14px;
 }
 
-.apex-nav a:hover{
-  color:#fff;
-}
-
-.apex-nav-left{
-  display:flex;
-  align-items:center;
-}
+.apex-nav a:hover{ color:#fff; }
 
 .apex-badge{
   background:var(--primary);
@@ -62,10 +55,9 @@ body{
   padding:6px 10px;
   border-radius:6px;
   font-size:13px;
-  margin-left:10px;
 }
 
-/* Sections */
+/* SECTIONS */
 section{
   max-width:1100px;
   margin:auto;
@@ -102,21 +94,19 @@ section{
   gap:30px;
 }
 
-ul{
-  margin-top:20px;
+/* PRICING */
+.price{
+  font-size:36px;
+  font-weight:bold;
+  margin:16px 0;
+  color:var(--primary);
 }
 
-ul li{
-  margin-bottom:10px;
+.price span{
+  font-size:14px;
+  color:var(--muted);
 }
 
-.note{
-  font-size:13px;
-  color:#6b7280;
-  margin-top:18px;
-}
-
-/* Buttons */
 .btn{
   display:inline-block;
   margin-top:26px;
@@ -128,7 +118,12 @@ ul li{
   font-weight:bold;
 }
 
-/* Footer */
+.note{
+  font-size:13px;
+  color:#6b7280;
+  margin-top:18px;
+}
+
 footer{
   background:var(--dark);
   color:#d1d5db;
@@ -141,86 +136,96 @@ footer{
 
 <body>
 
-<!-- APEX NAVIGATION -->
 <header class="apex-header">
   <nav class="apex-nav">
-    <div class="apex-nav-left">
+    <div>
       <a href="index.html">← Back to MilkrFX</a>
       <span class="apex-badge">FX Apex</span>
     </div>
     <div>
-      <a href="#apex">Apex</a>
+      <a href="#about">About</a>
       <a href="#features">Features</a>
-      <a href="#setup">Setup</a>
+      <a href="#pricing">Pricing</a>
       <a href="https://wa.me/27664597933" target="_blank">Support</a>
     </div>
   </nav>
 </header>
 
-<!-- HERO -->
-<section id="apex" class="hero">
+<section class="hero" id="about">
   <h1>FX Apex</h1>
   <p>
-    A mobile-friendly, rule-based MetaTrader 5 expert advisor built for
-    traders who want structured execution without being tied to charts
-    all day.
+    FX Apex is a rule-based MetaTrader 5 expert advisor designed for traders
+    who want consistent execution without emotional interference.
+    It follows predefined logic while allowing full user control over risk,
+    lot sizing, and trade management.
   </p>
 </section>
 
-<!-- FEATURES -->
 <section id="features">
   <div class="grid">
     <div class="card">
-      <h2>Rule-Based Execution</h2>
+      <h2>Strict Rule-Based Logic</h2>
       <p>
-        FX Apex operates strictly on predefined logic. No emotions,
-        no discretionary decisions — only coded rules.
+        FX Apex executes trades only when its conditions are met.
+        No manual bias, no emotional decisions — just structured logic.
       </p>
     </div>
 
     <div class="card">
-      <h2>Mobile-First Friendly</h2>
+      <h2>Mobile Monitoring</h2>
       <p>
-        Designed for traders who monitor and manage trades from
-        their phone while the EA handles execution logic.
+        Trades can be monitored and managed from the MetaTrader mobile app
+        while FX Apex handles execution on desktop or VPS.
       </p>
     </div>
 
     <div class="card">
       <h2>User-Controlled Risk</h2>
       <p>
-        All lot sizing, risk parameters, and trade management
-        remain under the trader’s control.
+        You remain in control of lot size, risk parameters,
+        sessions, and trade behavior at all times.
       </p>
     </div>
   </div>
 </section>
 
-<!-- SETUP -->
-<section id="setup">
-  <div class="card">
-    <h2>Setup & Usage</h2>
+<section id="pricing">
+  <div class="grid">
+    <div class="card">
+      <h2>FX Apex License</h2>
+      <p>
+        One-time license for the FX Apex expert advisor.
+        Includes setup guidance and basic usage support.
+      </p>
 
-    <ul>
-      <li>Install FX Apex on MetaTrader 5 (desktop or VPS)</li>
-      <li>Configure risk and execution settings</li>
-      <li>Monitor trades and manage positions from mobile</li>
-    </ul>
+      <div class="price">
+        $99 <span>one-time payment</span>
+      </div>
 
-    <p class="note">
-      FX Apex does not manage accounts, does not guarantee results,
-      and requires user supervision at all times.
-    </p>
+      <ul>
+        <li>MetaTrader 5 Expert Advisor</li>
+        <li>Rule-based execution</li>
+        <li>User-defined risk settings</li>
+        <li>Mobile monitoring compatible</li>
+        <li>No account management</li>
+      </ul>
 
-    <a href="https://wa.me/27664597933" target="_blank" class="btn">
-      Get Setup Assistance
-    </a>
+      <a href="https://wa.me/27664597933" target="_blank" class="btn">
+        Get FX Apex
+      </a>
+
+      <p class="note">
+        FX Apex is a trading tool, not a financial service.
+        Results are not guaranteed and depend on market conditions
+        and user configuration.
+      </p>
+    </div>
   </div>
 </section>
 
 <footer>
-  © 2026 MilkrFX. FX Apex is a rule-based execution tool. No financial advice.
+  © 2026 MilkrFX. FX Apex is a rule-based trading tool. No financial advice.
 </footer>
 
 </body>
-</html>
+  </html>
