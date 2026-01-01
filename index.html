@@ -152,6 +152,61 @@
       border-left: 5px solid var(--brand-primary);
     }
 
+    /* REVIEWS */
+    .reviews-section {
+      background: var(--brand-dark);
+      color: #ffffff;
+      border-radius: 20px;
+      padding: 90px 20px;
+    }
+
+    .reviews-section h3 {
+      color: #ffffff;
+    }
+
+    .review-card {
+      background: #111827;
+      border-radius: 16px;
+      padding: 34px;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+    }
+
+    .stars {
+      color: #facc15;
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    .review-name {
+      font-weight: bold;
+      margin-top: 18px;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .review-note {
+      text-align: center;
+      font-size: 13px;
+      opacity: 0.7;
+      margin-top: 35px;
+    }
+
+    .review-btn {
+      display: inline-block;
+      margin-top: 45px;
+      padding: 16px 38px;
+      background: var(--brand-primary);
+      color: #fff;
+      border-radius: 10px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.25s ease;
+    }
+
+    .review-btn:hover {
+      background: var(--brand-primary-hover);
+    }
+
     .broker-card {
       max-width: 420px;
       margin: auto;
@@ -175,10 +230,6 @@
       border-radius: 10px;
       text-decoration: none;
       font-weight: bold;
-    }
-
-    .broker-btn:hover {
-      background: var(--brand-primary-hover);
     }
 
     footer {
@@ -235,76 +286,75 @@
 
 <section>
   <h3>What We Do</h3>
-
   <div class="grid">
     <div class="card">
       <h4>Market Structure Analysis</h4>
-      <p>
-        We provide structured market insights based on price action,
-        bias, and execution rules designed to support disciplined
-        decision-making.
-      </p>
+      <p>Clear price-action based structure analysis for disciplined traders.</p>
     </div>
-
     <div class="card">
       <h4>Rule-Based Trading Tools</h4>
-      <p>
-        Custom indicators and expert advisors built for traders who
-        prefer systematic and repeatable execution models.
-      </p>
+      <p>Indicators and expert advisors built on strict execution rules.</p>
     </div>
-
     <div class="card">
       <h4>Trader Support</h4>
-      <p>
-        Guidance, setup assistance, and community access for traders
-        using MilkrFX tools responsibly and independently.
-      </p>
+      <p>Setup guidance and responsible usage support for MilkrFX tools.</p>
     </div>
   </div>
 </section>
 
-<section>
-  <h3>🎁 Mystery Welcome Gift</h3>
+<section class="reviews-section">
+  <h3>Client Reviews</h3>
 
   <div class="grid">
-    <div class="card highlight">
-      <h4>Exclusive Affiliate Bonus</h4>
-      <p>
-        Clients who join a supported broker using our official affiliate
-        link may receive a <strong>mystery welcome gift</strong> from MilkrFX.
-      </p>
-      <p>
-        Gifts may include premium indicators, educational material,
-        VIP community access, or setup assistance.
-      </p>
-      <p>
-        To claim your gift, contact us on WhatsApp after verification.
-      </p>
-      <p style="font-size:13px;">
-        Gifts are provided independently by MilkrFX and are not affiliated
-        with or endorsed by any broker.
-      </p>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p>Clean execution logic and no hype. Exactly what disciplined trading needs.</p>
+      <div class="review-name">— J.M.</div>
+    </div>
+
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p>FX Apex runs smoothly and follows rules properly. Very professional.</p>
+      <div class="review-name">— Anonymous</div>
+    </div>
+
+    <div class="review-card">
+      <div class="stars">★★★★☆</div>
+      <p>Support is honest and realistic. No fake promises.</p>
+      <div class="review-name">— T.K.</div>
+    </div>
+
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p>Indicators are clean and easy to understand.</p>
+      <div class="review-name">— S.L.</div>
+    </div>
+
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p>Finally a trading brand focused on structure, not marketing.</p>
+      <div class="review-name">— Anonymous</div>
+    </div>
+
+    <div class="review-card">
+      <div class="stars">★★★★☆</div>
+      <p>Solid tools and realistic expectations.</p>
+      <div class="review-name">— P.N.</div>
     </div>
   </div>
-</section>
 
-<section>
-  <h3>Recommended Broker</h3>
-
-  <div class="broker-card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Exness_logo.svg" class="broker-logo" alt="Exness">
-    <p>
-      Exness is widely used by traders for its execution quality,
-      flexible account options, and compatibility with automated
-      and rule-based trading systems.
-    </p>
-    <a href="https://one.exnessonelink.com/a/gjrchju5te" target="_blank" class="broker-btn">
-      Open an Exness Account
+  <div style="text-align:center;">
+    <a
+      href="https://wa.me/27664597933?text=Hi%20MilkrFX%2C%20I%20would%20like%20to%20leave%20a%20review."
+      class="review-btn"
+      target="_blank"
+    >
+      Leave a Review
     </a>
-    <p style="font-size:13px; margin-top:14px;">
-      Broker choice is independent. MilkrFX does not provide brokerage services.
-    </p>
+
+    <div class="review-note">
+      Client feedback shown is moderated before publishing.
+    </div>
   </div>
 </section>
 
@@ -313,7 +363,7 @@
 </footer>
 
 <a
-  href="https://wa.me/27664597933?text=Hi%20MilkrFX%2C%20I%20would%20like%20more%20information."
+  href="https://wa.me/27664597933"
   class="whatsapp-float"
   target="_blank"
   aria-label="Chat on WhatsApp"
