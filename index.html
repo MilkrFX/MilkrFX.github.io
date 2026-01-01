@@ -135,33 +135,6 @@
       text-align: center;
     }
 
-    .card h4 {
-      margin-top: 0;
-      font-size: 22px;
-      color: var(--brand-dark);
-    }
-
-    .card p {
-      font-size: 15px;
-      line-height: 1.7;
-      margin: 24px 0 30px;
-      color: var(--text-muted);
-    }
-
-    .card a {
-      display: inline-block;
-      padding: 14px 32px;
-      background: var(--brand-primary);
-      color: #fff;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-
-    .card a:hover {
-      background: var(--brand-primary-hover);
-    }
-
     /* Recommended Broker */
     .broker-card {
       max-width: 420px;
@@ -185,17 +158,10 @@
     }
 
     .stars {
-      font-size: 24px;
+      font-size: 22px;
       color: #f5b301;
       margin-bottom: 16px;
       letter-spacing: 3px;
-    }
-
-    .broker-card p {
-      font-size: 16px;
-      line-height: 1.7;
-      color: var(--text-muted);
-      margin-bottom: 28px;
     }
 
     .broker-btn {
@@ -214,48 +180,33 @@
       transform: scale(1.06);
     }
 
-    .cta {
-      text-align: center;
-      background: linear-gradient(135deg, var(--brand-dark), #111827);
-      color: #fff;
-      padding: 105px 20px;
-    }
-
-    .cta h3 {
-      font-size: 36px;
-      margin-bottom: 18px;
-      color: #ffffff;
-    }
-
-    .cta p {
-      font-size: 18px;
-      max-width: 720px;
-      margin: auto;
-      opacity: 0.9;
-      line-height: 1.6;
-    }
-
-    .cta a {
-      display: inline-block;
-      margin-top: 38px;
-      padding: 18px 42px;
-      background: var(--brand-primary);
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 8px;
-    }
-
-    .cta a:hover {
-      background: var(--brand-primary-hover);
-    }
-
     footer {
       background: var(--brand-dark);
       color: #d1d5db;
       padding: 38px;
       text-align: center;
       font-size: 14px;
+    }
+
+    /* WhatsApp Floating Button */
+    .whatsapp-float {
+      position: fixed;
+      width: 56px;
+      height: 56px;
+      bottom: 25px;
+      right: 25px;
+      background-color: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+      z-index: 999;
+      transition: transform 0.25s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.08);
     }
   </style>
 </head>
@@ -275,70 +226,56 @@
 
 <section class="hero">
   <h2>Rule-Based Trading Tools</h2>
-  <p>
-    Structured trading indicators and expert advisors built for
-    disciplined execution — not speculation or hype.
-  </p>
-
+  <p>Structured trading indicators and expert advisors built for disciplined execution.</p>
   <a href="pricing.html" class="btn">View Pricing</a>
-
-  <a
-    href="https://one.exnessonelink.com/a/gjrchju5te"
-    target="_blank"
-    class="btn-secondary"
-  >
-    Trade with Exness
-  </a>
-</section>
-
-<section>
-  <h3>Our Focus</h3>
-  <div class="grid">
-    <div class="card">
-      <h4>Trading Indicators</h4>
-      <p>Market structure and confirmation indicators designed for rule-based analysis.</p>
-      <a href="indicators.html">View Indicators</a>
-    </div>
-
-    <div class="card">
-      <h4>Expert Advisors</h4>
-      <p>MT5 Expert Advisors engineered with strict execution logic.</p>
-      <a href="ea.html">View Expert Advisors</a>
-    </div>
-
-    <div class="card">
-      <h4>Custom Development</h4>
-      <p>Bespoke trading tools built directly from defined rules.</p>
-      <a href="pricing.html">Request Information</a>
-    </div>
-  </div>
+  <a href="https://one.exnessonelink.com/a/gjrchju5te" target="_blank" class="btn-secondary">Trade with Exness</a>
 </section>
 
 <section>
   <h3>Recommended Broker</h3>
+
   <div class="broker-card">
     <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Exness_logo.svg" class="broker-logo">
     <div class="stars">★★★★★</div>
-    <p>Exness is a globally trusted broker offering fast execution and competitive spreads.</p>
+    <p>Exness is a widely used broker known for execution reliability and competitive trading conditions.</p>
     <a href="https://one.exnessonelink.com/a/gjrchju5te" target="_blank" class="broker-btn">
       Open an Exness Account
     </a>
   </div>
-</section>
 
-<section class="cta">
-  <h3>Ready to Start Trading?</h3>
-  <p>
-    Use our tools with a reliable trading environment.
-  </p>
-  <a href="https://one.exnessonelink.com/a/gjrchju5te" target="_blank">
-    Start with Exness
-  </a>
+  <div class="grid" style="margin-top:60px;">
+    <div class="card">
+      <div class="stars">★★★★★</div>
+      <p>“Execution remains stable even during volatile sessions.”</p>
+    </div>
+
+    <div class="card">
+      <div class="stars">★★★★★</div>
+      <p>“Withdrawals and platform performance have been consistent.”</p>
+    </div>
+
+    <div class="card">
+      <div class="stars">★★★★★</div>
+      <p>“Works well with rule-based and automated trading systems.”</p>
+    </div>
+  </div>
 </section>
 
 <footer>
   © 2025 MilkrFX. All rights reserved.
 </footer>
 
+<!-- WhatsApp float button -->
+<a
+  href="https://wa.me/27664597933?text=Hi%20MilkrFX%2C%20I%20have%20a%20question%20about%20your%20tools."
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="Chat on WhatsApp"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28" fill="white">
+    <path d="M16.04 3C9.4 3 4 8.4 4 15.04c0 2.64.86 5.07 2.32 7.05L4 29l7.1-2.27a12 12 0 005.94 1.52h.01c6.63 0 12.03-5.4 12.03-12.04C29.08 8.4 22.68 3 16.04 3z"/>
+  </svg>
+</a>
+
 </body>
-  </html>
+</html>
