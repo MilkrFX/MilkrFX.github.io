@@ -1,229 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pricing | MilkrFX</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing | MilkrFX</title>
 
-  <style>
-    :root {
-      --bg-main: #f4f6f9;
-      --brand-dark: #0b1220;
-      --brand-primary: #1d4ed8;
-      --brand-primary-hover: #1e40af;
-      --text-main: #111827;
-      --text-muted: #4b5563;
-      --card-bg: #ffffff;
-      --success: #16a34a;
-    }
+<style>
+:root{
+  --bg:#f4f6f9;
+  --dark:#0b1220;
+  --primary:#1d4ed8;
+  --primary-hover:#1e40af;
+  --text:#111827;
+  --muted:#4b5563;
+  --card:#ffffff;
+  --accent:#16a34a;
+}
 
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: var(--bg-main);
-      color: var(--text-main);
-    }
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
 
-    header {
-      background: var(--brand-dark);
-      padding: 55px 20px;
-      text-align: center;
-      color: #fff;
-    }
+header{
+  background:var(--dark);
+  color:#fff;
+  padding:60px 20px;
+  text-align:center;
+}
 
-    header h1 {
-      margin: 0;
-      font-size: 38px;
-    }
+header h1{
+  margin:0;
+  font-size:38px;
+}
 
-    header p {
-      margin-top: 12px;
-      font-size: 16px;
-      opacity: 0.9;
-      max-width: 720px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.6;
-    }
+header p{
+  margin-top:14px;
+  max-width:760px;
+  margin-left:auto;
+  margin-right:auto;
+  line-height:1.6;
+  opacity:0.9;
+}
 
-    .container {
-      max-width: 1200px;
-      margin: 80px auto;
-      padding: 0 20px;
-    }
+.container{
+  max-width:1200px;
+  margin:90px auto;
+  padding:0 20px;
+}
 
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 40px;
-    }
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:40px;
+}
 
-    .pricing-card {
-      background: var(--card-bg);
-      border-radius: 18px;
-      padding: 45px 38px;
-      box-shadow: 0 16px 45px rgba(0,0,0,0.08);
-      text-align: center;
-    }
+.card{
+  background:var(--card);
+  border-radius:18px;
+  padding:42px 38px;
+  box-shadow:0 18px 45px rgba(0,0,0,0.08);
+  text-align:center;
+}
 
-    .pricing-card h3 {
-      margin: 0;
-      font-size: 24px;
-      color: var(--brand-dark);
-    }
+.card h3{
+  margin-top:0;
+  font-size:24px;
+  color:var(--dark);
+}
 
-    .price {
-      font-size: 22px;
-      font-weight: bold;
-      color: var(--success);
-      margin: 14px 0;
-    }
+.price{
+  font-size:28px;
+  font-weight:bold;
+  color:var(--accent);
+  margin:18px 0 10px;
+}
 
-    .pricing-card p {
-      font-size: 15px;
-      line-height: 1.7;
-      color: var(--text-muted);
-      margin-bottom: 28px;
-    }
+.sub{
+  font-size:14px;
+  color:var(--muted);
+  margin-bottom:20px;
+}
 
-    .buy-btn {
-      display: inline-block;
-      padding: 16px 36px;
-      background: var(--brand-primary);
-      color: #fff;
-      text-decoration: none;
-      font-size: 16px;
-      border-radius: 10px;
-      font-weight: bold;
-    }
+.card p{
+  font-size:15px;
+  line-height:1.7;
+  color:var(--muted);
+  margin-bottom:26px;
+}
 
-    .buy-btn:hover {
-      background: var(--brand-primary-hover);
-    }
+.btn{
+  display:block;
+  padding:14px;
+  margin-bottom:12px;
+  background:var(--primary);
+  color:#fff;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:bold;
+}
 
-    .note {
-      margin-top: 90px;
-      background: #e5e7eb;
-      padding: 32px;
-      border-radius: 14px;
-      font-size: 14px;
-      color: #374151;
-      line-height: 1.7;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+.btn:hover{
+  background:var(--primary-hover);
+}
 
-    footer {
-      text-align: center;
-      padding: 40px;
-      font-size: 14px;
-      color: #6b7280;
-    }
-  </style>
+.note{
+  margin-top:80px;
+  background:#e5e7eb;
+  padding:32px;
+  border-radius:14px;
+  font-size:14px;
+  line-height:1.7;
+  color:#374151;
+}
+
+footer{
+  text-align:center;
+  padding:40px;
+  font-size:14px;
+  color:#6b7280;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1>Pricing</h1>
+  <h1>MilkrFX Pricing</h1>
   <p>
-    Clear pricing for rule-based trading tools.
-    No hype, no guarantees — just structured execution tools.
+    Transparent pricing for rule-based trading tools.
+    All products are execution-focused, non-repainting,
+    and built for disciplined traders.
   </p>
 </header>
 
 <div class="container">
 
-  <div class="pricing-grid">
+<div class="grid">
 
-    <!-- INDICATORS -->
-    <div class="pricing-card">
-      <h3>MilkrFX Indicators</h3>
-      <div class="price">R450 — 1 Month</div>
-      <div class="price">R900 — Lifetime</div>
-      <p>
-        Rule-based indicators for market structure,
-        confirmation, and disciplined analysis.
-        <strong>Lifetime includes all future updates.</strong>
-      </p>
-      <a class="buy-btn" href="https://wa.me/27664597933" target="_blank">
-        Purchase Indicators
-      </a>
-    </div>
+<!-- INDICATORS -->
+<div class="card">
+  <h3>MilkrFX Indicators</h3>
+  <p>Market structure and execution context indicators for disciplined analysis.</p>
 
-    <!-- TREND EA -->
-    <div class="pricing-card">
-      <h3>MilkrFX Trend EA</h3>
-      <div class="price">R650 — 1 Month</div>
-      <div class="price">R1300 — Lifetime</div>
-      <p>
-        Trend-following MT5 Expert Advisor built on
-        strict rule-based execution.
-        <strong>Lifetime includes all future updates.</strong>
-      </p>
-      <a class="buy-btn" href="https://wa.me/27664597933" target="_blank">
-        Purchase Trend EA
-      </a>
-    </div>
+  <div class="price">R450</div>
+  <div class="sub">1 Month Access</div>
+  <a class="btn" href="https://pay.yoco.com/r/2Al5DX" target="_blank">Buy 1 Month</a>
 
-    <!-- SNIPER EA -->
-    <div class="pricing-card">
-      <h3>MilkrFX Sniper EA</h3>
-      <div class="price">R1000 — 1 Month</div>
-      <div class="price">R2000 — Lifetime</div>
-      <p>
-        Precision entry MT5 Expert Advisor designed
-        for controlled risk and sniper-style execution.
-        <strong>Lifetime includes all future updates.</strong>
-      </p>
-      <a class="buy-btn" href="https://wa.me/27664597933" target="_blank">
-        Purchase Sniper EA
-      </a>
-    </div>
+  <div class="price">R900</div>
+  <div class="sub">Lifetime Access (All Updates)</div>
+  <a class="btn" href="https://pay.yoco.com/r/4jep6o" target="_blank">Buy Lifetime</a>
+</div>
 
-    <!-- APEX -->
-    <div class="pricing-card">
-      <h3>FX Apex (Mobile Bot)</h3>
-      <div class="price">R350 — 1 Month</div>
-      <div class="price">R800 — Lifetime</div>
-      <p>
-        Mobile-monitored MT5 Expert Advisor built
-        for rule-based execution with trader-controlled risk.
-        <strong>Lifetime includes all future updates.</strong>
-      </p>
-      <a class="buy-btn" href="https://wa.me/27664597933" target="_blank">
-        Purchase FX Apex
-      </a>
-    </div>
+<!-- TREND -->
+<div class="card">
+  <h3>MilkrFX Trend EA</h3>
+  <p>Trend-following expert advisor built on strict rule-based execution.</p>
 
-    <!-- VIP -->
-    <div class="pricing-card">
-      <h3>VIP Access</h3>
-      <div class="price">R350</div>
-      <p>
-        Private access to premium tools,
-        updates, and structured market insights.
-      </p>
-      <a class="buy-btn" href="https://wa.me/27664597933" target="_blank">
-        Join VIP
-      </a>
-    </div>
+  <div class="price">R650</div>
+  <div class="sub">1 Month License</div>
+  <a class="btn" href="https://pay.yoco.com/r/781MGJ" target="_blank">Buy 1 Month</a>
 
-  </div>
+  <div class="price">R1300</div>
+  <div class="sub">Lifetime License (All Updates)</div>
+  <a class="btn" href="https://pay.yoco.com/r/73dzJR" target="_blank">Buy Lifetime</a>
+</div>
 
-  <div class="note">
-    <strong>Important Notice</strong><br><br>
-    All MilkrFX products are rule-based tools provided for
-    analytical and educational purposes only.
-    No profit guarantees are made.
-    Trading involves risk.
-  </div>
+<!-- SNIPER -->
+<div class="card">
+  <h3>MilkrFX Sniper EA</h3>
+  <p>Precision entry expert advisor designed for high-quality execution zones.</p>
+
+  <div class="price">R1000</div>
+  <div class="sub">1 Month License</div>
+  <a class="btn" href="https://pay.yoco.com/r/4ZED8L" target="_blank">Buy 1 Month</a>
+
+  <div class="price">R2000</div>
+  <div class="sub">Lifetime License (All Updates)</div>
+  <a class="btn" href="https://pay.yoco.com/r/mRJOXq" target="_blank">Buy Lifetime</a>
+</div>
+
+<!-- APEX -->
+<div class="card">
+  <h3>FX Apex</h3>
+  <p>Mobile-friendly MT5 bot built for structured execution and user-controlled risk.</p>
+
+  <div class="price">R350</div>
+  <div class="sub">1 Month License</div>
+  <a class="btn" href="https://pay.yoco.com/r/2QzQO9" target="_blank">Buy 1 Month</a>
+
+  <div class="price">R800</div>
+  <div class="sub">Lifetime License (All Updates)</div>
+  <a class="btn" href="https://pay.yoco.com/r/mOGRrK" target="_blank">Buy Lifetime</a>
+</div>
+
+<!-- VIP -->
+<div class="card">
+  <h3>VIP Access</h3>
+  <p>Private access to updates, premium tools, and internal MilkrFX releases.</p>
+
+  <div class="price">R350</div>
+  <div class="sub">Lifetime Access</div>
+  <a class="btn" href="https://pay.yoco.com/r/4WdpVN" target="_blank">Join VIP</a>
+</div>
+
+</div>
+
+<div class="note">
+<strong>Important:</strong><br><br>
+MilkrFX products are rule-based tools for analytical and educational purposes only.
+No profit guarantees are made. Lifetime licenses include all future updates for the
+specific product purchased.
+</div>
 
 </div>
 
 <footer>
-  © 2026 MilkrFX. All rights reserved.
+© 2026 MilkrFX. All rights reserved.
 </footer>
 
 </body>
