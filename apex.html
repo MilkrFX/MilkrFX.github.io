@@ -1,182 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>FX Apex | Mobile Rule-Based MT5 Bot</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="FX Apex is a mobile-friendly, rule-based MetaTrader 5 expert advisor built for structured execution and trader-controlled risk.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FX Apex – Fully Automated Sniper EA | MilkrFX</title>
 
-<style>
-:root{
-  --dark:#0b1220;
-  --primary:#1d4ed8;
-  --bg:#f4f6f9;
-  --text:#111827;
-  --muted:#4b5563;
-}
+  <meta name="description" content="FX Apex is a fully automated sniper trading EA built for precision, discipline, and consistent execution across all markets and timeframes.">
 
-body{
-  margin:0;
-  font-family:Arial, Helvetica, sans-serif;
-  background:var(--bg);
-  color:var(--text);
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0d1117;
+      color: #e6edf3;
+      line-height: 1.6;
+    }
 
-/* NAV */
-.apex-header{
-  background:var(--dark);
-  padding:16px 18px;
-  position:sticky;
-  top:0;
-  z-index:100;
-}
+    /* HERO / BACKGROUND */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      background:
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)),
+        url("fx-apex-bg.jpg") center/cover no-repeat;
+    }
 
-.apex-nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap;
-}
+    .hero h1 {
+      font-size: 3.2rem;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
 
-.apex-nav a{
-  color:#d1d5db;
-  text-decoration:none;
-  font-weight:600;
-  font-size:14px;
-  margin-right:14px;
-}
+    .hero span {
+      color: #38bdf8;
+    }
 
-.apex-nav a:hover{color:#fff;}
+    .hero p {
+      font-size: 1.2rem;
+      color: #cbd5e1;
+      max-width: 720px;
+      margin: 0 auto 25px;
+    }
 
-.apex-badge{
-  background:var(--primary);
-  color:#fff;
-  padding:6px 10px;
-  border-radius:6px;
-  font-size:13px;
-}
+    .btn {
+      display: inline-block;
+      padding: 14px 36px;
+      background: #38bdf8;
+      color: #020617;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 30px;
+      transition: 0.3s ease;
+    }
 
-/* SECTIONS */
-section{
-  max-width:1100px;
-  margin:auto;
-  padding:90px 20px;
-}
+    .btn:hover {
+      background: #0ea5e9;
+    }
 
-.hero{
-  text-align:center;
-}
+    /* CONTENT */
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 80px 20px;
+    }
 
-.hero h1{
-  font-size:42px;
-  margin-bottom:16px;
-}
+    .section {
+      margin-bottom: 60px;
+    }
 
-.hero p{
-  max-width:760px;
-  margin:auto;
-  font-size:17px;
-  line-height:1.6;
-  color:var(--muted);
-}
+    h2 {
+      color: #38bdf8;
+      margin-bottom: 15px;
+    }
 
-.card{
-  background:#fff;
-  border-radius:16px;
-  padding:42px 36px;
-  box-shadow:0 14px 38px rgba(0,0,0,0.08);
-}
+    ul {
+      padding-left: 20px;
+    }
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:30px;
-}
+    ul li {
+      margin-bottom: 8px;
+    }
 
-.btn{
-  display:inline-block;
-  margin-top:26px;
-  padding:14px 34px;
-  background:var(--primary);
-  color:#fff;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:bold;
-}
+    .cta {
+      background: #020617;
+      border: 1px solid #1f2937;
+      padding: 40px;
+      border-radius: 12px;
+      text-align: center;
+    }
 
-.note{
-  font-size:13px;
-  color:#6b7280;
-  margin-top:18px;
-}
-
-footer{
-  background:var(--dark);
-  color:#d1d5db;
-  padding:38px;
-  text-align:center;
-  font-size:14px;
-}
-</style>
+    footer {
+      background: #020617;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #9ca3af;
+    }
+  </style>
 </head>
 
 <body>
 
-<header class="apex-header">
-  <nav class="apex-nav">
+  <!-- HERO -->
+  <section class="hero">
     <div>
-      <a href="index.html">← Back to MilkrFX</a>
-      <span class="apex-badge">FX Apex</span>
-    </div>
-    <div>
-      <a href="#about">About</a>
-      <a href="#features">Features</a>
-      <a href="https://wa.me/27664597933" target="_blank">Support</a>
-    </div>
-  </nav>
-</header>
-
-<section id="about" class="hero">
-  <h1>FX Apex</h1>
-  <p>
-    FX Apex is a rule-based MetaTrader 5 expert advisor built for traders
-    who want structured execution without emotional interference.
-    It is designed for mobile monitoring while execution runs on
-    desktop or VPS.
-  </p>
-</section>
-
-<section id="features">
-  <div class="grid">
-    <div class="card">
-      <h2>Strict Rule-Based Execution</h2>
+      <h1>FX <span>Apex</span></h1>
       <p>
-        FX Apex follows predefined logic only.
-        No emotions, no manual bias, no signal chasing.
+        Fully Automated Sniper Trading EA built for
+        <strong>precision, discipline, and automation</strong>.
+        Designed for all markets and all timeframes with a fixed 1.5 RR model.
       </p>
+      <a href="#buy" class="btn">Get FX Apex</a>
     </div>
+  </section>
 
-    <div class="card">
-      <h2>Mobile-Friendly Monitoring</h2>
-      <p>
-        Monitor and manage trades from the MetaTrader mobile app
-        while FX Apex handles execution in the background.
-      </p>
-    </div>
+  <div class="container">
 
-    <div class="card">
-      <h2>Full Risk Control</h2>
+    <section class="section">
+      <h2>What is FX Apex?</h2>
       <p>
-        Lot sizing, risk parameters, and trade behavior
-        are always controlled by the user.
+        <strong>FX Apex</strong> is a fully automated sniper trading Expert Advisor created for traders
+        who want rule-based execution without emotional interference.
+        It operates across all markets and timeframes with disciplined risk control.
       </p>
-    </div>
+
+      <p>
+        This is not a signal service. This is not martingale.
+        FX Apex executes trades using a fixed
+        <strong>1.5 Risk-to-Reward ratio</strong>.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Core Features</h2>
+      <ul>
+        <li>100% Fully Automated Trading</li>
+        <li>Sniper Precision Entry Logic</li>
+        <li>All Timeframes Supported</li>
+        <li>Forex, Indices, Crypto & Gold</li>
+        <li>Fixed 1.5 Risk-to-Reward</li>
+        <li>Beginner Friendly</li>
+        <li>No Emotional Trading</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Who Is FX Apex For?</h2>
+      <ul>
+        <li>Beginners who want hands-free automation</li>
+        <li>Busy traders with limited screen time</li>
+        <li>Advanced traders seeking discipline</li>
+        <li>Anyone who values consistency</li>
+      </ul>
+    </section>
+
+    <section id="buy" class="section cta">
+      <h2>Start Trading with FX Apex</h2>
+      <p>
+        Attach FX Apex to your chart, configure your inputs,
+        and let automation handle execution.
+      </p>
+      <a href="#" class="btn">Buy FX Apex</a>
+    </section>
+
   </div>
-</section>
 
-<footer>
-  © 2026 MilkrFX. FX Apex is a rule-based execution tool. No financial advice.
-</footer>
+  <footer>
+    © 2026 MilkrFX. All rights reserved.<br>
+    Trading involves risk. No guarantees are made.
+  </footer>
 
 </body>
 </html>
