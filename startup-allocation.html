@@ -2,234 +2,190 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Startup Allocation | MilkrFX</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MilkrFX | Startup Allocation Promotion</title>
 
-  <meta name="description" content="MilkrFX Startup Allocation — elite access advantages released during a controlled expansion phase.">
+  <meta name="description" content="MilkrFX Startup Allocation Promotion – A limited opportunity to access premium trading tools and systems at a major discount as part of our official launch phase.">
 
   <style>
-    :root {
-      --bg-main: #f4f6f9;
-      --brand-dark: #0b1220;
-      --brand-primary: #1d4ed8;
-      --brand-primary-hover: #1e40af;
-      --text-main: #111827;
-      --text-muted: #4b5563;
-      --card-bg: #ffffff;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: var(--bg-main);
-      color: var(--text-main);
-    }
-
-    header {
-      background: var(--brand-dark);
+      background: #0b0f14;
       color: #ffffff;
-      padding: 28px 20px;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 26px;
-      letter-spacing: 1px;
-    }
-
-    nav {
-      margin-top: 10px;
-    }
-
-    nav a {
-      color: #d1d5db;
-      margin-right: 18px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 14px;
-    }
-
-    nav a:hover {
-      color: #ffffff;
-    }
-
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 100px 20px;
-    }
-
-    /* HERO */
-    .hero {
-      text-align: center;
-      padding-bottom: 60px;
-    }
-
-    .hero h2 {
-      font-size: 44px;
-      margin-bottom: 16px;
-      color: var(--brand-dark);
-      letter-spacing: 0.5px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      max-width: 760px;
-      margin: auto;
       line-height: 1.6;
-      color: var(--text-muted);
     }
 
-    /* CARD */
-    .card {
-      background: var(--card-bg);
-      border-radius: 22px;
-      padding: 60px 52px;
-      box-shadow: 0 20px 55px rgba(0,0,0,0.12);
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 20px;
     }
 
-    .block {
-      margin-bottom: 48px;
+    .badge {
+      display: inline-block;
+      background: linear-gradient(90deg, #d4af37, #f5d76e);
+      color: #000;
+      padding: 8px 18px;
+      border-radius: 30px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      margin-bottom: 25px;
     }
 
-    .block h3 {
-      font-size: 22px;
-      margin-bottom: 10px;
-      color: var(--brand-dark);
-      letter-spacing: 0.3px;
+    h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+      font-weight: 700;
     }
 
-    .block p {
-      font-size: 16px;
-      line-height: 1.7;
-      color: var(--text-muted);
-      max-width: 820px;
+    h2 {
+      font-size: 26px;
+      margin-top: 50px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 17px;
+      opacity: 0.95;
+      margin-bottom: 18px;
     }
 
     .highlight {
-      background: #eef2ff;
-      border-left: 6px solid var(--brand-primary);
-      padding: 26px 30px;
-      border-radius: 14px;
-      font-size: 15px;
-      color: #1e3a8a;
-      line-height: 1.6;
-      margin: 50px 0;
+      color: #f5d76e;
+      font-weight: bold;
+    }
+
+    .box {
+      background: #121826;
+      border-radius: 16px;
+      padding: 30px;
+      margin-top: 40px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+
+    ul {
+      list-style: none;
+      margin-top: 15px;
+    }
+
+    ul li {
+      padding-left: 28px;
+      position: relative;
+      margin-bottom: 12px;
+      font-size: 16px;
+    }
+
+    ul li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #f5d76e;
+      font-weight: bold;
     }
 
     .cta {
-      text-align: center;
       margin-top: 60px;
+      text-align: center;
     }
 
     .cta a {
       display: inline-block;
-      padding: 18px 46px;
-      background: var(--brand-primary);
-      color: #ffffff;
-      border-radius: 12px;
-      font-weight: bold;
+      padding: 16px 36px;
+      background: linear-gradient(90deg, #d4af37, #f5d76e);
+      color: #000;
       text-decoration: none;
-      font-size: 16px;
-      transition: background 0.25s ease, transform 0.25s ease;
+      border-radius: 40px;
+      font-weight: bold;
+      font-size: 18px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .cta a:hover {
-      background: var(--brand-primary-hover);
-      transform: scale(1.05);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(245, 215, 110, 0.35);
     }
 
-    footer {
-      background: var(--brand-dark);
-      color: #d1d5db;
-      padding: 38px;
-      text-align: center;
+    .footer-note {
+      margin-top: 70px;
       font-size: 14px;
-      margin-top: 100px;
+      opacity: 0.6;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 32px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
     }
   </style>
 </head>
-
 <body>
 
-<header>
-  <h1>MilkrFX</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="pricing.html">Pricing</a>
-    <a href="indicators.html">Indicators</a>
-    <a href="ea.html">Expert Advisors</a>
-    <a href="apex/apex.html">FX Apex</a>
-    <a href="disclaimer.html">Disclaimer</a>
-  </nav>
-</header>
+  <div class="container">
 
-<section class="hero">
-  <h2>Startup Allocation Active</h2>
-  <p>
-    MilkrFX is releasing select tools under an elite startup allocation
-    as part of a controlled expansion phase.
-    Access advantages may include major discounts or full value coverage.
-  </p>
-</section>
+    <span class="badge">Startup Allocation</span>
 
-<section>
-  <div class="card">
+    <h1>Exclusive Launch Promotion</h1>
 
-    <div class="block">
-      <h3>What This Is</h3>
+    <p>
+      MilkrFX is currently in its official startup phase. During this period, we are opening a limited allocation that allows new clients to access selected tools, systems, and resources at <span class="highlight">major discounts — up to 100%</span>.
+    </p>
+
+    <p>
+      This allocation is not publicly advertised everywhere and is reserved for individuals who join MilkrFX during this early stage.
+    </p>
+
+    <div class="box">
+      <h2>What This Means</h2>
       <p>
-        This allocation is not a public sale.
-        It is a controlled release designed to onboard serious users,
-        validate infrastructure, and scale responsibly.
+        As part of our launch, qualifying clients may receive:
+      </p>
+      <ul>
+        <li>Full or partial access to premium MilkrFX products</li>
+        <li>Exclusive startup-only pricing</li>
+        <li>Priority onboarding and direct support</li>
+        <li>Early access to upcoming releases</li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <h2>How Allocation Is Activated</h2>
+      <p>
+        Startup allocation is activated once a client has completed registration through the MilkrFX website and finalized the required onboarding step.
+      </p>
+      <p>
+        After registration, clients are asked to contact the MilkrFX team with confirmation in order to unlock their allocation.
       </p>
     </div>
 
-    <div class="block">
-      <h3>Access Advantages</h3>
-      <p>
-        During this phase, qualifying clients may receive enhanced access
-        to selected MilkrFX tools, including discounts of up to
-        <strong>100%</strong>.
-        Allocation size and availability are limited.
-      </p>
-    </div>
-
-    <div class="block">
-      <h3>Verification & Control</h3>
-      <p>
-        Allocation eligibility is reviewed internally.
-        Startup benefits are released only after verification to ensure
-        platform integrity and fair access.
-      </p>
-    </div>
-
-    <div class="highlight">
-      Allocation Confirmation<br><br>
-      Startup allocation benefits are released only after internal verification.
-      Clients who qualify may be requested to confirm account creation through
-      MilkrFX’s official website before allocation is finalized.
-    </div>
-
-    <div class="block">
-      <h3>Allocation Conditions</h3>
-      <p>
-        Allocation availability may be adjusted, paused, or withdrawn at any time.
-        Participation does not guarantee continued access and is subject to
-        internal review.
-      </p>
+    <div class="box">
+      <h2>Important Notes</h2>
+      <ul>
+        <li>This promotion is limited and subject to availability</li>
+        <li>Allocation value may vary per client</li>
+        <li>MilkrFX reserves the right to adjust or close this offer at any time</li>
+      </ul>
     </div>
 
     <div class="cta">
-      <a href="pricing.html">View Available Tools</a>
+      <a href="index.html">Return to Homepage</a>
+    </div>
+
+    <div class="footer-note">
+      © MilkrFX. All rights reserved.
     </div>
 
   </div>
-</section>
-
-<footer>
-  © 2026 MilkrFX. Educational tools only. No financial advice.
-</footer>
 
 </body>
 </html>
