@@ -2,376 +2,138 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>MilkrFX | Rule-Based Trading Tools & Market Analysis</title>
+  <title>MilkrFX | Professional Trading Tools & Automation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="MilkrFX provides rule-based trading tools, market analysis, indicators, and expert advisors focused on structure, execution discipline, and systematic trading logic.">
+
+  <meta name="description" content="MilkrFX provides professional-grade trading tools, indicators, and automated systems designed for disciplined traders who value structure, execution, and control.">
 
   <style>
     :root {
-      --bg-main: #f4f6f9;
-      --brand-dark: #0b1220;
-      --brand-primary: #1d4ed8;
-      --brand-primary-hover: #1e40af;
-      --text-main: #111827;
-      --text-muted: #4b5563;
-      --card-bg: #ffffff;
+      --bg-dark: #05070d;
+      --gold: #d4af37;
+      --gold-soft: #bfa437;
+      --text-light: #e5e7eb;
+      --text-muted: #9ca3af;
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background-color: var(--bg-main);
-      color: var(--text-main);
-    }
-
-    /* PROMO BANNER */
-    .promo-banner {
-      background: #1d4ed8;
-      color: #ffffff;
-      text-align: center;
-      padding: 14px 20px;
-      font-size: 14px;
-      font-weight: 600;
-      letter-spacing: 0.3px;
-    }
-
-    .promo-banner a {
-      color: #ffffff;
-      text-decoration: underline;
-      font-weight: bold;
-      margin-left: 6px;
+      background: var(--bg-dark);
+      color: var(--text-light);
     }
 
     header {
-      background: var(--brand-dark);
-      color: #fff;
-      padding: 28px 20px;
+      padding: 26px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     header h1 {
       margin: 0;
-      font-size: 26px;
+      font-size: 22px;
       letter-spacing: 1px;
     }
 
-    nav {
-      margin-top: 10px;
-    }
-
     nav a {
-      color: #d1d5db;
-      margin-right: 18px;
+      color: var(--text-muted);
+      margin-left: 22px;
       text-decoration: none;
-      font-weight: 600;
       font-size: 14px;
+      font-weight: 600;
     }
 
     nav a:hover {
-      color: #ffffff;
+      color: var(--gold);
     }
 
     .hero {
-      background:
-        linear-gradient(rgba(11,18,32,0.82), rgba(11,18,32,0.82)),
-        url("assets/images/hero.jpeg");
-      background-size: cover;
-      background-position: center;
-      color: #fff;
-      padding: 150px 20px;
+      min-height: calc(100vh - 90px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
+      padding: 40px 20px;
     }
 
     .hero h2 {
-      font-size: 44px;
-      margin-bottom: 18px;
-      font-weight: 700;
+      font-size: 52px;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
     }
 
     .hero p {
       font-size: 18px;
-      max-width: 780px;
+      max-width: 720px;
       margin: auto;
-      opacity: 0.92;
       line-height: 1.6;
-    }
-
-    .hero .btn,
-    .hero .btn-secondary {
-      margin-top: 42px;
-      padding: 16px 38px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      display: inline-block;
-      transition: transform 0.25s ease, background 0.25s ease;
-    }
-
-    .hero .btn {
-      background: var(--brand-primary);
-      color: #ffffff;
-      margin-right: 12px;
-    }
-
-    .hero .btn:hover {
-      background: var(--brand-primary-hover);
-      transform: scale(1.05);
-    }
-
-    .hero .btn-secondary {
-      background: #ffffff;
-      color: var(--brand-dark);
-    }
-
-    .hero .btn-secondary:hover {
-      transform: scale(1.05);
-    }
-
-    section {
-      padding: 95px 20px;
-      max-width: 1150px;
-      margin: auto;
-    }
-
-    h3 {
-      font-size: 34px;
-      margin-bottom: 45px;
-      text-align: center;
-      color: var(--brand-dark);
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 38px;
-    }
-
-    .card {
-      background: var(--card-bg);
-      border-radius: 16px;
-      padding: 42px 36px;
-      box-shadow: 0 14px 38px rgba(0,0,0,0.08);
-      text-align: center;
-    }
-
-    .card h4 {
-      margin-top: 0;
-      font-size: 22px;
-      color: var(--brand-dark);
-    }
-
-    .card p {
-      font-size: 15px;
-      line-height: 1.7;
       color: var(--text-muted);
     }
 
-    /* REVIEWS */
-    .reviews-section {
-      background: var(--brand-dark);
-      color: #ffffff;
-      border-radius: 20px;
-      padding: 90px 20px;
+    .cta {
+      margin-top: 40px;
     }
 
-    .reviews-section h3 {
-      color: #ffffff;
-    }
-
-    .review-card {
-      background: #111827;
-      border-radius: 16px;
-      padding: 34px;
-      box-shadow: 0 12px 32px rgba(0,0,0,0.4);
-    }
-
-    .stars {
-      color: #facc15;
-      font-size: 18px;
-      margin-bottom: 12px;
-    }
-
-    .review-name {
-      font-weight: bold;
-      margin-top: 18px;
-      font-size: 14px;
-      opacity: 0.9;
-    }
-
-    .review-note {
-      text-align: center;
-      font-size: 13px;
-      opacity: 0.7;
-      margin-top: 35px;
-    }
-
-    .review-btn {
+    .cta a {
       display: inline-block;
-      margin-top: 45px;
-      padding: 16px 38px;
-      background: var(--brand-primary);
-      color: #fff;
+      padding: 16px 44px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+      color: #000;
       border-radius: 10px;
       font-weight: bold;
       text-decoration: none;
-      transition: background 0.25s ease;
+      letter-spacing: 0.5px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.35);
     }
 
-    .review-btn:hover {
-      background: var(--brand-primary-hover);
+    .cta a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 40px rgba(212, 175, 55, 0.5);
     }
 
     footer {
-      background: var(--brand-dark);
-      color: #d1d5db;
-      padding: 38px;
       text-align: center;
-      font-size: 14px;
+      padding: 28px;
+      font-size: 13px;
+      color: var(--text-muted);
     }
 
-    .whatsapp-float {
-      position: fixed;
-      width: 56px;
-      height: 56px;
-      bottom: 25px;
-      right: 25px;
-      background-color: #25D366;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.35);
-      z-index: 999;
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 38px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<div class="promo-banner">
-  MilkrFX Startup Promotion — Up to 100% Discount on Selected Tools.
-  <a href="startup-promo.html
-">View Details</a>
-</div>
-
 <header>
   <h1>MilkrFX</h1>
   <nav>
-    <a href="index.html">Home</a>
     <a href="pricing.html">Pricing</a>
     <a href="indicators.html">Indicators</a>
     <a href="ea.html">Expert Advisors</a>
-    <a href="apex/apex.html">FX Apex</a>
     <a href="disclaimer.html">Disclaimer</a>
   </nav>
 </header>
 
 <section class="hero">
-  <h2>Rule-Based Trading Tools & Market Analysis</h2>
-  <p>
-    Structured market analysis, indicators, and expert advisors built
-    around price structure, execution discipline, and repeatable logic —
-    not hype or promises.
-  </p>
-  <a href="pricing.html" class="btn">View Services</a>
-  <a href="https://one.exnessonelink.com/a/gjrchju5te" target="_blank" class="btn-secondary">
-    Trade with Exness
-  </a>
-</section>
+  <div>
+    <h2>Precision. Discipline. Control.</h2>
+    <p>
+      Professional trading tools and automation built for traders who value
+      structure, execution quality, and long-term consistency.
+    </p>
 
-<!-- SIGNUP FORM (INSERTED – NOTHING ELSE CHANGED) -->
-<section>
-  <h3>Get Started with MilkrFX</h3>
-  <div style="max-width:520px;margin:auto;background:#ffffff;padding:48px;border-radius:20px;box-shadow:0 18px 45px rgba(0,0,0,0.1);text-align:center;">
-    <form>
-      <input type="text" placeholder="Full Name" required style="width:100%;padding:14px;margin-bottom:18px;border-radius:8px;border:1px solid #d1d5db;font-size:15px;">
-      <input type="email" placeholder="Email Address" required style="width:100%;padding:14px;margin-bottom:18px;border-radius:8px;border:1px solid #d1d5db;font-size:15px;">
-      <select required style="width:100%;padding:14px;margin-bottom:24px;border-radius:8px;border:1px solid #d1d5db;font-size:15px;">
-        <option value="">Select Interest</option>
-        <option>Indicators</option>
-        <option>Expert Advisors</option>
-        <option>FX Apex</option>
-        <option>General Inquiry</option>
-      </select>
-      <button type="submit" style="width:100%;padding:16px;background:#1d4ed8;color:#ffffff;border:none;border-radius:10px;font-weight:bold;font-size:16px;cursor:pointer;">
-        Request Access
-      </button>
-    </form>
-  </div>
-</section>
-
-<section>
-  <h3>What We Do</h3>
-  <div class="grid">
-    <div class="card">
-      <h4>Market Structure Analysis</h4>
-      <p>Clear price-action based structure analysis for disciplined traders.</p>
-    </div>
-    <div class="card">
-      <h4>Rule-Based Trading Tools</h4>
-      <p>Indicators and expert advisors built on strict execution rules.</p>
-    </div>
-    <div class="card">
-      <h4>Trader Support</h4>
-      <p>Setup guidance and responsible usage support for MilkrFX tools.</p>
-    </div>
-  </div>
-</section>
-
-<section class="reviews-section">
-  <h3>Client Reviews</h3>
-
-  <div class="grid">
-    <div class="review-card">
-      <div class="stars">★★★★★</div>
-      <p>Clean execution logic and no hype. Exactly what disciplined trading needs.</p>
-      <div class="review-name">— J.M.</div>
-    </div>
-
-    <div class="review-card">
-      <div class="stars">★★★☆☆</div>
-      <p>Service was quite slow but the Robot is not bad at all.</p>
-      <div class="review-name">— Anonymous</div>
-
-      <div style="margin-top:18px; padding-top:14px; border-top:1px solid rgba(255,255,255,0.15); font-size:14px; opacity:0.9;">
-        <strong>MilkrFX Reply:</strong><br>
-        We sincerely apologize for the delays experienced. We are currently undergoing extensive maintenance and internal upgrades to ensure a smoother, more reliable experience for all clients. Thank you for your patience and understanding.<br><br>
-        Kind regards,<br>
-        <strong>MilkrFX Team</strong>
-      </div>
-    </div>
-
-    <div class="review-card">
-      <div class="stars">★★★★☆</div>
-      <p>Support is honest and realistic. No fake promises.</p>
-      <div class="review-name">— T.K.</div>
-    </div>
-
-    <div class="review-card">
-      <div class="stars">★★★★★</div>
-      <p>Indicators are clean and easy to understand.</p>
-      <div class="review-name">— S.L.</div>
-    </div>
-
-    <div class="review-card">
-      <div class="stars">★★★★★</div>
-      <p>Finally a trading brand focused on structure, not marketing.</p>
-      <div class="review-name">— Anonymous</div>
-    </div>
-
-    <div class="review-card">
-      <div class="stars">★★★★☆</div>
-      <p>Solid tools and realistic expectations.</p>
-      <div class="review-name">— P.N.</div>
-    </div>
-  </div>
-
-  <div style="text-align:center;">
-    <a href="https://wa.me/27641801344?text=Hi%20MilkrFX%2C%20I%20would%20like%20to%20leave%20a%20review." class="review-btn" target="_blank">
-      Leave a Review
-    </a>
-
-    <div class="review-note">
-      Client feedback shown is moderated before publishing.
+    <div class="cta">
+      <a href="startup-allocation.html">View Current Access</a>
     </div>
   </div>
 </section>
@@ -379,12 +141,6 @@
 <footer>
   © 2026 MilkrFX. Educational tools only. No financial advice.
 </footer>
-
-<a href="https://wa.me/27641801344" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28" fill="white">
-    <path d="M16.04 3C9.4 3 4 8.4 4 15.04c0 2.64.86 5.07 2.32 7.05L4 29l7.1-2.27a12 12 0 005.94 1.52h.01c6.63 0 12.03-5.4 12.03-12.04C29.08 8.4 22.68 3 16.04 3z"/>
-  </svg>
-</a>
 
 </body>
 </html>
