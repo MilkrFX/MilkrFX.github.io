@@ -100,11 +100,32 @@
       color: var(--text-muted);
     }
 
+    /* GOLD ANIMATED DIVIDER */
+    .gold-divider {
+      width: 140px;
+      height: 2px;
+      margin: 80px auto;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        var(--gold-main),
+        transparent
+      );
+      background-size: 200% 100%;
+      animation: goldShimmer 4s linear infinite;
+      opacity: 0.9;
+    }
+
+    @keyframes goldShimmer {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+
     .panel {
       background: linear-gradient(180deg, var(--black-panel), #070b18);
       border-radius: 26px;
       padding: 64px 58px;
-      margin-top: 80px;
+      margin-top: 0;
       border: 1px solid var(--border-subtle);
       box-shadow: 0 30px 80px rgba(0,0,0,0.7);
     }
@@ -134,7 +155,7 @@
     }
 
     .cta {
-      margin-top: 70px;
+      margin-top: 60px;
       text-align: center;
       border-top: 1px solid var(--border-subtle);
       padding-top: 50px;
@@ -214,6 +235,8 @@
   </p>
 </section>
 
+<div class="gold-divider"></div>
+
 <section>
   <div class="panel">
     <h3>Allocation Framework</h3>
@@ -240,6 +263,8 @@
       Allocation status is reviewed internally. Availability is limited
       and may be adjusted, paused, or withdrawn without notice.
     </p>
+
+    <div class="gold-divider"></div>
 
     <div class="cta">
       <p>
