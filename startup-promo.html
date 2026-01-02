@@ -5,212 +5,165 @@
   <title>Startup Allocation | MilkrFX</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="MilkrFX Startup Allocation provides controlled early-access advantages, including priority pricing and allocation-based benefits during our expansion phase.">
+  <meta name="description" content="MilkrFX Startup Allocation provides limited access advantages, including major discounts on selected trading tools during our controlled expansion phase.">
 
   <style>
     :root {
-      --black-deep: #05070f;
-      --black-panel: #0b0f1c;
-      --gold-main: #d4af37;
-      --gold-soft: #f5e6a8;
-      --gold-hover: #c9a227;
-      --text-main: #f9fafb;
+      --bg-dark: #05070d;
+      --panel-dark: #0b1220;
+      --gold: #d4af37;
+      --gold-soft: #bfa437;
+      --text-light: #e5e7eb;
       --text-muted: #9ca3af;
-      --border-subtle: #1f2937;
-      --whatsapp: #25D366;
-      --whatsapp-hover: #1ebe5d;
-    }
-
-    * {
-      box-sizing: border-box;
     }
 
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: radial-gradient(circle at top, #0e1224, var(--black-deep));
-      color: var(--text-main);
+      background: var(--bg-dark);
+      color: var(--text-light);
     }
 
     header {
-      background: linear-gradient(180deg, #05070f, #02040a);
-      padding: 32px 22px;
-      border-bottom: 1px solid var(--border-subtle);
+      padding: 26px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     header h1 {
       margin: 0;
-      font-size: 28px;
-      letter-spacing: 1.5px;
-    }
-
-    nav {
-      margin-top: 12px;
+      font-size: 22px;
+      letter-spacing: 1px;
     }
 
     nav a {
-      color: #9ca3af;
-      margin-right: 18px;
+      color: var(--text-muted);
+      margin-left: 22px;
       text-decoration: none;
-      font-weight: 600;
       font-size: 14px;
+      font-weight: 600;
     }
 
     nav a:hover {
-      color: #ffffff;
+      color: var(--gold);
     }
 
     section {
-      max-width: 1150px;
+      max-width: 1050px;
       margin: auto;
-      padding: 110px 22px;
+      padding: 90px 20px;
     }
 
     .hero {
       text-align: center;
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 8px 18px;
-      border: 1px solid var(--gold-main);
-      color: var(--gold-main);
-      font-size: 12px;
-      border-radius: 999px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 26px;
+      padding-bottom: 40px;
     }
 
     .hero h2 {
-      font-size: 48px;
-      letter-spacing: 0.8px;
-      margin-bottom: 26px;
-    }
-
-    .hero h2 span {
-      color: var(--gold-main);
+      font-size: 46px;
+      margin-bottom: 18px;
+      letter-spacing: 1px;
     }
 
     .hero p {
       font-size: 18px;
-      max-width: 860px;
+      max-width: 820px;
       margin: auto;
-      line-height: 1.8;
+      line-height: 1.7;
       color: var(--text-muted);
     }
 
-    .gold-divider {
+    .divider {
       width: 140px;
-      height: 2px;
-      margin: 80px auto;
-      background: linear-gradient(
-        90deg,
-        transparent,
-        var(--gold-main),
-        transparent
-      );
-      background-size: 200% 100%;
-      animation: goldShimmer 4s linear infinite;
-      opacity: 0.9;
+      height: 3px;
+      margin: 45px auto;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      animation: glow 2.5s infinite ease-in-out;
     }
 
-    @keyframes goldShimmer {
-      0% { background-position: 200% 0; }
-      100% { background-position: -200% 0; }
+    @keyframes glow {
+      0% { opacity: 0.4; }
+      50% { opacity: 1; }
+      100% { opacity: 0.4; }
     }
 
     .panel {
-      background: linear-gradient(180deg, var(--black-panel), #070b18);
-      border-radius: 26px;
-      padding: 64px 58px;
-      border: 1px solid var(--border-subtle);
-      box-shadow: 0 30px 80px rgba(0,0,0,0.7);
+      background: var(--panel-dark);
+      border-radius: 18px;
+      padding: 46px;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.6);
+      margin-top: 50px;
     }
 
     .panel h3 {
-      font-size: 28px;
       margin-top: 0;
-      margin-bottom: 22px;
-      letter-spacing: 0.4px;
+      font-size: 26px;
+      color: var(--gold);
+      letter-spacing: 0.5px;
     }
 
     .panel p {
       font-size: 16px;
-      line-height: 1.9;
+      line-height: 1.7;
       color: var(--text-muted);
     }
 
-    .allocation-box {
-      margin: 46px 0;
-      padding: 26px 30px;
-      border-left: 4px solid var(--gold-main);
-      background: rgba(212,175,55,0.06);
-      border-radius: 14px;
-      color: var(--gold-soft);
+    .highlight {
+      margin: 36px 0;
+      padding: 26px 28px;
+      border-left: 4px solid var(--gold);
+      background: rgba(212, 175, 55, 0.06);
+      border-radius: 10px;
       font-size: 15px;
-      line-height: 1.8;
+      color: #f5f3c4;
+    }
+
+    .steps {
+      margin-top: 30px;
+    }
+
+    .steps li {
+      margin-bottom: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
     }
 
     .cta {
-      margin-top: 60px;
       text-align: center;
-      border-top: 1px solid var(--border-subtle);
-      padding-top: 50px;
-    }
-
-    .cta p {
-      color: var(--text-muted);
-      font-size: 15px;
-      margin-bottom: 18px;
-    }
-
-    .cta .policy-note {
-      font-size: 13px;
-      color: #c7b25a;
-      margin-bottom: 28px;
-      opacity: 0.95;
+      margin-top: 55px;
     }
 
     .cta a {
       display: inline-block;
-      padding: 18px 48px;
-      border-radius: 14px;
+      padding: 16px 44px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+      color: #000;
+      border-radius: 10px;
       font-weight: bold;
-      letter-spacing: 0.5px;
       text-decoration: none;
-      transition: all 0.25s ease;
-      margin: 10px;
+      letter-spacing: 0.5px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.35);
     }
 
-    .cta a.primary {
-      background: linear-gradient(180deg, var(--gold-main), var(--gold-hover));
-      color: #05070f;
-      box-shadow: 0 10px 30px rgba(212,175,55,0.35);
-    }
-
-    .cta a.primary:hover {
-      transform: scale(1.06);
-    }
-
-    .cta a.whatsapp {
-      background: var(--whatsapp);
-      color: #ffffff;
-    }
-
-    .cta a.whatsapp:hover {
-      background: var(--whatsapp-hover);
-      transform: scale(1.06);
+    .cta a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 40px rgba(212, 175, 55, 0.5);
     }
 
     footer {
-      background: #02040a;
-      border-top: 1px solid var(--border-subtle);
-      padding: 46px;
       text-align: center;
-      font-size: 14px;
-      color: #9ca3af;
-      margin-top: 120px;
+      padding: 38px;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 80px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 36px;
+      }
     }
   </style>
 </head>
@@ -222,70 +175,60 @@
   <nav>
     <a href="index.html">Home</a>
     <a href="pricing.html">Pricing</a>
-    <a href="indicators.html">Indicators</a>
-    <a href="ea.html">Expert Advisors</a>
-    <a href="apex/apex.html">FX Apex</a>
     <a href="disclaimer.html">Disclaimer</a>
   </nav>
 </header>
 
 <section class="hero">
-  <span class="badge">Startup Allocation</span>
-  <h2><span>Exclusive</span> Access. Strategic Advantage.</h2>
+  <h2>Startup Allocation Access</h2>
   <p>
-    MilkrFX is currently operating within a controlled expansion phase.
-    During this period, selected tools are released through an internal
-    allocation framework — offering priority access and
-    <strong>substantial pricing advantages</strong> to qualifying clients.
+    MilkrFX is currently operating within a controlled startup phase.
+    During this period, select clients may receive enhanced access
+    to MilkrFX tools under internal allocation criteria.
   </p>
-</section>
 
-<div class="gold-divider"></div>
+  <div class="divider"></div>
+</section>
 
 <section>
   <div class="panel">
-    <h3>Allocation Framework</h3>
+    <h3>What This Means</h3>
 
     <p>
-      MilkrFX follows a disciplined rollout model focused on platform
-      integrity, execution reliability, and long-term alignment.
-      Access is granted selectively — not through mass promotion.
+      Rather than scaling aggressively, MilkrFX follows a controlled
+      expansion model focused on platform stability, execution quality,
+      and long-term client alignment.
     </p>
 
     <p>
-      This startup allocation allows a limited number of participants
-      to secure enhanced terms while the ecosystem scales.
+      As part of this process, limited startup allocations may include
+      <strong>significant discounts — up to full value coverage</strong>
+      on selected tools.
     </p>
 
-    <div class="allocation-box">
-      Allocation benefits — including pricing reductions of up to
-      <strong>full value coverage</strong> — are reserved exclusively for
-      trading accounts established through MilkrFX’s official website
-      during the current expansion window.
+    <div class="highlight">
+      Startup allocation eligibility applies exclusively to clients who
+      establish their trading accounts through MilkrFX’s official website
+      pathways during this expansion phase.
     </div>
 
+    <h3>How Allocation Is Activated</h3>
+
+    <ul class="steps">
+      <li>• Client registers a trading account through MilkrFX’s website pathway</li>
+      <li>• Client completes account setup with the supported broker</li>
+      <li>• Client contacts MilkrFX with proof of registration</li>
+      <li>• Allocation status is reviewed and confirmed internally</li>
+    </ul>
+
     <p>
-      Allocation status is reviewed internally. Availability is limited
-      and may be adjusted, paused, or withdrawn without notice.
+      Allocation availability is limited and not guaranteed.
+      MilkrFX reserves the right to adjust or close allocations
+      at any time to maintain service integrity.
     </p>
 
-    <div class="gold-divider"></div>
-
     <div class="cta">
-      <p>
-        Once your trading account is established, contact MilkrFX directly
-        to verify eligibility and unlock your startup allocation.
-      </p>
-
-      <div class="policy-note">
-        Only trading accounts created through MilkrFX’s official website
-        qualify for startup allocation benefits.
-      </div>
-
-      <a href="pricing.html" class="primary">View Available Tools</a>
-      <a href="https://wa.me/27664597933" target="_blank" class="whatsapp">
-        Contact via WhatsApp
-      </a>
+      <a href="pricing.html">View Eligible Tools</a>
     </div>
   </div>
 </section>
