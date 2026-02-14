@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>MilkrFX | Professional Trading Automation</title>
+<title>MilkrFX | AI Trading Automation</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="MilkrFX delivers professional-grade trading automation tools designed for disciplined execution and structured performance.">
+<meta name="description" content="MilkrFX delivers AI-powered trading automation built for disciplined execution, precision control, and structured performance.">
 
 <style>
 
@@ -20,238 +20,261 @@
 
 * { box-sizing:border-box; }
 
-body {
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  background:var(--bg-dark);
-  color:var(--text-light);
-  overflow-x:hidden;
+body{
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+background:var(--bg-dark);
+color:var(--text-light);
+overflow-x:hidden;
 }
 
-/* ---------- BACKGROUND GLOW ---------- */
+/* ===== BACKGROUND GLOW ===== */
 
-body::before {
-  content:"";
-  position:fixed;
-  width:900px;
-  height:900px;
-  background:radial-gradient(circle,var(--gold-soft),transparent 70%);
-  opacity:.07;
-  top:-250px;
-  left:-250px;
-  animation:glowMove 14s linear infinite alternate;
-  pointer-events:none;
+body::before{
+content:"";
+position:fixed;
+width:900px;
+height:900px;
+background:radial-gradient(circle,var(--gold-soft),transparent 70%);
+opacity:.07;
+top:-250px;
+left:-250px;
+animation:glowMove 14s linear infinite alternate;
+pointer-events:none;
 }
 
-@keyframes glowMove {
-  to { transform:translate(200px,180px); }
+@keyframes glowMove{
+to{transform:translate(200px,180px);}
 }
 
-/* ---------- SCROLL ANIMATION ---------- */
+/* ===== SCROLL REVEAL ===== */
 
-.reveal {
-  opacity:0;
-  transform:translateY(40px);
-  transition:all .8s ease;
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:all .8s ease;
 }
 
-.reveal.active {
-  opacity:1;
-  transform:none;
+.reveal.active{
+opacity:1;
+transform:none;
 }
 
-/* ---------- HERO ---------- */
+/* ===== HERO ===== */
 
-.hero {
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  padding:80px 20px;
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+padding:80px 20px;
 }
 
-.hero-grid {
-  max-width:1200px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:60px;
-  align-items:center;
+.hero-grid{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
 }
 
-.hero-text h1 {
-  font-size:50px;
-  margin-bottom:20px;
+.hero-text h1{
+font-size:50px;
+margin-bottom:20px;
 }
 
-.hero-text p {
-  font-size:18px;
-  color:var(--text-muted);
+.hero-text p{
+font-size:18px;
+color:var(--text-muted);
 }
 
-.cta a {
-  display:inline-block;
-  margin-top:40px;
-  padding:16px 44px;
-  background:linear-gradient(135deg,var(--gold),var(--gold-soft));
-  color:#000;
-  border-radius:10px;
-  font-weight:bold;
-  text-decoration:none;
-  transition:.25s;
-  box-shadow:0 10px 30px rgba(212,175,55,.35);
+.cta a{
+display:inline-block;
+margin-top:40px;
+padding:16px 44px;
+background:linear-gradient(135deg,var(--gold),var(--gold-soft));
+color:#000;
+border-radius:10px;
+font-weight:bold;
+text-decoration:none;
+transition:.25s;
+box-shadow:0 10px 30px rgba(212,175,55,.35);
 }
 
-.cta a:hover {
-  transform:translateY(-3px);
-  box-shadow:0 0 25px rgba(212,175,55,.7);
+.cta a:hover{
+transform:translateY(-3px);
+box-shadow:0 0 25px rgba(212,175,55,.7);
 }
 
-/* ---------- MOCKUP + GLOW ---------- */
+/* ===== VALUE STRIP ===== */
 
-.mockup {
-  position:relative;
-  width:100%;
-  max-width:420px;
-  backdrop-filter:blur(10px);
-  background:var(--glass);
-  border:1px solid rgba(255,255,255,.1);
-  border-radius:16px;
-  padding:12px;
-  margin:auto;
-
-  /* floating idle animation */
-  animation:float 5s ease-in-out infinite;
-
-  transition:.35s ease;
+.value-strip{
+padding:50px 20px;
+text-align:center;
 }
 
-/* glow halo */
-.mockup::before {
-  content:"";
-  position:absolute;
-  inset:-25px;
-  border-radius:20px;
-  background:radial-gradient(circle,var(--gold),transparent 65%);
-  opacity:.25;
-  filter:blur(25px);
-  z-index:-1;
+.strip-grid{
+max-width:1000px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+color:var(--gold);
+font-weight:600;
 }
 
-/* hover animation */
-.mockup:hover {
-  transform:translateY(-8px) scale(1.02);
-  box-shadow:0 0 40px rgba(212,175,55,.45);
+/* ===== MOCKUP ===== */
+
+.mockup{
+position:relative;
+width:100%;
+max-width:420px;
+background:var(--glass);
+border:1px solid rgba(255,255,255,.1);
+border-radius:16px;
+padding:12px;
+margin:auto;
+animation:float 5s ease-in-out infinite;
+transition:.35s ease;
 }
 
-/* floating motion */
-@keyframes float {
-  0% { transform:translateY(0); }
-  50% { transform:translateY(-10px); }
-  100% { transform:translateY(0); }
+.mockup::before{
+content:"";
+position:absolute;
+inset:-25px;
+border-radius:20px;
+background:radial-gradient(circle,var(--gold),transparent 65%);
+opacity:.25;
+filter:blur(25px);
+z-index:-1;
 }
 
-.mockup img {
-  width:100%;
-  height:auto;
-  border-radius:12px;
-  display:block;
+.mockup:hover{
+transform:translateY(-8px) scale(1.02);
+box-shadow:0 0 40px rgba(212,175,55,.45);
 }
 
-/* ---------- FEATURES ---------- */
-
-.features {
-  padding:100px 20px;
-  text-align:center;
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-10px);}
+100%{transform:translateY(0);}
 }
 
-.feature-grid {
-  max-width:1100px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:30px;
+.mockup img{
+width:100%;
+border-radius:12px;
+display:block;
 }
 
-.feature {
-  backdrop-filter:blur(10px);
-  background:var(--glass);
-  padding:28px;
-  border-radius:14px;
-  border:1px solid rgba(255,255,255,.08);
+/* ===== FEATURES ===== */
+
+.features{
+padding:100px 20px;
+text-align:center;
 }
 
-.feature p { color:var(--text-muted); }
-
-/* ---------- WORKFLOW ---------- */
-
-.workflow {
-  padding:100px 20px;
-  text-align:center;
+.feature-grid{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:30px;
 }
 
-.steps {
-  max-width:1000px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:30px;
+.feature{
+background:var(--glass);
+padding:28px;
+border-radius:14px;
+border:1px solid rgba(255,255,255,.08);
+transition:.3s;
 }
 
-.step {
-  backdrop-filter:blur(10px);
-  background:var(--glass);
-  padding:30px;
-  border-radius:14px;
-  border:1px solid rgba(212,175,55,.2);
+.feature:hover{
+transform:translateY(-6px);
+border-color:rgba(212,175,55,.3);
 }
 
-.step h3 { color:var(--gold); }
+.feature p{color:var(--text-muted);}
 
-/* ---------- FINAL CTA ---------- */
+/* ===== WORKFLOW ===== */
 
-.final-cta {
-  padding:120px 20px;
-  text-align:center;
+.workflow{
+padding:100px 20px;
+text-align:center;
 }
 
-.final-cta h2 {
-  font-size:40px;
-  margin-bottom:20px;
+.steps{
+max-width:1000px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
 }
 
-.final-cta p { color:var(--text-muted); }
-
-.final-cta a {
-  display:inline-block;
-  margin-top:30px;
-  padding:18px 48px;
-  background:linear-gradient(135deg,var(--gold),var(--gold-soft));
-  color:#000;
-  border-radius:12px;
-  font-weight:bold;
-  text-decoration:none;
-  transition:.25s;
+.step{
+background:var(--glass);
+padding:30px;
+border-radius:14px;
+border:1px solid rgba(212,175,55,.2);
 }
 
-.final-cta a:hover {
-  box-shadow:0 0 30px rgba(212,175,55,.8);
-  transform:translateY(-3px);
+.step h3{color:var(--gold);}
+
+/* ===== AUTHORITY ===== */
+
+.authority{
+padding:80px 20px;
+text-align:center;
+max-width:800px;
+margin:auto;
+color:var(--text-muted);
 }
 
-/* ---------- FOOTER ---------- */
+/* ===== FINAL CTA ===== */
 
-footer {
-  text-align:center;
-  padding:30px;
-  color:var(--text-muted);
-  font-size:13px;
+.final-cta{
+padding:120px 20px;
+text-align:center;
 }
 
-/* ---------- MOBILE ---------- */
+.final-cta h2{
+font-size:40px;
+margin-bottom:20px;
+}
+
+.final-cta p{color:var(--text-muted);}
+
+.final-cta a{
+display:inline-block;
+margin-top:30px;
+padding:18px 48px;
+background:linear-gradient(135deg,var(--gold),var(--gold-soft));
+color:#000;
+border-radius:12px;
+font-weight:bold;
+text-decoration:none;
+transition:.25s;
+}
+
+.final-cta a:hover{
+box-shadow:0 0 30px rgba(212,175,55,.8);
+transform:translateY(-3px);
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+text-align:center;
+padding:30px;
+color:var(--text-muted);
+font-size:13px;
+}
+
+/* ===== MOBILE ===== */
 
 @media(max-width:900px){
-.hero-grid { grid-template-columns:1fr; text-align:center; }
-.hero-text h1 { font-size:36px; }
+.hero-grid{grid-template-columns:1fr;text-align:center;}
+.hero-text h1{font-size:36px;}
 }
 
 </style>
@@ -259,47 +282,64 @@ footer {
 
 <body>
 
+<!-- HERO -->
+
 <section class="hero reveal">
 <div class="hero-grid">
 
 <div class="hero-text">
-<h1>Trade Smarter. Execute Automatically.</h1>
-<p>Professional automation built for disciplined execution.</p>
+<h1>AI-Powered Trading Automation</h1>
+<p>Custom rule execution. Emotionless precision. Built for serious traders.</p>
 
 <div class="cta">
-<a href="startup-promo.html">View Current Access</a>
+<a href="startup-promo.html">Activate Automation</a>
 </div>
 </div>
 
 <div class="mockup">
-<img src="assets/preview.png" alt="Automation Bot Preview">
+<img src="assets/preview.png" alt="MilkrFX automation interface">
 </div>
 
 </div>
 </section>
 
+<!-- VALUE STRIP -->
+
+<section class="value-strip reveal">
+<div class="strip-grid">
+<div>⚡ AI Execution Engine</div>
+<div>🧠 Custom Rule Automation</div>
+<div>🔒 Plug-and-Play Setup</div>
+<div>📈 Discipline Over Emotion</div>
+</div>
+</section>
+
+<!-- FEATURES -->
+
 <section class="features reveal">
-<h2>Built for Serious Traders</h2>
+<h2>Built for Structured Traders</h2>
 
 <div class="feature-grid">
 
 <div class="feature">
-⚡ Instant Execution
-<p>Precision automation without hesitation.</p>
+⚡ AI Execution
+<p>Milliseconds-level automation removes hesitation.</p>
 </div>
 
 <div class="feature">
-🧠 Emotionless Discipline
-<p>Structured consistency, zero bias.</p>
+🧠 Custom Rule Intelligence
+<p>Strategies execute without emotional interference.</p>
 </div>
 
 <div class="feature">
-🔒 Strategy Control
-<p>You stay in command.</p>
+🔒 Precision Control
+<p>You define risk. Automation executes perfectly.</p>
 </div>
 
 </div>
 </section>
+
+<!-- WORKFLOW -->
 
 <section class="workflow reveal">
 <h2>How It Works</h2>
@@ -308,26 +348,35 @@ footer {
 
 <div class="step">
 <h3>Connect</h3>
-<p>Secure platform linking.</p>
+<p>Secure platform linking in seconds.</p>
 </div>
 
 <div class="step">
 <h3>Configure</h3>
-<p>Define automation rules.</p>
+<p>Define AI trading logic your way.</p>
 </div>
 
 <div class="step">
 <h3>Execute</h3>
-<p>Disciplined trade execution.</p>
+<p>Automation handles disciplined execution.</p>
 </div>
 
 </div>
 </section>
 
+<!-- AUTHORITY -->
+
+<section class="authority reveal">
+<h2>Engineered for Automation Precision</h2>
+<p>MilkrFX combines AI execution architecture with structured trading discipline — designed for traders who demand control, speed, and consistency.</p>
+</section>
+
+<!-- FINAL CTA -->
+
 <section class="final-cta reveal">
 
-<h2>Automate Your Edge</h2>
-<p>Professional tools for structured traders.</p>
+<h2>Start Trading With Automation Precision</h2>
+<p>Instant access. Plug-and-play setup. Zero hesitation execution.</p>
 
 <a href="startup-promo.html">Get Access</a>
 
@@ -345,7 +394,7 @@ const trigger=window.innerHeight*0.85;
 
 reveals.forEach(el=>{
 const top=el.getBoundingClientRect().top;
-if(top<trigger){ el.classList.add("active"); }
+if(top<trigger){el.classList.add("active");}
 });
 }
 
