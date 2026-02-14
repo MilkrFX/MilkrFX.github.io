@@ -1,136 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>MilkrFX | Professional Trading Tools & Automation</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>MilkrFX | Professional Trading Automation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="MilkrFX provides professional-grade trading tools, indicators, and automated systems designed for disciplined traders who value structure, execution, and control.">
+<meta name="description" content="MilkrFX delivers professional-grade trading automation tools designed for disciplined execution and structured performance.">
 
-  <style>
-    :root {
-      --bg-dark: #05070d;
-      --gold: #d4af37;
-      --gold-soft: #bfa437;
-      --text-light: #e5e7eb;
-      --text-muted: #9ca3af;
-    }
+<style>
 
-    * {
-      box-sizing: border-box;
-    }
+:root {
+  --bg-dark: #05070d;
+  --panel: #0f172a;
+  --gold: #d4af37;
+  --gold-soft: #bfa437;
+  --text-light: #e5e7eb;
+  --text-muted: #9ca3af;
+}
 
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg-dark);
-      color: var(--text-light);
-    }
+* {
+  box-sizing: border-box;
+}
 
-    /* Removed header section */
-    /* header {
-      padding: 26px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-light);
+}
 
-    header h1 {
-      margin: 0;
-      font-size: 22px;
-      letter-spacing: 1px;
-    }
+/* ---------- HERO ---------- */
 
-    nav a {
-      color: var(--text-muted);
-      margin-left: 22px;
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 600;
-    }
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 20px;
+}
 
-    nav a:hover {
-      color: var(--gold);
-    } */
+.hero-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
 
-    .hero {
-      min-height: calc(100vh - 90px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 40px 20px;
-    }
+.hero-text h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
 
-    .hero h2 {
-      font-size: 52px;
-      margin-bottom: 20px;
-      letter-spacing: 1px;
-    }
+.hero-text p {
+  font-size: 18px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
 
-    .hero p {
-      font-size: 18px;
-      max-width: 720px;
-      margin: auto;
-      line-height: 1.6;
-      color: var(--text-muted);
-    }
+.cta {
+  margin-top: 40px;
+}
 
-    .cta {
-      margin-top: 40px;
-    }
+.cta a {
+  display: inline-block;
+  padding: 16px 44px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+  color: #000;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform .25s ease, box-shadow .25s ease;
+  box-shadow: 0 10px 30px rgba(212,175,55,.35);
+}
 
-    .cta a {
-      display: inline-block;
-      padding: 16px 44px;
-      background: linear-gradient(135deg, var(--gold), var(--gold-soft));
-      color: #000;
-      border-radius: 10px;
-      font-weight: bold;
-      text-decoration: none;
-      letter-spacing: 0.5px;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.35);
-    }
+.cta a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(212,175,55,.5);
+}
 
-    .cta a:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 18px 40px rgba(212, 175, 55, 0.5);
-    }
+/* ---------- MOCKUP ---------- */
 
-    footer {
-      text-align: center;
-      padding: 28px;
-      font-size: 13px;
-      color: var(--text-muted);
-    }
+.mockup {
+  width: 380px;
+  height: 240px;
+  background: linear-gradient(135deg,#111827,#1f2937);
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
 
-    @media (max-width: 768px) {
-      .hero h2 {
-        font-size: 38px;
-      }
-    }
-  </style>
+/* ---------- FEATURES ---------- */
+
+.features {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 34px;
+  margin-bottom: 50px;
+}
+
+.feature-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  gap: 30px;
+}
+
+.feature {
+  background: var(--panel);
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.5);
+}
+
+.feature p {
+  margin-top: 12px;
+  color: var(--text-muted);
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+/* ---------- MOBILE ---------- */
+
+@media(max-width:900px) {
+
+.hero-grid {
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.mockup {
+  margin: auto;
+}
+
+.hero-text h1 {
+  font-size: 38px;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
 <section class="hero">
-  <div>
-    <h2>Precision. Discipline. Control.</h2>
-    <p>
-      Professional trading tools and automation built for traders who value
-      structure, execution quality, and long-term consistency.
-    </p>
+<div class="hero-grid">
 
-    <div class="cta">
-      <a href="startup-promo.html" class="btn">View Current Access</a>
-    </div>
-  </div>
+<div class="hero-text">
+
+<h1>Trade Smarter. Execute Automatically.</h1>
+
+<p>
+Professional-grade trading automation built for precision,
+discipline, and structured execution.
+</p>
+
+<div class="cta">
+<a href="startup-promo.html">View Current Access</a>
+</div>
+
+</div>
+
+<div class="hero-visual">
+<div class="mockup">
+Platform Preview
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="features">
+
+<h2>Built for Serious Traders</h2>
+
+<div class="feature-grid">
+
+<div class="feature">
+⚡ Instant Execution
+<p>Automated precision trading without hesitation.</p>
+</div>
+
+<div class="feature">
+🧠 Emotionless Discipline
+<p>Eliminate bias and trade with structured consistency.</p>
+</div>
+
+<div class="feature">
+🔒 Full Strategy Control
+<p>Maintain authority while automation handles execution.</p>
+</div>
+
+</div>
+
 </section>
 
 <footer>
-  © 2026 MilkrFX. Educational tools only. No financial advice.
+© 2026 MilkrFX — Educational tools only. No financial advice.
 </footer>
 
 </body>
