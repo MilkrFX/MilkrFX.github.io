@@ -110,17 +110,24 @@ body::before {
 /* ---------- MOCKUP ---------- */
 
 .mockup {
-  width:380px;
-  height:240px;
+  width:100%;
+  max-width:420px;
   backdrop-filter:blur(10px);
   background:var(--glass);
   border:1px solid rgba(255,255,255,.1);
   border-radius:16px;
+  padding:12px;
   display:flex;
   align-items:center;
   justify-content:center;
-  color:var(--gold);
-  font-weight:bold;
+  margin:auto;
+}
+
+.mockup img {
+  width:100%;
+  height:auto;
+  border-radius:12px;
+  display:block;
 }
 
 /* ---------- FEATURES ---------- */
@@ -219,7 +226,6 @@ footer {
 
 @media(max-width:900px){
 .hero-grid { grid-template-columns:1fr; text-align:center; }
-.mockup { margin:auto; }
 .hero-text h1 { font-size:36px; }
 }
 
@@ -234,12 +240,15 @@ footer {
 <div class="hero-text">
 <h1>Trade Smarter. Execute Automatically.</h1>
 <p>Professional automation built for disciplined execution.</p>
+
 <div class="cta">
 <a href="startup-promo.html">View Current Access</a>
 </div>
 </div>
 
-<div class="mockup">Platform Preview</div>
+<div class="mockup">
+<img src="assets/preview.png" alt="Automation Bot Preview">
+</div>
 
 </div>
 </section>
@@ -293,7 +302,6 @@ footer {
 <section class="final-cta reveal">
 
 <h2>Automate Your Edge</h2>
-
 <p>Professional tools for structured traders.</p>
 
 <a href="startup-promo.html">Get Access</a>
