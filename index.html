@@ -11,7 +11,6 @@
 
 :root {
   --bg-dark:#05070d;
-  --panel:#0f172a;
   --glass:rgba(255,255,255,0.04);
   --gold:#d4af37;
   --gold-soft:#bfa437;
@@ -107,9 +106,10 @@ body::before {
   box-shadow:0 0 25px rgba(212,175,55,.7);
 }
 
-/* ---------- MOCKUP ---------- */
+/* ---------- MOCKUP + GLOW ---------- */
 
 .mockup {
+  position:relative;
   width:100%;
   max-width:420px;
   backdrop-filter:blur(10px);
@@ -117,10 +117,37 @@ body::before {
   border:1px solid rgba(255,255,255,.1);
   border-radius:16px;
   padding:12px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
   margin:auto;
+
+  /* floating idle animation */
+  animation:float 5s ease-in-out infinite;
+
+  transition:.35s ease;
+}
+
+/* glow halo */
+.mockup::before {
+  content:"";
+  position:absolute;
+  inset:-25px;
+  border-radius:20px;
+  background:radial-gradient(circle,var(--gold),transparent 65%);
+  opacity:.25;
+  filter:blur(25px);
+  z-index:-1;
+}
+
+/* hover animation */
+.mockup:hover {
+  transform:translateY(-8px) scale(1.02);
+  box-shadow:0 0 40px rgba(212,175,55,.45);
+}
+
+/* floating motion */
+@keyframes float {
+  0% { transform:translateY(0); }
+  50% { transform:translateY(-10px); }
+  100% { transform:translateY(0); }
 }
 
 .mockup img {
@@ -192,9 +219,7 @@ body::before {
   margin-bottom:20px;
 }
 
-.final-cta p {
-  color:var(--text-muted);
-}
+.final-cta p { color:var(--text-muted); }
 
 .final-cta a {
   display:inline-block;
