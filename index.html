@@ -10,13 +10,12 @@
 <style>
 
 :root {
-  --bg-dark:#05070d;
-  --panel:#0f172a;
-  --glass:rgba(255,255,255,0.04);
+  --bg:#05070d;
+  --glass:rgba(255,255,255,.04);
   --gold:#d4af37;
   --gold-soft:#bfa437;
-  --text-light:#e5e7eb;
-  --text-muted:#9ca3af;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
 }
 
 * { box-sizing:border-box; }
@@ -24,12 +23,29 @@
 body {
   margin:0;
   font-family:Arial,Helvetica,sans-serif;
-  background:var(--bg-dark);
-  color:var(--text-light);
+  background:var(--bg);
+  color:var(--text);
   overflow-x:hidden;
 }
 
-/* ---------- BACKGROUND GLOW ---------- */
+/* ---------- TRADING GRID BACKGROUND ---------- */
+
+.grid-bg {
+  position:fixed;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+  background-size:40px 40px;
+  animation:gridMove 20s linear infinite;
+  pointer-events:none;
+}
+
+@keyframes gridMove {
+  to { transform:translateY(40px); }
+}
+
+/* ---------- GOLD GLOW ---------- */
 
 body::before {
   content:"";
@@ -37,7 +53,7 @@ body::before {
   width:900px;
   height:900px;
   background:radial-gradient(circle,var(--gold-soft),transparent 70%);
-  opacity:.07;
+  opacity:.06;
   top:-250px;
   left:-250px;
   animation:glowMove 14s linear infinite alternate;
@@ -48,12 +64,12 @@ body::before {
   to { transform:translate(200px,180px); }
 }
 
-/* ---------- SCROLL ANIMATION ---------- */
+/* ---------- SCROLL REVEAL ---------- */
 
 .reveal {
   opacity:0;
   transform:translateY(40px);
-  transition:all .8s ease;
+  transition:.9s ease;
 }
 
 .reveal.active {
@@ -79,14 +95,14 @@ body::before {
   align-items:center;
 }
 
-.hero-text h1 {
+.hero h1 {
   font-size:50px;
   margin-bottom:20px;
 }
 
-.hero-text p {
+.hero p {
+  color:var(--muted);
   font-size:18px;
-  color:var(--text-muted);
 }
 
 .cta a {
@@ -95,7 +111,7 @@ body::before {
   padding:16px 44px;
   background:linear-gradient(135deg,var(--gold),var(--gold-soft));
   color:#000;
-  border-radius:10px;
+  border-radius:12px;
   font-weight:bold;
   text-decoration:none;
   transition:.25s;
@@ -104,28 +120,29 @@ body::before {
 
 .cta a:hover {
   transform:translateY(-3px);
-  box-shadow:0 0 25px rgba(212,175,55,.7);
+  box-shadow:0 0 30px rgba(212,175,55,.8);
 }
 
-/* ---------- MOCKUP ---------- */
+/* ---------- DASHBOARD MOCKUP ---------- */
 
-.mockup {
-  width:380px;
-  height:240px;
-  backdrop-filter:blur(10px);
+.dashboard {
+  backdrop-filter:blur(12px);
   background:var(--glass);
   border:1px solid rgba(255,255,255,.1);
-  border-radius:16px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:var(--gold);
-  font-weight:bold;
+  border-radius:18px;
+  padding:12px;
+  box-shadow:0 20px 60px rgba(0,0,0,.6);
+}
+
+.dashboard img {
+  width:100%;
+  border-radius:10px;
+  display:block;
 }
 
 /* ---------- FEATURES ---------- */
 
-.features {
+.section {
   padding:100px 20px;
   text-align:center;
 }
@@ -138,58 +155,28 @@ body::before {
   gap:30px;
 }
 
-.feature {
-  backdrop-filter:blur(10px);
+.card {
+  backdrop-filter:blur(12px);
   background:var(--glass);
   padding:28px;
-  border-radius:14px;
+  border-radius:16px;
   border:1px solid rgba(255,255,255,.08);
 }
 
-.feature p { color:var(--text-muted); }
+.card p { color:var(--muted); }
 
-/* ---------- WORKFLOW ---------- */
+/* ---------- CTA SECTION ---------- */
 
-.workflow {
-  padding:100px 20px;
-  text-align:center;
-}
-
-.steps {
-  max-width:1000px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:30px;
-}
-
-.step {
-  backdrop-filter:blur(10px);
-  background:var(--glass);
-  padding:30px;
-  border-radius:14px;
-  border:1px solid rgba(212,175,55,.2);
-}
-
-.step h3 { color:var(--gold); }
-
-/* ---------- FINAL CTA ---------- */
-
-.final-cta {
+.final {
   padding:120px 20px;
   text-align:center;
 }
 
-.final-cta h2 {
-  font-size:40px;
-  margin-bottom:20px;
-}
+.final h2 { font-size:40px; }
 
-.final-cta p {
-  color:var(--text-muted);
-}
+.final p { color:var(--muted); }
 
-.final-cta a {
+.final a {
   display:inline-block;
   margin-top:30px;
   padding:18px 48px;
@@ -201,9 +188,9 @@ body::before {
   transition:.25s;
 }
 
-.final-cta a:hover {
-  box-shadow:0 0 30px rgba(212,175,55,.8);
+.final a:hover {
   transform:translateY(-3px);
+  box-shadow:0 0 35px rgba(212,175,55,.9);
 }
 
 /* ---------- FOOTER ---------- */
@@ -211,16 +198,17 @@ body::before {
 footer {
   text-align:center;
   padding:30px;
-  color:var(--text-muted);
+  color:var(--muted);
   font-size:13px;
 }
 
 /* ---------- MOBILE ---------- */
 
 @media(max-width:900px){
-.hero-grid { grid-template-columns:1fr; text-align:center; }
-.mockup { margin:auto; }
-.hero-text h1 { font-size:36px; }
+.hero-grid {
+  grid-template-columns:1fr;
+  text-align:center;
+}
 }
 
 </style>
@@ -228,73 +216,62 @@ footer {
 
 <body>
 
+<div class="grid-bg"></div>
+
 <section class="hero reveal">
 <div class="hero-grid">
 
-<div class="hero-text">
+<div>
 <h1>Trade Smarter. Execute Automatically.</h1>
-<p>Professional automation built for disciplined execution.</p>
+
+<p>
+Professional trading automation built for disciplined execution.
+</p>
+
 <div class="cta">
 <a href="startup-promo.html">View Current Access</a>
 </div>
 </div>
 
-<div class="mockup">Platform Preview</div>
+<div class="dashboard">
+
+<!-- Replace image later with your real UI screenshot -->
+<img src="https://dummyimage.com/600x360/111827/ffffff&text=Dashboard+Preview">
+
+</div>
 
 </div>
 </section>
 
-<section class="features reveal">
+<section class="section reveal">
+
 <h2>Built for Serious Traders</h2>
 
 <div class="feature-grid">
 
-<div class="feature">
+<div class="card">
 ⚡ Instant Execution
 <p>Precision automation without hesitation.</p>
 </div>
 
-<div class="feature">
+<div class="card">
 🧠 Emotionless Discipline
 <p>Structured consistency, zero bias.</p>
 </div>
 
-<div class="feature">
+<div class="card">
 🔒 Strategy Control
-<p>You stay in command.</p>
+<p>You remain fully in command.</p>
 </div>
 
 </div>
 </section>
 
-<section class="workflow reveal">
-<h2>How It Works</h2>
-
-<div class="steps">
-
-<div class="step">
-<h3>Connect</h3>
-<p>Secure platform linking.</p>
-</div>
-
-<div class="step">
-<h3>Configure</h3>
-<p>Define automation rules.</p>
-</div>
-
-<div class="step">
-<h3>Execute</h3>
-<p>Disciplined trade execution.</p>
-</div>
-
-</div>
-</section>
-
-<section class="final-cta reveal">
+<section class="final reveal">
 
 <h2>Automate Your Edge</h2>
 
-<p>Professional tools for structured traders.</p>
+<p>Professional tools for disciplined traders.</p>
 
 <a href="startup-promo.html">Get Access</a>
 
@@ -307,17 +284,18 @@ footer {
 <script>
 const reveals=document.querySelectorAll(".reveal");
 
-function revealOnScroll(){
+function reveal(){
 const trigger=window.innerHeight*0.85;
 
 reveals.forEach(el=>{
-const top=el.getBoundingClientRect().top;
-if(top<trigger){ el.classList.add("active"); }
+if(el.getBoundingClientRect().top<trigger){
+el.classList.add("active");
+}
 });
 }
 
-window.addEventListener("scroll",revealOnScroll);
-revealOnScroll();
+window.addEventListener("scroll",reveal);
+reveal();
 </script>
 
 </body>
